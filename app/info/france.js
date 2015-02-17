@@ -1,9 +1,4 @@
-Game.countryArray['France'] = {
-	active:false,
-	position:new THREE.Vector3(0,0,0),
-	model:'',
-	data:[]
-}
+Game.countryArray['France'] = new Country();
 
 Game.countryArray['France'].data[1939] = {
 	occupation:'French',

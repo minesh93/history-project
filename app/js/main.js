@@ -23,7 +23,6 @@ window.Game = {
 		var el = document.getElementById('canvas-wrapper');
 		el.appendChild(this.renderer.domElement);
 
-
 		this.renderer.setClearColor(0xccccff);
 		this.scene = new THREE.Scene();
 
@@ -56,9 +55,7 @@ window.Game = {
 			color: 0xFF0000
 		});
 
-		this.objects['sphere'] = new THREE.Mesh( new THREE.BoxGeometry(50,50,50), sphereMaterial);
-		this.objects['sphere'].position.y = 2;
-		this.scene.add(this.objects['sphere']);
+		this.scene.add(Game.countryArray.France.getModel());
 
 		this.objects['light'] = new THREE.PointLight(0xFFFFFF);
 		this.objects['light'].position.x = 10;
@@ -70,8 +67,9 @@ window.Game = {
 	},
 
 	animate:function(deltaTime){
-			this.objects['sphere'].position.z += 10;
+			// this.objects['sphere'].position.z += 10;
 	},
+
 
 	render:function(){
 		Game.renderer.render(Game.scene,Game.camera);
@@ -87,7 +85,8 @@ window.Game = {
 		},
 		getByNameYear:function(name,year){
 			return Game.countryArray[name].data[year];
-		}
+		},
+
 	}
 
 }
@@ -96,5 +95,3 @@ function render(){
 
 }
 
-
-window.onload = Game.init();
