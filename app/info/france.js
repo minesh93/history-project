@@ -33,7 +33,10 @@ Game.countryArray['France'].data[1943] = {
 Game.countryArray['France'].data[1944] = {
 	occupation:'French',
 	capital:'Paris',
-	events:[]
+	events:[{
+		name:'D-Day',
+		model: new THREE.Mesh( new THREE.TorusGeometry( 10, 3, 16, 100 ), new THREE.MeshBasicMaterial( { color: 0xffff00 } ) )	
+	}]
 }
 
 Game.countryArray['France'].data[1945] = {
