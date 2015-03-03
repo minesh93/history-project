@@ -1,22 +1,19 @@
 window.Game = {
-	WIDTH:800,
-	HEIGHT:600,
+	WIDTH:1366,
+	HEIGHT:768,
 	VIEW_ANGLE:45,
-	ASPECT_RATIO:800/600,
+	ASPECT_RATIO:1366/768,
 	NEAR_CLIPPING_PLANE:0.1,
 	FAR_CLIPPING_PLANE:10000,
 	renderer:'',
 	scene:'',
 	camera:'',
 	controls:'',
-	//-
 	countryArray:[],
 	currentCountry:'',
-	now:0,
 	currentTime:new Date(),
 	clock:new THREE.Clock(),
 	objects:[],
-	rise:false,
 	modelLoader: new THREE.ColladaLoader(),
 	init:function (){
 		console.log("Initiated.");
@@ -59,11 +56,6 @@ window.Game = {
 			// Here we store the dae in a global variable.
 			returnModel = collada.scene;
 
-			// Position your model in the scene (world space).
-			returnModel.position.x = 0;
-			returnModel.position.y = 0;
-			returnModel.position.z = 0;
-
 			// Scale your model to the correct size.
 			returnModel.scale.x = 1;
 			returnModel.scale.y = 1;
@@ -77,13 +69,37 @@ window.Game = {
 	},
 	initScene:function(){
 
-		this.loadModel('models/map.DAE',function(model){
+		this.loadModel('models/Europe3d.DAE',function(model){
 			Game.objects['mapeu'] = model;
 		});
 
 		this.loadModel('models/tank.DAE',function(model){
 			Game.objects['tank'] = model;
+			Game.objects['tank'].position.x = 0;
+			Game.objects['tank'].position.y = 26;
+			Game.objects['tank'].position.z = 0;
 		});
+
+
+		this.loadModel('models/boat.DAE',function(model){
+			Game.objects['boat'] = model;
+			Game.objects['boat'].position.x = 200;
+			Game.objects['boat'].position.y = 23;
+			Game.objects['boat'].position.z = -320;
+		});
+
+		// { x: 20, y: 5, z: -63 }
+		Game.countryArray.Britain.setCapital('models/big-ben.DAE',0,0,0);
+		// { x: 232, y: 25, z: -314 }
+		Game.countryArray.France.setCapital('models/Paris.DAE',232,25,-314);
+		// { x: 335, y: 26, z: -325 }
+		Game.countryArray.Germany.setCapital('models/Berlin.DAE',335,26,-325);
+
+		Game.countryArray.Egypt.setCapital('models/Cairo.DAE',300,26,-344);;
+		// { x: 500, y: 26, z: -344 }
+		Game.countryArray.Russia.setCapital('models/Moscow.DAE',500,26,-344);
+		// { x: 300, y: 26, z: -208 }
+		Game.countryArray.Italy.setCapital('models/Rome.DAE',300,26,-208);
 
 		this.objects['light'] = new THREE.PointLight(0xFFFFFF,2,10000);
 		this.objects['light'].position.x = 240;
@@ -98,7 +114,6 @@ window.Game = {
 			// Game.countryArray.France.raise(deltaTime);
 	},
 
-
 	render:function(){
 		Game.renderer.render(Game.scene,Game.camera);
 		var deltaTime = Game.clock.getDelta();
@@ -111,10 +126,10 @@ window.Game = {
 		getByName:function(name){
 			return Game.countryArray[name];
 		},
+		
 		getByNameYear:function(name,year){
 			return Game.countryArray[name].data[year];
-		},
-
+		}
 	}
 
 }

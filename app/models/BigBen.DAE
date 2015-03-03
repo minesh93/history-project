@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>1112028</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///U:/MyModules/ADMA/GameModels/BigBen.max</source_data>
+    </contributor>
+    <created>2015-03-02T18:09:02</created>
+    <modified>2015-03-02T18:09:02</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="ColorEffectR82G67B36">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <ambient>
+              <color>0.3215686 0.2627451 0.1411765 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.3215686 0.2627451 0.1411765 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+    <effect id="Material__26">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.588 0.588 0.588 1</color>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="Material__27">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.588 0.588 0.588 1</color>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="Material__28">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.588 0.588 0.588 1</color>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="Material__29">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.588 0.588 0.588 1</color>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="Material__30">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.588 0.588 0.588 1</color>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="Material__31">
+      <profile_COMMON>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.588 0.588 0.588 1</color>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="Material__25">
+      <profile_COMMON>
+        <newparam sid="Parliament_Clock_Westminster_jpg-surface">
+          <surface type="2D">
+            <init_from>Parliament_Clock_Westminster_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="Parliament_Clock_Westminster_jpg-sampler">
+          <sampler2D>
+            <source>Parliament_Clock_Westminster_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Parliament_Clock_Westminster_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+    <effect id="ColorEffectR17G17B17">
+      <profile_COMMON>
+        <technique sid="common">
+          <phong>
+            <ambient>
+              <color>0.06666667 0.06666667 0.06666667 1</color>
+            </ambient>
+            <diffuse>
+              <color>0.06666667 0.06666667 0.06666667 1</color>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>10</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent>
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="ColorEffectR82G67B36-material" name="ColorEffectR82G67B36-material">
+      <instance_effect url="#ColorEffectR82G67B36"/>
+    </material>
+    <material id="ColorEffectR17G17B17-material" name="ColorEffectR17G17B17-material">
+      <instance_effect url="#ColorEffectR17G17B17"/>
+    </material>
+    <material id="Material__26-material" name="Material__26">
+      <instance_effect url="#Material__26"/>
+    </material>
+    <material id="Material__27-material" name="Material__27">
+      <instance_effect url="#Material__27"/>
+    </material>
+    <material id="Material__28-material" name="Material__28">
+      <instance_effect url="#Material__28"/>
+    </material>
+    <material id="Material__29-material" name="Material__29">
+      <instance_effect url="#Material__29"/>
+    </material>
+    <material id="Material__30-material" name="Material__30">
+      <instance_effect url="#Material__30"/>
+    </material>
+    <material id="Material__31-material" name="Material__31">
+      <instance_effect url="#Material__31"/>
+    </material>
+    <material id="Material__25-material" name="Material__25">
+      <instance_effect url="#Material__25"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Tower" name="Tower">
+      <mesh>
+        <source id="geom-Tower-positions">
+          <float_array id="geom-Tower-positions-array" count="24">-2 -2 0 2 -2 0 -2 2 0 2 2 0 -2 -2 9 2 -2 9 -2 2 9 2 2 9</float_array>
+          <technique_common>
+            <accessor source="#geom-Tower-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Tower-normals">
+          <float_array id="geom-Tower-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0.9999999 0 0 1 0 0 0.9999999 0 0 1 0 0 0 0.9999999 0 0 1 0 0 0.9999999 0 0 1 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Tower-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Tower-map1">
+          <float_array id="geom-Tower-map1-array" count="36">0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Tower-map1-array" count="12" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Tower-vertices">
+          <input semantic="POSITION" source="#geom-Tower-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="12">
+          <input semantic="VERTEX" source="#geom-Tower-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Tower-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Tower-map1" offset="2" set="0"/>
+          <p>0 0 9 2 1 11 3 2 10 3 2 10 1 3 8 0 0 9 4 4 8 5 5 9 7 6 11 7 6 11 6 7 10 4 4 8 0 8 4 1 9 5 5 10 7 5 10 7 4 11 6 0 8 4 1 12 0 3 13 1 7 14 3 7 14 3 5 15 2 1 12 0 3 16 4 2 17 5 6 18 7 6 18 7 7 19 6 3 16 4 2 20 0 0 21 1 4 22 3 4 22 3 6 23 2 2 20 0</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>1</generateuvs>
+            <height>9</height>
+            <heightsegments>1</heightsegments>
+            <length>4</length>
+            <lengthsegments>1</lengthsegments>
+            <width>4</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-Head" name="Head">
+      <mesh>
+        <source id="geom-Head-positions">
+          <float_array id="geom-Head-positions-array" count="24">-2.15 -2.15 0 2.15 -2.15 0 -2.15 2.15 0 2.15 2.15 0 -2.15 -2.15 4 2.15 -2.15 4 -2.15 2.15 4 2.15 2.15 4</float_array>
+          <technique_common>
+            <accessor source="#geom-Head-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Head-normals">
+          <float_array id="geom-Head-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Head-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Head-map1">
+          <float_array id="geom-Head-map1-array" count="72">1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Head-map1-array" count="24" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Head-vertices">
+          <input semantic="POSITION" source="#geom-Head-positions"/>
+        </vertices>
+        <triangles material="Material__27_1" count="2">
+          <input semantic="VERTEX" source="#geom-Head-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Head-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Head-map1" offset="2" set="0"/>
+          <p>0 0 0 2 1 2 3 2 3 3 2 3 1 3 1 0 0 0</p>
+        </triangles>
+        <triangles material="Material__26_1" count="2">
+          <input semantic="VERTEX" source="#geom-Head-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Head-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Head-map1" offset="2" set="0"/>
+          <p>4 4 4 5 5 5 7 6 7 7 6 7 6 7 6 4 4 4</p>
+        </triangles>
+        <triangles material="Material__25_1" count="8">
+          <input semantic="VERTEX" source="#geom-Head-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Head-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Head-map1" offset="2" set="0"/>
+          <p>0 8 8 1 9 9 5 10 11 5 10 11 4 11 10 0 8 8 1 12 12 3 13 13 7 14 15 7 14 15 5 15 14 1 12 12 3 16 16 2 17 17 6 18 19 6 18 19 7 19 18 3 16 16 2 20 20 0 21 21 4 22 23 4 22 23 6 23 22 2 20 20</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-Building" name="Building">
+      <mesh>
+        <source id="geom-Building-positions">
+          <float_array id="geom-Building-positions-array" count="24">-2 -5 0 2 -5 0 -2 5 0 2 5 0 -2 -5 4 2 -5 4 -2 5 4 2 5 4</float_array>
+          <technique_common>
+            <accessor source="#geom-Building-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Building-normals">
+          <float_array id="geom-Building-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Building-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Building-map1">
+          <float_array id="geom-Building-map1-array" count="36">0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Building-map1-array" count="12" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Building-vertices">
+          <input semantic="POSITION" source="#geom-Building-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="12">
+          <input semantic="VERTEX" source="#geom-Building-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Building-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Building-map1" offset="2" set="0"/>
+          <p>0 0 9 2 1 11 3 2 10 3 2 10 1 3 8 0 0 9 4 4 8 5 5 9 7 6 11 7 6 11 6 7 10 4 4 8 0 8 4 1 9 5 5 10 7 5 10 7 4 11 6 0 8 4 1 12 0 3 13 1 7 14 3 7 14 3 5 15 2 1 12 0 3 16 4 2 17 5 6 18 7 6 18 7 7 19 6 3 16 4 2 20 0 0 21 1 4 22 3 4 22 3 6 23 2 2 20 0</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>1</generateuvs>
+            <height>4</height>
+            <heightsegments>1</heightsegments>
+            <length>10</length>
+            <lengthsegments>1</lengthsegments>
+            <width>4</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-middleSpire" name="middleSpire">
+      <mesh>
+        <source id="geom-middleSpire-positions">
+          <float_array id="geom-middleSpire-positions-array" count="24">-1.2 -1.2 0 1.2 -1.2 0 -1.2 1.2 0 1.2 1.2 0 -1.2 -1.2 2 1.2 -1.2 2 -1.2 1.2 2 1.2 1.2 2</float_array>
+          <technique_common>
+            <accessor source="#geom-middleSpire-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-middleSpire-normals">
+          <float_array id="geom-middleSpire-normals-array" count="72">0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-middleSpire-normals-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-middleSpire-map1">
+          <float_array id="geom-middleSpire-map1-array" count="36">0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+          <technique_common>
+            <accessor source="#geom-middleSpire-map1-array" count="12" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-middleSpire-vertices">
+          <input semantic="POSITION" source="#geom-middleSpire-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="12">
+          <input semantic="VERTEX" source="#geom-middleSpire-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-middleSpire-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-middleSpire-map1" offset="2" set="0"/>
+          <p>0 0 9 2 1 11 3 2 10 3 2 10 1 3 8 0 0 9 4 4 8 5 5 9 7 6 11 7 6 11 6 7 10 4 4 8 0 8 4 1 9 5 5 10 7 5 10 7 4 11 6 0 8 4 1 12 0 3 13 1 7 14 3 7 14 3 5 15 2 1 12 0 3 16 4 2 17 5 6 18 7 6 18 7 7 19 6 3 16 4 2 20 0 0 21 1 4 22 3 4 22 3 6 23 2 2 20 0</p>
+        </triangles>
+      </mesh>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <max_box>
+            <generateuvs>1</generateuvs>
+            <height>2</height>
+            <heightsegments>1</heightsegments>
+            <length>2.4</length>
+            <lengthsegments>1</lengthsegments>
+            <width>2.4</width>
+            <widthsegments>1</widthsegments>
+          </max_box>
+        </technique>
+      </extra>
+    </geometry>
+    <geometry id="geom-topSpire" name="topSpire">
+      <mesh>
+        <source id="geom-topSpire-positions">
+          <float_array id="geom-topSpire-positions-array" count="27">0 0 4.965576 -0.4 -0.4 3.965576 0.4 -0.4 3.965576 0.4 0.4 3.965576 -0.4 0.4 3.965576 -0.8 -0.8 2.965576 0.8 -0.8 2.965576 0.8 0.8 2.965576 -0.8 0.8 2.965576</float_array>
+          <technique_common>
+            <accessor source="#geom-topSpire-positions-array" count="9" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-topSpire-normals">
+          <float_array id="geom-topSpire-normals-array" count="60">0 -0.9284768 0.3713907 0 -0.9284767 0.3713907 0 -0.9284767 0.3713907 0.9284768 0 0.3713907 0.9284767 0 0.3713907 0.9284767 0 0.3713907 0 0.9284768 0.3713907 0 0.9284767 0.3713907 0 0.9284767 0.3713907 -0.9284768 0 0.3713907 -0.9284767 0 0.3713907 -0.9284767 0 0.3713907 0 -0.9284768 0.3713907 0 -0.9284768 0.3713907 0.9284768 0 0.3713907 0.9284768 0 0.3713907 0 0.9284768 0.3713907 0 0.9284768 0.3713907 -0.9284768 0 0.3713907 -0.9284768 0 0.3713907</float_array>
+          <technique_common>
+            <accessor source="#geom-topSpire-normals-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-topSpire-map1">
+          <float_array id="geom-topSpire-map1-array" count="30">0.5 1 0 0.4 0.8 0 0.6 0.8 0 0.5 1 0 0.4 0.8 0 0.6 0.8 0 0.3 0.6 0 0.7 0.6 0 0.3 0.6 0 0.7 0.6 0</float_array>
+          <technique_common>
+            <accessor source="#geom-topSpire-map1-array" count="10" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-topSpire-vertices">
+          <input semantic="POSITION" source="#geom-topSpire-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="12">
+          <input semantic="VERTEX" source="#geom-topSpire-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-topSpire-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-topSpire-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 0 3 3 2 4 4 3 5 5 0 6 0 3 7 1 4 8 2 0 9 3 4 10 4 1 11 5 6 12 7 2 2 2 1 1 1 1 1 1 5 13 6 6 12 7 7 14 9 3 5 5 2 4 4 2 4 4 6 15 8 7 14 9 8 16 7 4 8 2 3 7 1 3 7 1 7 17 6 8 16 7 5 18 9 1 11 5 4 10 4 4 10 4 8 19 8 5 18 9</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-buildingRoof" name="buildingRoof">
+      <mesh>
+        <source id="geom-buildingRoof-positions">
+          <float_array id="geom-buildingRoof-positions-array" count="24">3.654826 2.956005 20.9447 0.2659245 -0.67654 21.07019 7.028062 -0.7624207 20.7486 3.724706 10.19616 21.01146 0.2306824 0.6453974 0.1232414 6.992894 0.5603493 -0.2115269 3.690172 11.5205 0.05902576 3.620174 4.280212 -0.008477211</float_array>
+          <technique_common>
+            <accessor source="#geom-buildingRoof-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-buildingRoof-normals">
+          <float_array id="geom-buildingRoof-normals-array" count="60">0.04737854 -0.009674123 0.9988302 0.04736871 -0.009684845 0.9988305 0.04738842 -0.009684928 0.9988296 0.04737877 -0.009667963 0.9988302 -0.01566691 -0.9978938 -0.06294956 -0.01566719 -0.9978938 -0.06294966 -0.01566712 -0.9978938 -0.06294964 -0.01566684 -0.9978937 -0.06294953 0.9574443 0.2881403 0.0165959 0.9574236 0.2882068 0.01663869 0.9574335 0.2881756 0.01661856 0.9574541 0.2881092 0.01657579 -0.9527056 0.3031868 0.02073467 -0.9527066 0.3031833 0.02073642 -0.9527061 0.3031849 0.02073562 -0.9527051 0.3031884 0.02073387 -0.04931587 0.009795186 -0.9987352 -0.0493199 0.009790792 -0.9987351 -0.04932394 0.009795222 -0.9987348 -0.04931999 0.00978827 -0.9987351</float_array>
+          <technique_common>
+            <accessor source="#geom-buildingRoof-normals-array" count="20" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-buildingRoof-map1">
+          <float_array id="geom-buildingRoof-map1-array" count="48">0.4980852 0.3333333 0 0 0 0 1 0 0 0.4942556 1 0 0 1 0 0.2291507 1 0 0.6149666 1 0 1 1 0 0 0 0 0.2291507 0 0 0.6149666 0 0 1 0 0 1 1 0 0 1 0 0.5057443 0 0 0.5019147 0.6666666 0</float_array>
+          <technique_common>
+            <accessor source="#geom-buildingRoof-map1-array" count="16" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-buildingRoof-vertices">
+          <input semantic="POSITION" source="#geom-buildingRoof-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="12">
+          <input semantic="VERTEX" source="#geom-buildingRoof-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-buildingRoof-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-buildingRoof-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 2 2 2 0 0 0 2 2 2 3 3 3 0 0 0 3 3 3 1 1 1 5 4 9 2 5 5 1 6 4 1 6 4 4 7 8 5 4 9 6 8 10 3 9 6 2 10 5 2 10 5 5 11 9 6 8 10 4 12 11 1 13 7 3 14 6 3 14 6 6 15 10 4 12 11 4 16 12 7 17 15 5 18 13 5 18 13 7 17 15 6 19 14 6 19 14 7 17 15 4 16 12</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="geom-bottomSpire" name="bottomSpire">
+      <mesh>
+        <source id="geom-bottomSpire-positions">
+          <float_array id="geom-bottomSpire-positions-array" count="39">-1.2 -1.2 2 1.2 -1.2 2 1.2 1.2 2 -1.2 1.2 2 -1.6 -1.6 1 1.6 -1.6 1 1.6 1.6 1 -1.6 1.6 1 -2 -2 0 2 -2 0 2 2 0 -2 2 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bottomSpire-positions-array" count="13" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bottomSpire-normals">
+          <float_array id="geom-bottomSpire-normals-array" count="87">0 -0.9284767 0.3713906 0 -0.9284768 0.3713907 0 -0.9284768 0.3713907 0 -0.9284767 0.3713906 0.9284767 0 0.3713906 0.9284768 0 0.3713907 0.9284768 0 0.3713907 0.9284767 0 0.3713906 0 0.9284767 0.3713906 0 0.9284768 0.3713907 0 0.9284768 0.3713907 0 0.9284767 0.3713906 -0.9284767 0 0.3713906 -0.9284768 0 0.3713907 -0.9284768 0 0.3713907 -0.9284767 0 0.3713906 0 -0.9284768 0.3713906 0 -0.9284768 0.3713907 0.9284768 0 0.3713906 0.9284768 0 0.3713907 0 0.9284768 0.3713906 0 0.9284768 0.3713907 -0.9284768 0 0.3713906 -0.9284768 0 0.3713907 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1</float_array>
+          <technique_common>
+            <accessor source="#geom-bottomSpire-normals-array" count="29" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-bottomSpire-map1">
+          <float_array id="geom-bottomSpire-map1-array" count="51">0.2 0.4 0 0.8 0.4 0 0.2 0.4 0 0.8 0.4 0 0.1 0.2 0 0.9 0.2 0 0.1 0.2 0 0.9 0.2 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 0 0 0 0.5 0.5 0</float_array>
+          <technique_common>
+            <accessor source="#geom-bottomSpire-map1-array" count="17" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-bottomSpire-vertices">
+          <input semantic="POSITION" source="#geom-bottomSpire-positions"/>
+        </vertices>
+        <triangles material="ColorMaterial" count="20">
+          <input semantic="VERTEX" source="#geom-bottomSpire-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-bottomSpire-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-bottomSpire-map1" offset="2" set="0"/>
+          <p>5 0 5 1 1 1 0 2 0 0 2 0 4 3 4 5 0 5 6 4 7 2 5 3 1 6 2 1 6 2 5 7 6 6 4 7 7 8 5 3 9 1 2 10 0 2 10 0 6 11 4 7 8 5 4 12 7 0 13 3 3 14 2 3 14 2 7 15 6 4 12 7 9 16 9 5 0 5 4 3 4 4 3 4 8 17 8 9 16 9 10 18 11 6 4 7 5 7 6 5 7 6 9 19 10 10 18 11 11 20 9 7 8 5 6 11 4 6 11 4 10 21 8 11 20 9 8 22 11 4 12 7 7 15 6 7 15 6 11 23 10 8 22 11 8 24 12 12 25 16 9 26 13 9 26 13 12 25 16 10 27 14 10 27 14 12 25 16 11 28 15 11 28 15 12 25 16 8 24 12</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="Parliament_Clock_Westminster_jpg">
+      <init_from>./images/0_Parliament_Clock_Westminster.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Tower" name="Tower">
+        <matrix>1 0 0 5.298668 0 1 0 -8.783791 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Tower">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="ColorMaterial" target="#ColorEffectR82G67B36-material"/>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <node id="node-Head" name="Head">
+          <matrix>1 0 0 -0.001066208 0 1 0 -0.00887394 0 0 1 9.043255 0 0 0 1</matrix>
+          <instance_geometry url="#geom-Head">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="Material__25_1" target="#Material__25-material">
+                  <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+                <instance_material symbol="Material__26_1" target="#Material__26-material"/>
+                <instance_material symbol="Material__27_1" target="#Material__27-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <node id="node-Building" name="Building">
+          <matrix>1 0 0 -2.00272e-4 0 1 0 -7.0068 0 0 1 -2.77996e-4 0 0 0 1</matrix>
+          <instance_geometry url="#geom-Building">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ColorMaterial" target="#ColorEffectR82G67B36-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <node id="node-middleSpire" name="middleSpire">
+          <matrix>1 0 0 0.04980087 0 1 0 0.02800465 0 0 0.5771083 14.46785 0 0 0 1</matrix>
+          <instance_geometry url="#geom-middleSpire">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ColorMaterial" target="#ColorEffectR82G67B36-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <node id="node-topSpire" name="topSpire">
+          <matrix>1.491576 0 0 0.0499382 0 1.441871 0 0.01178455 0 0 2.38485 8.576656 0 0 0 1</matrix>
+          <instance_geometry url="#geom-topSpire">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ColorMaterial" target="#ColorEffectR17G17B17-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <node id="node-buildingRoof" name="buildingRoof">
+          <matrix>0.5910251 -0.005629835 -0.001366962 -2.13224 -0.02405494 0.004693705 -0.4751465 -1.981214 0.002471043 0.15805 0.009970059 3.899927 0 0 0 1</matrix>
+          <instance_geometry url="#geom-buildingRoof">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ColorMaterial" target="#ColorEffectR17G17B17-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <node id="node-bottomSpire" name="bottomSpire">
+          <matrix>1 0 0 0.04989433 0 1 0 0.01185703 0 0 0.6766531 13.10093 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bottomSpire">
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="ColorMaterial" target="#ColorEffectR17G17B17-material"/>
+              </technique_common>
+            </bind_material>
+          </instance_geometry>
+          <extra>
+            <technique profile="OpenCOLLADA">
+              <cast_shadows>1</cast_shadows>
+              <primary_visibility>1</primary_visibility>
+              <receive_shadows>1</receive_shadows>
+              <secondary_visibility>1</secondary_visibility>
+            </technique>
+          </extra>
+        </node>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
