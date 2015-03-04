@@ -1,5 +1,6 @@
 Game.countryArray['Memeland'] = new Country("Memeland");
 Game.countryArray['Memeland'].capital = 'Pin';
+Game.countryArray['Memeland'].cPos = { x: 0, y: 0, z: 0 };
 
 Game.countryArray['Memeland'].data[1939] = {
 	occupation:'Neutral',

@@ -16,10 +16,17 @@ Country.prototype.setCapital = function(path,x,y,z){
 	var lowername = this.name.toLowerCase().replace(/\s/g, '');
 	// console.log('models/capitals/'+lowername+'.DAE');
 
+	var pos = this.cPos;
 	if(this.capital != 'Pin'){
-		var pos = this.cPos;
 		console.log("Loading capital: "+lowername);
 		Game.loadModel('models/capitals/'+lowername+'.DAE',function(model){
+			that.capital = model;
+			that.capital.position.x = pos.x;
+			that.capital.position.y = pos.y;
+			that.capital.position.z = pos.z;
+		});
+	} else {
+		Game.loadModel('models/general/pin.DAE',function(model){
 			that.capital = model;
 			that.capital.position.x = pos.x;
 			that.capital.position.y = pos.y;

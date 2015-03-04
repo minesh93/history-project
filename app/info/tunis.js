@@ -1,5 +1,6 @@
 Game.countryArray['Tunis'] = new Country("Tunis");
 Game.countryArray['Tunis'].capital = 'Pin';
+Game.countryArray['Tunis'].cPos = { x: 0, y: 0, z: 0 };
 
 Game.countryArray['Tunis'].data[1939] = {
 	occupation:'Neutral',

@@ -81,6 +81,14 @@ window.Game = {
 		});
 
 
+
+		// this.loadModel('models/general/pin.DAE',function(model){
+		// 	Game.objects['pin'] = model;
+		// 	Game.objects['pin'].position.x = 400;
+		// 	Game.objects['pin'].position.y = 26;
+		// 	Game.objects['pin'].position.z = -320;
+		// });
+
 		this.loadModel('models/general/boat.DAE',function(model){
 			Game.objects['boat'] = model;
 			Game.objects['boat'].position.x = 200;
@@ -95,20 +103,6 @@ window.Game = {
 			Game.countryArray[country].setCapital();
 		}
 
-		// // { x: 20, y: 5, z: -63 }
-		// Game.countryArray['Britain'].setCapital('models/capitals/big-ben.DAE',0,0,0);
-		// // { x: 232, y: 25, z: -314 }
-		// // Game.countryArray['France'].setCapital('models/capitals/Paris.DAE',232,25,-314);
-		// Game.countryArray['France'].setCapital('models/countries/france.DAE',0,30,0);
-		// Game.countryArray['Germany'].setCapital('models/countries/germany.DAE',0,30,0);
-		// // { x: 335, y: 26, z: -325 }
-		// // Game.countryArray['Germany'].setCapital('models/capitals/Berlin.DAE',335,26,-325);
-
-		// // Game.countryArray['Egypt'].setCapital('models/capitals/Cairo.DAE',300,26,-344);
-		// // { x: 500, y: 26, z: -344 }
-		// Game.countryArray['Russia'].setCapital('models/capitals/Moscow.DAE',500,26,-344);
-		// // { x: 300, y: 26, z: -208 }
-		// Game.countryArray['Italy'].setCapital('models/capitals/Rome.DAE',300,26,-208);
 
 		this.objects['light'] = new THREE.PointLight(0xFFFFFF,2,10000);
 		this.objects['light'].position.x = 240;

@@ -1,6 +1,6 @@
 Game.countryArray['GreatBritain'] = new Country("Great Britain");
+Game.countryArray['GreatBritain'].cPos = { x: 230, y: 25, z: -384 }
 
-// Game.capitalPos
 
 Game.countryArray['GreatBritain'].data[1939] = {
 	occupation:'British',

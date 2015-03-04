@@ -1,5 +1,6 @@
 Game.countryArray['France'] = new Country("France");
-Game.countryArray['France'].cPos = { x: 232, y: 25, z: -314 }
+
+Game.countryArray['France'].cPos = { x: 232, y: 25, z: -314 };
 
 Game.countryArray['France'].data[1939] = {
 	occupation:'French',
@@ -28,9 +29,7 @@ Game.countryArray['France'].data[1943] = {
 
 Game.countryArray['France'].data[1944] = {
 	occupation:'French',
-	events:[{
-		name:'D-Day',
-	}]
+	events:[]
 }
 
 Game.countryArray['France'].data[1945] = {
