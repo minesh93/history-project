@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:14:41</created>
+    <modified>2015-03-04T16:14:41</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Albania" name="Albania">
+      <mesh>
+        <source id="geom-Albania-positions">
+          <float_array id="geom-Albania-positions-array" count="96">-0.932312 -19.72977 0 3.577332 -12.09802 0 7.393188 -9.669754 0 7.393188 -5.506989 0 4.271118 -3.425598 0 4.271118 -1.344223 0 3.577332 5.940628 0 6.005615 10.45029 0 1.842834 17.73512 0 -1.973022 18.08203 0 -5.788879 13.91925 0 -5.788879 9.409592 0 -4.054413 8.022003 0 -7.523376 -2.731812 0 -8.91098 -9.669754 0 -3.360596 -19.38287 0 -0.932312 -19.72977 25 3.577332 -12.09802 25 7.393188 -9.669754 25 7.393188 -5.506989 25 4.271118 -3.425598 25 4.271118 -1.344223 25 3.577332 5.940628 25 6.005615 10.45029 25 1.842834 17.73512 25 -1.973022 18.08203 25 -5.788879 13.91925 25 -5.788879 9.409592 25 -4.054413 8.022003 25 -7.523376 -2.731812 25 -8.91098 -9.669754 25 -3.360596 -19.38287 25</float_array>
+          <technique_common>
+            <accessor source="#geom-Albania-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Albania-normals">
+          <float_array id="geom-Albania-normals-array" count="288">0.8609277 -0.5087273 0 0.8609277 -0.5087274 0 0.8609277 -0.5087273 0 0.8609277 -0.5087274 0 0.5368749 -0.843662 0 0.5368749 -0.843662 0 0.5368749 -0.843662 0 0.5368749 -0.843662 0 0.9999999 0 0 1 0 0 0.9999999 0 0 1 0 0 0.5547021 0.8320491 0 0.554702 0.832049 0 0.5547021 0.8320491 0 0.554702 0.832049 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9954956 0.09480791 0 0.9954956 0.09480791 0 0.9954956 0.09480791 0 0.9954956 0.09480791 0 0.8804706 -0.4741007 0 0.8804706 -0.4741008 0 0.8804706 -0.4741007 0 0.8804706 -0.4741008 0 0.8682422 0.4961405 0 0.8682422 0.4961405 0 0.8682422 0.4961405 0 0.8682422 0.4961405 0 0.09053898 0.9958929 0 0.09053897 0.9958929 0 0.09053898 0.9958929 0 0.09053897 0.9958929 0 -0.7371563 0.6757221 0 -0.7371563 0.6757221 0 -0.7371563 0.6757221 0 -0.7371563 0.6757221 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.6246993 -0.7808654 0 -0.6246992 -0.7808654 0 -0.6246993 -0.7808654 0 -0.6246992 -0.7808654 0 -0.9517088 0.307002 0 -0.9517089 0.3070021 0 -0.9517088 0.307002 0 -0.9517089 0.3070021 0 -0.9805803 0.1961182 0 -0.9805802 0.1961182 0 -0.9805803 0.1961182 0 -0.9805802 0.1961182 0 -0.868242 -0.496141 0 -0.8682419 -0.496141 0 -0.868242 -0.496141 0 -0.8682419 -0.496141 0 -0.1414196 -0.9899498 0 -0.1414196 -0.9899496 0 -0.1414196 -0.9899498 0 -0.1414196 -0.9899496 0 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Albania-normals-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Albania-map1">
+          <float_array id="geom-Albania-map1-array" count="198">0 0 0 0.09589698 0 0 0.1448266 0 0 0.1898594 0 0 0.2304515 0 0 0.2529679 0 0 0.3321322 0 0 0.3875407 0 0 0.4783074 0 0 0.5197577 0 0 0.5808479 0 0 0.6296335 0 0 0.6536626 0 0 0.7759005 0 0 0.8524417 0 0 0.9734641 0 0 1 0 0 0 1 0 0.09589698 1 0 0.1448266 1 0 0.1898594 1 0 0.2304515 1 0 0.2529679 1 0 0.3321322 1 0 0.3875407 1 0 0.4783074 1 0 0.5197577 1 0 0.5808479 1 0 0.6296335 1 0 0.6536626 1 0 0.7759005 1 0 0.8524417 1 0 0.9734641 1 0 1 1 0 0.4893637 0 0 0.7659582 0.201835 0 1 0.2660549 0 1 0.3761466 0 0.8085109 0.4311926 0 0.8085109 0.4862383 0 0.7659582 0.6788991 0 0.9148946 0.798165 0 0.6595746 0.9908254 0 0.4255328 1 0 0.1914909 0.8899079 0 0.1914909 0.770642 0 0.2978727 0.7339448 0 0.0851073 0.4495411 0 0 0.2660549 0 0.3404273 0.009174208 0 0.4893637 0 0 0.7659582 0.201835 0 1 0.2660549 0 1 0.3761466 0 0.8085109 0.4311926 0 0.8085109 0.4862383 0 0.7659582 0.6788991 0 0.9148946 0.798165 0 0.6595746 0.9908254 0 0.4255328 1 0 0.1914909 0.8899079 0 0.1914909 0.770642 0 0.2978727 0.7339448 0 0.0851073 0.4495411 0 0 0.2660549 0 0.3404273 0.009174208 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Albania-map1-array" count="66" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Albania-vertices">
+          <input semantic="POSITION" source="#geom-Albania-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="60">
+          <input semantic="VERTEX" source="#geom-Albania-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Albania-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Albania-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 17 2 18 0 0 0 17 2 18 16 3 17 1 4 1 2 5 2 18 6 19 1 4 1 18 6 19 17 7 18 2 8 2 3 9 3 19 10 20 2 8 2 19 10 20 18 11 19 3 12 3 4 13 4 20 14 21 3 12 3 20 14 21 19 15 20 4 16 4 5 17 5 21 18 22 4 16 4 21 18 22 20 19 21 5 20 5 6 21 6 22 22 23 5 20 5 22 22 23 21 23 22 6 24 6 7 25 7 23 26 24 6 24 6 23 26 24 22 27 23 7 28 7 8 29 8 24 30 25 7 28 7 24 30 25 23 31 24 8 32 8 9 33 9 25 34 26 8 32 8 25 34 26 24 35 25 9 36 9 10 37 10 26 38 27 9 36 9 26 38 27 25 39 26 10 40 10 11 41 11 27 42 28 10 40 10 27 42 28 26 43 27 11 44 11 12 45 12 28 46 29 11 44 11 28 46 29 27 47 28 12 48 12 13 49 13 29 50 30 12 48 12 29 50 30 28 51 29 13 52 13 14 53 14 30 54 31 13 52 13 30 54 31 29 55 30 14 56 14 15 57 15 31 58 32 14 56 14 31 58 32 30 59 31 15 60 15 0 61 16 16 62 33 15 60 15 16 62 33 31 63 32 15 64 49 1 65 35 0 66 34 14 67 48 1 65 35 15 64 49 13 68 47 1 65 35 14 67 48 13 68 47 2 69 36 1 65 35 13 68 47 3 70 37 2 69 36 13 68 47 4 71 38 3 70 37 12 72 46 4 71 38 13 68 47 12 72 46 5 73 39 4 71 38 12 72 46 6 74 40 5 73 39 12 72 46 7 75 41 6 74 40 12 72 46 8 76 42 7 75 41 12 72 46 9 77 43 8 76 42 12 72 46 10 78 44 9 77 43 12 72 46 11 79 45 10 78 44 31 80 65 16 81 50 17 82 51 30 83 64 31 80 65 17 82 51 29 84 63 30 83 64 17 82 51 29 84 63 17 82 51 18 85 52 29 84 63 18 85 52 19 86 53 29 84 63 19 86 53 20 87 54 28 88 62 29 84 63 20 87 54 28 88 62 20 87 54 21 89 55 28 88 62 21 89 55 22 90 56 28 88 62 22 90 56 23 91 57 28 88 62 23 91 57 24 92 58 28 88 62 24 92 58 25 93 59 28 88 62 25 93 59 26 94 60 28 88 62 26 94 60 27 95 61</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Albania" name="Albania">
+        <matrix>1 0 0 364.4806 0 1 0 183.8121 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Albania">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

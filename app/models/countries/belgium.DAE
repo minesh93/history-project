@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:15:49</created>
+    <modified>2015-03-04T16:15:49</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Belgium" name="Belgium">
+      <mesh>
+        <source id="geom-Belgium-positions">
+          <float_array id="geom-Belgium-positions-array" count="114">-15.57384 10.7355 0 -7.942093 -0.3652039 0 -7.942093 -3.487274 0 -4.473145 -4.874847 0 -1.697968 -3.487274 0 -1.351044 -9.037628 0 2.464813 -13.8942 0 4.546204 -12.1597 0 3.852417 -10.07831 0 6.280701 -5.915558 0 8.015167 -6.956238 0 10.79034 -4.874847 0 10.09656 1.0224 0 7.668274 2.409973 0 10.09656 6.572754 0 2.464813 12.81689 0 -3.432434 11.77621 0 -8.289001 15.59207 0 -15.57384 14.2045 0 -15.57384 10.7355 25 -7.942093 -0.3652039 25 -7.942093 -3.487274 25 -4.473145 -4.874847 25 -1.697968 -3.487274 25 -1.351044 -9.037628 25 2.464813 -13.8942 25 4.546204 -12.1597 25 3.852417 -10.07831 25 6.280701 -5.915558 25 8.015167 -6.956238 25 10.79034 -4.874847 25 10.09656 1.0224 25 7.668274 2.409973 25 10.09656 6.572754 25 2.464813 12.81689 25 -3.432434 11.77621 25 -8.289001 15.59207 25 -15.57384 14.2045 25</float_array>
+          <technique_common>
+            <accessor source="#geom-Belgium-positions-array" count="38" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Belgium-normals">
+          <float_array id="geom-Belgium-normals-array" count="342">-0.8240417 -0.5665292 0 -0.8240417 -0.5665292 0 -0.8240417 -0.5665292 0 -0.8240417 -0.5665292 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -0.3713892 -0.9284772 0 -0.3713892 -0.9284772 0 -0.3713892 -0.9284772 0 -0.3713892 -0.9284772 0 0.4472097 -0.8944292 0 0.4472097 -0.8944291 0 0.4472097 -0.8944292 0 0.4472097 -0.8944291 0 -0.9980522 -0.06238307 0 -0.9980522 -0.06238307 0 -0.9980522 -0.06238307 0 -0.9980522 -0.06238307 0 -0.7863197 -0.6178198 0 -0.7863197 -0.6178198 0 -0.7863197 -0.6178198 0 -0.7863197 -0.6178198 0 0.6401855 -0.7682204 0 0.6401855 -0.7682204 0 0.6401855 -0.7682204 0 0.6401855 -0.7682204 0 0.9486848 0.3162236 0 0.9486846 0.3162236 0 0.9486848 0.3162236 0 0.9486846 0.3162236 0 0.8637778 -0.5038731 0 0.8637777 -0.503873 0 0.8637778 -0.5038731 0 0.8637777 -0.503873 0 -0.5144957 -0.8574929 0 -0.5144958 -0.8574929 0 -0.5144957 -0.8574929 0 -0.5144958 -0.8574929 0 0.6000015 -0.7999989 0 0.6000015 -0.7999989 0 0.6000015 -0.7999989 0 0.6000015 -0.7999989 0 0.9931508 0.1168401 0 0.9931508 0.1168401 0 0.9931508 0.1168401 0 0.9931508 0.1168401 0 0.4961342 0.8682458 0 0.4961343 0.8682458 0 0.4961342 0.8682458 0 0.4961343 0.8682458 0 0.8637794 -0.5038702 0 0.8637794 -0.5038702 0 0.8637794 -0.5038702 0 0.8637794 -0.5038702 0 0.6332369 0.773958 0 0.633237 0.773958 0 0.6332369 0.773958 0 0.633237 0.773958 0 -0.1737836 0.9847838 0 -0.1737836 0.9847839 0 -0.1737836 0.9847838 0 -0.1737836 0.9847839 0 0.6178198 0.7863197 0 0.6178198 0.7863197 0 0.6178198 0.7863197 0 0.6178198 0.7863197 0 -0.1871102 0.982339 0 -0.1871102 0.982339 0 -0.1871102 0.982339 0 -0.1871102 0.982339 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999</float_array>
+          <technique_common>
+            <accessor source="#geom-Belgium-normals-array" count="114" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Belgium-map1">
+          <float_array id="geom-Belgium-map1-array" count="234">0 0 0 0.1390949 0 0 0.1713317 0 0 0.2099094 0 0 0.2419466 0 0 0.2993685 0 0 0.3631419 0 0 0.3911174 0 0 0.4137712 0 0 0.4635321 0 0 0.4844176 0 0 0.5202363 0 0 0.5815481 0 0 0.610426 0 0 0.6601872 0 0 0.7620032 0 0 0.8238358 0 0 0.8876093 0 0 0.964181 0 0 1 0 0 0 1 0 0.1390949 1 0 0.1713317 1 0 0.2099094 1 0 0.2419466 1 0 0.2993685 1 0 0.3631419 1 0 0.3911174 1 0 0.4137712 1 0 0.4635321 1 0 0.4844176 1 0 0.5202363 1 0 0.5815481 1 0 0.610426 1 0 0.6601872 1 0 0.7620032 1 0 0.8238358 1 0 0.8876093 1 0 0.964181 1 0 1 1 0 0 0.8352939 0 0.289474 0.4588235 0 0.289474 0.3529413 0 0.421052 0.305883 0 0.5263152 0.3529413 0 0.5394741 0.1647061 0 0.6842105 0 0 0.7631582 0.05882389 0 0.7368427 0.1294124 0 0.8289481 0.2705882 0 0.8947368 0.2352946 0 1 0.305883 0 0.9736845 0.5058828 0 0.8815791 0.5529411 0 0.9736845 0.694118 0 0.6842105 0.9058824 0 0.4605265 0.8705887 0 0.2763157 1 0 0 0.9529417 0 0 0.8352939 0 0.289474 0.4588235 0 0.289474 0.3529413 0 0.421052 0.305883 0 0.5263152 0.3529413 0 0.5394741 0.1647061 0 0.6842105 0 0 0.7631582 0.05882389 0 0.7368427 0.1294124 0 0.8289481 0.2705882 0 0.8947368 0.2352946 0 1 0.305883 0 0.9736845 0.5058828 0 0.8815791 0.5529411 0 0.9736845 0.694118 0 0.6842105 0.9058824 0 0.4605265 0.8705887 0 0.2763157 1 0 0 0.9529417 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Belgium-map1-array" count="78" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Belgium-vertices">
+          <input semantic="POSITION" source="#geom-Belgium-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="72">
+          <input semantic="VERTEX" source="#geom-Belgium-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Belgium-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Belgium-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 20 2 21 0 0 0 20 2 21 19 3 20 1 4 1 2 5 2 21 6 22 1 4 1 21 6 22 20 7 21 2 8 2 3 9 3 22 10 23 2 8 2 22 10 23 21 11 22 3 12 3 4 13 4 23 14 24 3 12 3 23 14 24 22 15 23 4 16 4 5 17 5 24 18 25 4 16 4 24 18 25 23 19 24 5 20 5 6 21 6 25 22 26 5 20 5 25 22 26 24 23 25 6 24 6 7 25 7 26 26 27 6 24 6 26 26 27 25 27 26 7 28 7 8 29 8 27 30 28 7 28 7 27 30 28 26 31 27 8 32 8 9 33 9 28 34 29 8 32 8 28 34 29 27 35 28 9 36 9 10 37 10 29 38 30 9 36 9 29 38 30 28 39 29 10 40 10 11 41 11 30 42 31 10 40 10 30 42 31 29 43 30 11 44 11 12 45 12 31 46 32 11 44 11 31 46 32 30 47 31 12 48 12 13 49 13 32 50 33 12 48 12 32 50 33 31 51 32 13 52 13 14 53 14 33 54 34 13 52 13 33 54 34 32 55 33 14 56 14 15 57 15 34 58 35 14 56 14 34 58 35 33 59 34 15 60 15 16 61 16 35 62 36 15 60 15 35 62 36 34 63 35 16 64 16 17 65 17 36 66 37 16 64 16 36 66 37 35 67 36 17 68 17 18 69 18 37 70 38 17 68 17 37 70 38 36 71 37 18 72 18 0 73 19 19 74 39 18 72 18 19 74 39 37 75 38 5 76 45 7 77 47 6 78 46 5 76 45 8 79 48 7 77 47 13 80 53 15 81 55 14 82 54 17 83 57 0 84 40 18 85 58 17 83 57 1 86 41 0 84 40 16 87 56 1 86 41 17 83 57 4 88 44 8 79 48 5 76 45 4 88 44 9 89 49 8 79 48 13 80 53 16 87 56 15 81 55 13 80 53 1 86 41 16 87 56 13 80 53 2 90 42 1 86 41 13 80 53 3 91 43 2 90 42 13 80 53 4 88 44 3 91 43 13 80 53 9 89 49 4 88 44 12 92 52 9 89 49 13 80 53 11 93 51 9 89 49 12 92 52 10 94 50 9 89 49 11 93 51 24 95 64 25 96 65 26 97 66 24 95 64 26 97 66 27 98 67 32 99 72 33 100 73 34 101 74 36 102 76 37 103 77 19 104 59 36 102 76 19 104 59 20 105 60 35 106 75 36 102 76 20 105 60 23 107 63 24 95 64 27 98 67 23 107 63 27 98 67 28 108 68 32 99 72 34 101 74 35 106 75 32 99 72 35 106 75 20 105 60 32 99 72 20 105 60 21 109 61 32 99 72 21 109 61 22 110 62 32 99 72 22 110 62 23 107 63 32 99 72 23 107 63 28 108 68 31 111 71 32 99 72 28 108 68 30 112 70 31 111 71 28 108 68 29 113 69 30 112 70 28 108 68</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Belgium" name="Belgium">
+        <matrix>1 0 0 261.8708 0 1 0 330.2644 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Belgium">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

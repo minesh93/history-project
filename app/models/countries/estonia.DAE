@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:18:32</created>
+    <modified>2015-03-04T16:18:32</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Estonia" name="Estonia">
+      <mesh>
+        <source id="geom-Estonia-positions">
+          <float_array id="geom-Estonia-positions-array" count="108">-4.278412 -5.93576 0 5.087799 -13.9144 0 9.597473 -13.9144 0 11.33194 -6.97644 0 10.98505 -3.85437 0 7.516083 -1.426086 0 9.597473 3.083588 0 13.76022 4.124268 0 14.8009 8.980835 0 -0.4625549 13.8374 0 -1.503235 12.10291 0 -8.441193 11.06223 0 -13.99155 9.674622 0 -14.68533 2.736664 0 -12.60397 -3.507477 0 -9.828766 -4.201263 0 -8.094299 -3.507477 0 -8.788086 -8.364044 0 -4.278412 -5.93576 25 5.087799 -13.9144 25 9.597473 -13.9144 25 11.33194 -6.97644 25 10.98505 -3.85437 25 7.516083 -1.426086 25 9.597473 3.083588 25 13.76022 4.124268 25 14.8009 8.980835 25 -0.4625549 13.8374 25 -1.503235 12.10291 25 -8.441193 11.06223 25 -13.99155 9.674622 25 -14.68533 2.736664 25 -12.60397 -3.507477 25 -9.828766 -4.201263 25 -8.094299 -3.507477 25 -8.788086 -8.364044 25</float_array>
+          <technique_common>
+            <accessor source="#geom-Estonia-positions-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Estonia-normals">
+          <float_array id="geom-Estonia-normals-array" count="324">-0.6484671 -0.7612427 0 -0.6484671 -0.7612427 0 -0.6484671 -0.7612427 0 -0.6484671 -0.7612427 0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0.9701433 -0.2425326 0 0.9701433 -0.2425326 0 0.9701433 -0.2425326 0 0.9701433 -0.2425326 0 0.9938838 0.1104305 0 0.9938838 0.1104305 0 0.9938838 0.1104305 0 0.9938838 0.1104305 0 0.5734639 0.8192309 0 0.5734639 0.8192309 0 0.5734639 0.8192309 0 0.5734639 0.8192309 0 0.9079592 -0.4190586 0 0.9079593 -0.4190586 0 0.9079592 -0.4190586 0 0.9079593 -0.4190586 0 0.2425339 -0.9701429 0 0.2425339 -0.9701428 0 0.2425339 -0.9701429 0 0.2425339 -0.9701428 0 0.977803 -0.2095266 0 0.9778029 -0.2095266 0 0.977803 -0.2095266 0 0.9778029 -0.2095266 0 0.3032044 0.9529256 0 0.3032044 0.9529256 0 0.3032044 0.9529256 0 0.3032044 0.9529256 0 -0.857497 0.5144891 0 -0.857497 0.5144891 0 -0.857497 0.5144891 0 -0.857497 0.5144891 0 -0.1483385 0.9889367 0 -0.1483385 0.9889367 0 -0.1483385 0.9889367 0 -0.1483385 0.9889367 0 -0.2425381 0.9701419 0 -0.2425381 0.9701419 0 -0.2425381 0.9701419 0 -0.2425381 0.9701419 0 -0.9950373 0.09950242 0 -0.9950373 0.09950242 0 -0.9950373 0.09950242 0 -0.9950373 0.09950242 0 -0.9486842 -0.316225 0 -0.9486843 -0.316225 0 -0.9486842 -0.316225 0 -0.9486843 -0.316225 0 -0.2425306 -0.9701437 0 -0.2425306 -0.9701437 0 -0.2425306 -0.9701437 0 -0.2425306 -0.9701437 0 0.3713907 -0.9284767 0 0.3713907 -0.9284768 0 0.3713907 -0.9284767 0 0.3713907 -0.9284768 0 -0.9899498 0.1414196 0 -0.9899496 0.1414196 0 -0.9899498 0.1414196 0 -0.9899496 0.1414196 0 0.4740995 -0.8804712 0 0.4740995 -0.8804713 0 0.4740995 -0.8804712 0 0.4740995 -0.8804713 0 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Estonia-normals-array" count="108" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Estonia-map1">
+          <float_array id="geom-Estonia-map1-array" count="222">0 0 0 0.1175679 0 0 0.1606596 0 0 0.2289947 0 0 0.2590108 0 0 0.2994723 0 0 0.3469322 0 0 0.387933 0 0 0.4353928 0 0 0.5884458 0 0 0.607774 0 0 0.6748104 0 0 0.7294784 0 0 0.7961039 0 0 0.8589964 0 0 0.8863307 0 0 0.9041809 0 0 0.9510584 0 0 1 0 0 0 1 0 0.1175679 1 0 0.1606596 1 0 0.2289947 1 0 0.2590108 1 0 0.2994723 1 0 0.3469322 1 0 0.387933 1 0 0.4353928 1 0 0.5884458 1 0 0.607774 1 0 0.6748104 1 0 0.7294784 1 0 0.7961039 1 0 0.8589964 1 0 0.8863307 1 0 0.9041809 1 0 0.9510584 1 0 1 1 0 0.3529417 0.2874998 0 0.6705885 0 0 0.8235301 0 0 0.8823531 0.2500003 0 0.8705885 0.3625 0 0.7529416 0.45 0 0.8235301 0.6125003 0 0.9647062 0.6499998 0 0.9999999 0.8249999 0 0.4823531 1 0 0.4470594 0.9374996 0 0.2117646 0.9000001 0 0.02352917 0.8499996 0 0 0.5999993 0 0.0705875 0.3749999 0 0.1647062 0.3500002 0 0.2235292 0.3749999 0 0.2 0.1999998 0 0.3529417 0.2874998 0 0.6705885 0 0 0.8235301 0 0 0.8823531 0.2500003 0 0.8705885 0.3625 0 0.7529416 0.45 0 0.8235301 0.6125003 0 0.9647062 0.6499998 0 0.9999999 0.8249999 0 0.4823531 1 0 0.4470594 0.9374996 0 0.2117646 0.9000001 0 0.02352917 0.8499996 0 0 0.5999993 0 0.0705875 0.3749999 0 0.1647062 0.3500002 0 0.2235292 0.3749999 0 0.2 0.1999998 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Estonia-map1-array" count="74" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Estonia-vertices">
+          <input semantic="POSITION" source="#geom-Estonia-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="68">
+          <input semantic="VERTEX" source="#geom-Estonia-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Estonia-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Estonia-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 19 2 20 0 0 0 19 2 20 18 3 19 1 4 1 2 5 2 20 6 21 1 4 1 20 6 21 19 7 20 2 8 2 3 9 3 21 10 22 2 8 2 21 10 22 20 11 21 3 12 3 4 13 4 22 14 23 3 12 3 22 14 23 21 15 22 4 16 4 5 17 5 23 18 24 4 16 4 23 18 24 22 19 23 5 20 5 6 21 6 24 22 25 5 20 5 24 22 25 23 23 24 6 24 6 7 25 7 25 26 26 6 24 6 25 26 26 24 27 25 7 28 7 8 29 8 26 30 27 7 28 7 26 30 27 25 31 26 8 32 8 9 33 9 27 34 28 8 32 8 27 34 28 26 35 27 9 36 9 10 37 10 28 38 29 9 36 9 28 38 29 27 39 28 10 40 10 11 41 11 29 42 30 10 40 10 29 42 30 28 43 29 11 44 11 12 45 12 30 46 31 11 44 11 30 46 31 29 47 30 12 48 12 13 49 13 31 50 32 12 48 12 31 50 32 30 51 31 13 52 13 14 53 14 32 54 33 13 52 13 32 54 33 31 55 32 14 56 14 15 57 15 33 58 34 14 56 14 33 58 34 32 59 33 15 60 15 16 61 16 34 62 35 15 60 15 34 62 35 33 63 34 16 64 16 17 65 17 35 66 36 16 64 16 35 66 36 34 67 35 17 68 17 0 69 18 18 70 37 17 68 17 18 70 37 35 71 36 16 72 54 0 73 38 17 74 55 7 75 45 9 76 47 8 77 46 6 78 44 9 76 47 7 75 45 6 78 44 10 79 48 9 76 47 1 80 39 3 81 41 2 82 40 0 73 38 3 81 41 1 80 39 0 73 38 4 83 42 3 81 41 0 73 38 5 84 43 4 83 42 5 84 43 10 79 48 6 78 44 0 73 38 10 79 48 5 84 43 16 72 54 10 79 48 0 73 38 16 72 54 11 85 49 10 79 48 16 72 54 12 86 50 11 85 49 16 72 54 13 87 51 12 86 50 16 72 54 14 88 52 13 87 51 16 72 54 15 89 53 14 88 52 34 90 72 35 91 73 18 92 56 25 93 63 26 94 64 27 95 65 24 96 62 25 93 63 27 95 65 24 96 62 27 95 65 28 97 66 19 98 57 20 99 58 21 100 59 18 92 56 19 98 57 21 100 59 18 92 56 21 100 59 22 101 60 18 92 56 22 101 60 23 102 61 23 102 61 24 96 62 28 97 66 18 92 56 23 102 61 28 97 66 34 90 72 18 92 56 28 97 66 34 90 72 28 97 66 29 103 67 34 90 72 29 103 67 30 104 68 34 90 72 30 104 68 31 105 69 34 90 72 31 105 69 32 106 70 34 90 72 32 106 70 33 107 71</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Estonia" name="Estonia">
+        <matrix>1 0 0 430.6151 0 1 0 401.0517 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Estonia">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

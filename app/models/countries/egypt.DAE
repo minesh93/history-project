@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:18:07</created>
+    <modified>2015-03-04T16:18:07</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Egypt" name="Egypt">
+      <mesh>
+        <source id="geom-Egypt-positions">
+          <float_array id="geom-Egypt-positions-array" count="120">58.01855 3.677109 0 52.12131 1.248825 0 46.57095 2.636429 0 40.32681 -1.526352 0 31.65436 2.28952 0 30.96057 4.717804 0 23.32883 6.105392 0 14.30951 3.677109 0 0.4336243 -3.954636 0 -6.504333 -0.4856415 0 -15.52365 1.248825 0 -22.46158 3.677109 0 -35.99057 7.83989 0 -42.92853 6.799179 0 -45.35681 7.83989 0 -48.47888 5.758499 0 -47.09131 -1.526352 0 -50.90717 -12.28017 0 -49.17267 -19.21809 0 66.69101 -18.52431 0 58.01855 3.677109 25 52.12131 1.248825 25 46.57095 2.636429 25 40.32681 -1.526352 25 31.65436 2.28952 25 30.96057 4.717804 25 23.32883 6.105392 25 14.30951 3.677109 25 0.4336243 -3.954636 25 -6.504333 -0.4856415 25 -15.52365 1.248825 25 -22.46158 3.677109 25 -35.99057 7.83989 25 -42.92853 6.799179 25 -45.35681 7.83989 25 -48.47888 5.758499 25 -47.09131 -1.526352 25 -50.90717 -12.28017 25 -49.17267 -19.21809 25 66.69101 -18.52431 25</float_array>
+          <technique_common>
+            <accessor source="#geom-Egypt-positions-array" count="40" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Egypt-normals">
+          <float_array id="geom-Egypt-normals-array" count="360">-0.3807506 0.9246778 0 -0.3807505 0.9246778 0 -0.3807506 0.9246778 0 -0.3807505 0.9246778 0 0.2425381 0.9701419 0 0.2425381 0.9701419 0 0.2425381 0.9701419 0 0.2425381 0.9701419 0 -0.554702 0.832049 0 -0.554702 0.832049 0 -0.554702 0.832049 0 -0.554702 0.832049 0 0.4027379 0.9153154 0 0.4027379 0.9153154 0 0.4027379 0.9153154 0 0.4027379 0.9153154 0 0.9615249 0.274718 0 0.9615248 0.2747179 0 0.9615249 0.274718 0 0.9615248 0.2747179 0 0.1788853 0.98387 0 0.1788853 0.98387 0 0.1788853 0.98387 0 0.1788853 0.98387 0 -0.259974 0.9656156 0 -0.2599741 0.9656156 0 -0.259974 0.9656156 0 -0.2599741 0.9656156 0 -0.4819191 0.8762157 0 -0.4819191 0.8762156 0 -0.4819191 0.8762157 0 -0.4819191 0.8762156 0 0.4472152 0.8944265 0 0.4472152 0.8944265 0 0.4472152 0.8944265 0 0.4472152 0.8944265 0 0.1888456 0.9820068 0 0.1888455 0.9820067 0 0.1888456 0.9820068 0 0.1888455 0.9820067 0 0.3303515 0.943858 0 0.3303515 0.943858 0 0.3303515 0.943858 0 0.3303515 0.943858 0 0.2940868 0.9557788 0 0.2940868 0.9557788 0 0.2940868 0.9557788 0 0.2940868 0.9557788 0 -0.1483428 0.9889359 0 -0.1483428 0.988936 0 -0.1483428 0.9889359 0 -0.1483428 0.988936 0 0.3939249 0.9191426 0 0.3939249 0.9191427 0 0.3939249 0.9191426 0 0.3939249 0.9191427 0 -0.5547021 0.8320491 0 -0.554702 0.832049 0 -0.5547021 0.8320491 0 -0.554702 0.832049 0 -0.982339 -0.1871098 0 -0.982339 -0.1871098 0 -0.982339 -0.1871098 0 -0.982339 -0.1871098 0 -0.9424281 0.3344088 0 -0.9424281 0.3344088 0 -0.9424281 0.3344088 0 -0.9424281 0.3344088 0 -0.9701419 -0.2425377 0 -0.9701419 -0.2425376 0 -0.9701419 -0.2425377 0 -0.9701419 -0.2425376 0 0.005987849 -0.9999821 0 0.005987848 -0.9999821 0 0.005987849 -0.9999821 0 0.005987848 -0.9999821 0 0.9314569 0.3638515 0 0.9314569 0.3638515 0 0.9314569 0.3638515 0 0.9314569 0.3638515 0 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Egypt-normals-array" count="120" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Egypt-map1">
+          <float_array id="geom-Egypt-map1-array" count="246">0 0 0 0.02260985 0 0 0.04289248 0 0 0.06949743 0 0 0.1030874 0 0 0.1120406 0 0 0.1395401 0 0 0.1726539 0 0 0.2287959 0 0 0.2562955 0 0 0.2888565 0 0 0.3149158 0 0 0.3650976 0 0 0.3899691 0 0 0.3993352 0 0 0.4126377 0 0 0.4389281 0 0 0.4793814 0 0 0.5047346 0 0 0.9155 0 0 1 0 0 0 1 0 0.02260985 1 0 0.04289248 1 0 0.06949743 1 0 0.1030874 1 0 0.1120406 1 0 0.1395401 1 0 0.1726539 1 0 0.2287959 1 0 0.2562955 1 0 0.2888565 1 0 0.3149158 1 0 0.3650976 1 0 0.3899691 1 0 0.3993352 1 0 0.4126377 1 0 0.4389281 1 0 0.4793814 1 0 0.5047346 1 0 0.9155 1 0 1 1 0 0.9262534 0.8461533 0 0.876106 0.7564096 0 0.8289084 0.8076922 0 0.7758111 0.6538455 0 0.7020646 0.7948713 0 0.696165 0.884615 0 0.6312682 0.9358971 0 0.5545722 0.8461533 0 0.4365781 0.5641019 0 0.3775809 0.6923078 0 0.3008849 0.7564096 0 0.241888 0.8461533 0 0.1268438 1 0 0.06784661 0.9615378 0 0.04719762 1 0 0.02064899 0.9230767 0 0.03244827 0.6538455 0 0 0.2564096 0 0.01474935 0 0 0.9999999 0.02564074 0 0.9262534 0.8461533 0 0.876106 0.7564096 0 0.8289084 0.8076922 0 0.7758111 0.6538455 0 0.7020646 0.7948713 0 0.696165 0.884615 0 0.6312682 0.9358971 0 0.5545722 0.8461533 0 0.4365781 0.5641019 0 0.3775809 0.6923078 0 0.3008849 0.7564096 0 0.241888 0.8461533 0 0.1268438 1 0 0.06784661 0.9615378 0 0.04719762 1 0 0.02064899 0.9230767 0 0.03244827 0.6538455 0 0 0.2564096 0 0.01474935 0 0 0.9999999 0.02564074 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Egypt-map1-array" count="82" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Egypt-vertices">
+          <input semantic="POSITION" source="#geom-Egypt-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="76">
+          <input semantic="VERTEX" source="#geom-Egypt-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Egypt-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Egypt-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 21 2 22 0 0 0 21 2 22 20 3 21 1 4 1 2 5 2 22 6 23 1 4 1 22 6 23 21 7 22 2 8 2 3 9 3 23 10 24 2 8 2 23 10 24 22 11 23 3 12 3 4 13 4 24 14 25 3 12 3 24 14 25 23 15 24 4 16 4 5 17 5 25 18 26 4 16 4 25 18 26 24 19 25 5 20 5 6 21 6 26 22 27 5 20 5 26 22 27 25 23 26 6 24 6 7 25 7 27 26 28 6 24 6 27 26 28 26 27 27 7 28 7 8 29 8 28 30 29 7 28 7 28 30 29 27 31 28 8 32 8 9 33 9 29 34 30 8 32 8 29 34 30 28 35 29 9 36 9 10 37 10 30 38 31 9 36 9 30 38 31 29 39 30 10 40 10 11 41 11 31 42 32 10 40 10 31 42 32 30 43 31 11 44 11 12 45 12 32 46 33 11 44 11 32 46 33 31 47 32 12 48 12 13 49 13 33 50 34 12 48 12 33 50 34 32 51 33 13 52 13 14 53 14 34 54 35 13 52 13 34 54 35 33 55 34 14 56 14 15 57 15 35 58 36 14 56 14 35 58 36 34 59 35 15 60 15 16 61 16 36 62 37 15 60 15 36 62 37 35 63 36 16 64 16 17 65 17 37 66 38 16 64 16 37 66 38 36 67 37 17 68 17 18 69 18 38 70 39 17 68 17 38 70 39 37 71 38 18 72 18 19 73 19 39 74 40 18 72 18 39 74 40 38 75 39 19 76 19 0 77 20 20 78 41 19 76 19 20 78 41 39 79 40 19 80 61 1 81 43 0 82 42 17 83 59 19 80 61 18 84 60 16 85 58 19 80 61 17 83 59 15 86 57 19 80 61 16 85 58 4 87 46 6 88 48 5 89 47 13 90 55 15 86 57 14 91 56 1 81 43 3 92 45 2 93 44 19 80 61 3 92 45 1 81 43 4 87 46 7 94 49 6 88 48 4 87 46 8 95 50 7 94 49 3 92 45 8 95 50 4 87 46 19 80 61 8 95 50 3 92 45 15 86 57 8 95 50 19 80 61 15 86 57 9 96 51 8 95 50 15 86 57 10 97 52 9 96 51 15 86 57 11 98 53 10 97 52 15 86 57 12 99 54 11 98 53 15 86 57 13 90 55 12 99 54 39 100 81 20 101 62 21 102 63 37 103 79 38 104 80 39 100 81 36 105 78 37 103 79 39 100 81 35 106 77 36 105 78 39 100 81 24 107 66 25 108 67 26 109 68 33 110 75 34 111 76 35 106 77 21 102 63 22 112 64 23 113 65 39 100 81 21 102 63 23 113 65 24 107 66 26 109 68 27 114 69 24 107 66 27 114 69 28 115 70 23 113 65 24 107 66 28 115 70 39 100 81 23 113 65 28 115 70 35 106 77 39 100 81 28 115 70 35 106 77 28 115 70 29 116 71 35 106 77 29 116 71 30 117 72 35 106 77 30 117 72 31 118 73 35 106 77 31 118 73 32 119 74 35 106 77 32 119 74 33 110 75</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Egypt" name="Egypt">
+        <matrix>1 0 0 448.7982 0 1 0 48.01057 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Egypt">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

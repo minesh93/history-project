@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:17:49</created>
+    <modified>2015-03-04T16:17:49</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-EastPrussia" name="EastPrussia">
+      <mesh>
+        <source id="geom-EastPrussia-positions">
+          <float_array id="geom-EastPrussia-positions-array" count="108">-15.10941 -2.409027 0 -14.41559 -5.877991 0 -3.31488 -8.306274 0 -0.5397034 -10.38766 0 5.010651 -10.38766 0 8.132721 -10.73456 0 13.68307 -8.306274 0 14.02997 -4.143524 0 16.45825 -0.67453 0 15.41757 6.263397 0 8.479614 7.997894 0 1.194763 11.81375 0 -1.580414 9.732391 0 -5.049377 10.07928 0 -6.090057 5.569611 0 -9.905945 2.794434 0 -13.37491 3.835144 0 -13.02802 3.141327 0 -15.10941 -2.409027 25 -14.41559 -5.877991 25 -3.31488 -8.306274 25 -0.5397034 -10.38766 25 5.010651 -10.38766 25 8.132721 -10.73456 25 13.68307 -8.306274 25 14.02997 -4.143524 25 16.45825 -0.67453 25 15.41757 6.263397 25 8.479614 7.997894 25 1.194763 11.81375 25 -1.580414 9.732391 25 -5.049377 10.07928 25 -6.090057 5.569611 25 -9.905945 2.794434 25 -13.37491 3.835144 25 -13.02802 3.141327 25</float_array>
+          <technique_common>
+            <accessor source="#geom-EastPrussia-positions-array" count="36" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-EastPrussia-normals">
+          <float_array id="geom-EastPrussia-normals-array" count="324">-0.9805794 -0.1961228 0 -0.9805793 -0.1961228 0 -0.9805794 -0.1961228 0 -0.9805793 -0.1961228 0 -0.2136972 -0.9768999 0 -0.2136972 -0.9768999 0 -0.2136972 -0.9768999 0 -0.2136972 -0.9768999 0 -0.6000015 -0.7999989 0 -0.6000015 -0.7999989 0 -0.6000015 -0.7999989 0 -0.6000015 -0.7999989 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -0.1104305 -0.9938838 0 -0.1104305 -0.9938838 0 -0.1104305 -0.9938838 0 -0.1104305 -0.9938838 0 0.4008193 -0.9161571 0 0.4008194 -0.9161571 0 0.4008193 -0.9161571 0 0.4008194 -0.9161571 0 0.9965458 -0.08304487 0 0.9965457 -0.08304487 0 0.9965458 -0.08304487 0 0.9965457 -0.08304487 0 0.8192333 -0.5734604 0 0.8192333 -0.5734605 0 0.8192333 -0.5734604 0 0.8192333 -0.5734605 0 0.9889366 0.1483392 0 0.9889365 0.1483392 0 0.9889366 0.1483392 0 0.9889365 0.1483392 0 0.2425366 0.9701422 0 0.2425366 0.9701423 0 0.2425366 0.9701422 0 0.2425366 0.9701423 0 0.4640053 0.8858324 0 0.4640054 0.8858324 0 0.4640053 0.8858324 0 0.4640054 0.8858324 0 -0.5999958 0.8000032 0 -0.5999958 0.8000032 0 -0.5999958 0.8000032 0 -0.5999958 0.8000032 0 0.09950285 0.9950373 0 0.09950285 0.9950373 0 0.09950285 0.9950373 0 0.09950285 0.9950373 0 -0.9743919 0.2248566 0 -0.9743919 0.2248566 0 -0.9743919 0.2248566 0 -0.9743919 0.2248566 0 -0.5881698 0.8087375 0 -0.5881698 0.8087375 0 -0.5881698 0.8087375 0 -0.5881698 0.8087375 0 0.2873533 0.9578246 0 0.2873533 0.9578247 0 0.2873533 0.9578246 0 0.2873533 0.9578247 0 -0.894435 -0.4471979 0 -0.8944351 -0.4471979 0 -0.894435 -0.4471979 0 -0.8944351 -0.4471979 0 -0.9363288 0.3511246 0 -0.9363288 0.3511246 0 -0.9363288 0.3511246 0 -0.9363288 0.3511246 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-EastPrussia-normals-array" count="108" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-EastPrussia-map1">
+          <float_array id="geom-EastPrussia-map1-array" count="222">0 0 0 0.03906905 0 0 0.1645612 0 0 0.2028716 0 0 0.2641682 0 0 0.2988597 0 0 0.3657659 0 0 0.4118976 0 0 0.4586616 0 0 0.5361394 0 0 0.6151184 0 0 0.7059392 0 0 0.7442495 0 0 0.7827508 0 0 0.8338634 0 0 0.8859713 0 0 0.9259685 0 0 0.9345352 0 0 1 0 0 0 1 0 0.03906905 1 0 0.1645612 1 0 0.2028716 1 0 0.2641682 1 0 0.2988597 1 0 0.3657659 1 0 0.4118976 1 0 0.4586616 1 0 0.5361394 1 0 0.6151184 1 0 0.7059392 1 0 0.7442495 1 0 0.7827508 1 0 0.8338634 1 0 0.8859713 1 0 0.9259685 1 0 0.9345352 1 0 1 1 0 0 0.3692308 0 0.02197873 0.215385 0 0.3736269 0.1076925 0 0.4615389 0.01538445 0 0.637363 0.01538445 0 0.7362639 0 0 0.9120879 0.1076925 0 0.9230768 0.2923072 0 1 0.4461544 0 0.9670333 0.7538461 0 0.7472528 0.8307697 0 0.5164833 1 0 0.4285713 0.9076933 0 0.3186815 0.9230778 0 0.2857148 0.7230772 0 0.1648352 0.6000003 0 0.05494538 0.646155 0 0.06593426 0.6153847 0 0 0.3692308 0 0.02197873 0.215385 0 0.3736269 0.1076925 0 0.4615389 0.01538445 0 0.637363 0.01538445 0 0.7362639 0 0 0.9120879 0.1076925 0 0.9230768 0.2923072 0 1 0.4461544 0 0.9670333 0.7538461 0 0.7472528 0.8307697 0 0.5164833 1 0 0.4285713 0.9076933 0 0.3186815 0.9230778 0 0.2857148 0.7230772 0 0.1648352 0.6000003 0 0.05494538 0.646155 0 0.06593426 0.6153847 0</float_array>
+          <technique_common>
+            <accessor source="#geom-EastPrussia-map1-array" count="74" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-EastPrussia-vertices">
+          <input semantic="POSITION" source="#geom-EastPrussia-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="68">
+          <input semantic="VERTEX" source="#geom-EastPrussia-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-EastPrussia-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-EastPrussia-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 19 2 20 0 0 0 19 2 20 18 3 19 1 4 1 2 5 2 20 6 21 1 4 1 20 6 21 19 7 20 2 8 2 3 9 3 21 10 22 2 8 2 21 10 22 20 11 21 3 12 3 4 13 4 22 14 23 3 12 3 22 14 23 21 15 22 4 16 4 5 17 5 23 18 24 4 16 4 23 18 24 22 19 23 5 20 5 6 21 6 24 22 25 5 20 5 24 22 25 23 23 24 6 24 6 7 25 7 25 26 26 6 24 6 25 26 26 24 27 25 7 28 7 8 29 8 26 30 27 7 28 7 26 30 27 25 31 26 8 32 8 9 33 9 27 34 28 8 32 8 27 34 28 26 35 27 9 36 9 10 37 10 28 38 29 9 36 9 28 38 29 27 39 28 10 40 10 11 41 11 29 42 30 10 40 10 29 42 30 28 43 29 11 44 11 12 45 12 30 46 31 11 44 11 30 46 31 29 47 30 12 48 12 13 49 13 31 50 32 12 48 12 31 50 32 30 51 31 13 52 13 14 53 14 32 54 33 13 52 13 32 54 33 31 55 32 14 56 14 15 57 15 33 58 34 14 56 14 33 58 34 32 59 33 15 60 15 16 61 16 34 62 35 15 60 15 34 62 35 33 63 34 16 64 16 17 65 17 35 66 36 16 64 16 35 66 36 34 67 35 17 68 17 0 69 18 18 70 37 17 68 17 18 70 37 35 71 36 15 72 53 17 73 55 16 74 54 12 75 50 14 76 52 13 77 51 15 72 53 0 78 38 17 73 55 8 79 46 10 80 48 9 81 47 7 82 45 10 80 48 8 79 46 0 78 38 2 83 40 1 84 39 15 72 53 2 83 40 0 78 38 14 76 52 2 83 40 15 72 53 10 80 48 12 75 50 11 85 49 5 86 43 7 82 45 6 87 44 5 86 43 10 80 48 7 82 45 4 88 42 10 80 48 5 86 43 4 88 42 12 75 50 10 80 48 4 88 42 14 76 52 12 75 50 4 88 42 2 83 40 14 76 52 3 89 41 2 83 40 4 88 42 33 90 71 34 91 72 35 92 73 30 93 68 31 94 69 32 95 70 33 90 71 35 92 73 18 96 56 26 97 64 27 98 65 28 99 66 25 100 63 26 97 64 28 99 66 18 96 56 19 101 57 20 102 58 33 90 71 18 96 56 20 102 58 32 95 70 33 90 71 20 102 58 28 99 66 29 103 67 30 93 68 23 104 61 24 105 62 25 100 63 23 104 61 25 100 63 28 99 66 22 106 60 23 104 61 28 99 66 22 106 60 28 99 66 30 93 68 22 106 60 30 93 68 32 95 70 22 106 60 32 95 70 20 102 58 21 107 59 22 106 60 20 102 58</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-EastPrussia" name="EastPrussia">
+        <matrix>1 0 0 391.8398 0 1 0 348.2655 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-EastPrussia">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

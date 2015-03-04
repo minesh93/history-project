@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:28:51</created>
+    <modified>2015-03-04T16:28:51</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-SpanishArea" name="SpanishArea">
+      <mesh>
+        <source id="geom-SpanishArea-positions">
+          <float_array id="geom-SpanishArea-positions-array" count="96">-12.61838 4.292862 0 -9.149414 -1.257492 0 -1.170776 -5.073364 0 6.114059 -10.62372 0 12.01131 -9.929916 0 14.09268 -13.74579 0 18.94925 -11.3175 0 12.70511 -4.032669 0 8.542328 -3.68576 0 2.991974 -0.2167969 0 -1.170776 0.477005 0 -5.333557 5.333557 0 -6.72113 11.57771 0 -6.374237 15.04668 0 -13.31219 14.35289 0 -19.55634 8.802536 0 -12.61838 4.292862 25 -9.149414 -1.257492 25 -1.170776 -5.073364 25 6.114059 -10.62372 25 12.01131 -9.929916 25 14.09268 -13.74579 25 18.94925 -11.3175 25 12.70511 -4.032669 25 8.542328 -3.68576 25 2.991974 -0.2167969 25 -1.170776 0.477005 25 -5.333557 5.333557 25 -6.72113 11.57771 25 -6.374237 15.04668 25 -13.31219 14.35289 25 -19.55634 8.802536 25</float_array>
+          <technique_common>
+            <accessor source="#geom-SpanishArea-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-SpanishArea-normals">
+          <float_array id="geom-SpanishArea-normals-array" count="288">-0.8479987 -0.5299981 0 -0.8479989 -0.5299981 0 -0.8479987 -0.5299981 0 -0.8479989 -0.5299981 0 -0.4314556 -0.9021341 0 -0.4314557 -0.9021342 0 -0.4314556 -0.9021341 0 -0.4314557 -0.9021342 0 -0.6060434 -0.7954316 0 -0.6060435 -0.7954316 0 -0.6060434 -0.7954316 0 -0.6060435 -0.7954316 0 0.1168426 -0.9931505 0 0.1168426 -0.9931505 0 0.1168426 -0.9931505 0 0.1168426 -0.9931505 0 -0.8778965 -0.4788504 0 -0.8778965 -0.4788504 0 -0.8778965 -0.4788504 0 -0.8778965 -0.4788504 0 0.4472136 -0.8944271 0 0.4472136 -0.8944272 0 0.4472136 -0.8944271 0 0.4472136 -0.8944272 0 0.7592568 0.6507911 0 0.7592568 0.650791 0 0.7592568 0.6507911 0 0.7592568 0.650791 0 0.0830479 0.9965456 0 0.0830479 0.9965456 0 0.0830479 0.9965456 0 0.0830479 0.9965456 0 0.5299981 0.8479987 0 0.5299981 0.8479989 0 0.5299981 0.8479987 0 0.5299981 0.8479989 0 0.1644014 0.9863936 0 0.1644013 0.9863935 0 0.1644014 0.9863936 0 0.1644013 0.9863935 0 0.7592549 0.6507934 0 0.7592549 0.6507933 0 0.7592549 0.6507934 0 0.7592549 0.6507933 0 0.9761876 0.2169279 0 0.9761876 0.2169279 0 0.9761876 0.2169279 0 0.9761876 0.2169279 0 0.9950373 -0.09950285 0 0.9950373 -0.09950285 0 0.9950373 -0.09950285 0 0.9950373 -0.09950285 0 -0.09950242 0.9950373 0 -0.09950242 0.9950373 0 -0.09950242 0.9950373 0 -0.09950242 0.9950373 0 -0.6643643 0.7474089 0 -0.6643643 0.7474089 0 -0.6643643 0.7474089 0 -0.6643643 0.7474089 0 -0.5449885 -0.8384436 0 -0.5449885 -0.8384436 0 -0.5449885 -0.8384436 0 -0.5449885 -0.8384436 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-SpanishArea-normals-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-SpanishArea-map1">
+          <float_array id="geom-SpanishArea-map1-array" count="198">0 0 0 0.06252594 0 0 0.1470134 0 0 0.2345021 0 0 0.2912264 0 0 0.3327491 0 0 0.3846194 0 0 0.4762764 0 0 0.5161809 0 0 0.5787069 0 0 0.6190217 0 0 0.6801264 0 0 0.7412312 0 0 0.7745351 0 0 0.8411432 0 0 0.9209517 0 0 1 0 0 0 1 0 0.06252594 1 0 0.1470134 1 0 0.2345021 1 0 0.2912264 1 0 0.3327491 1 0 0.3846194 1 0 0.4762764 1 0 0.5161809 1 0 0.5787069 1 0 0.6190217 1 0 0.6801264 1 0 0.7412312 1 0 0.7745351 1 0 0.8411432 1 0 0.9209517 1 0 1 1 0 0.1801806 0.626506 0 0.2702704 0.4337349 0 0.4774777 0.3012047 0 0.6666668 0.1084336 0 0.8198199 0.1325302 0 0.8738737 0 0 1 0.08433747 0 0.8378381 0.3373494 0 0.7297296 0.349398 0 0.5855855 0.4698796 0 0.4774777 0.4939763 0 0.3693692 0.6626506 0 0.3333336 0.8795184 0 0.3423425 1 0 0.1621619 0.9759039 0 0 0.7831329 0 0.1801806 0.626506 0 0.2702704 0.4337349 0 0.4774777 0.3012047 0 0.6666668 0.1084336 0 0.8198199 0.1325302 0 0.8738737 0 0 1 0.08433747 0 0.8378381 0.3373494 0 0.7297296 0.349398 0 0.5855855 0.4698796 0 0.4774777 0.4939763 0 0.3693692 0.6626506 0 0.3333336 0.8795184 0 0.3423425 1 0 0.1621619 0.9759039 0 0 0.7831329 0</float_array>
+          <technique_common>
+            <accessor source="#geom-SpanishArea-map1-array" count="66" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-SpanishArea-vertices">
+          <input semantic="POSITION" source="#geom-SpanishArea-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="60">
+          <input semantic="VERTEX" source="#geom-SpanishArea-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-SpanishArea-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-SpanishArea-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 17 2 18 0 0 0 17 2 18 16 3 17 1 4 1 2 5 2 18 6 19 1 4 1 18 6 19 17 7 18 2 8 2 3 9 3 19 10 20 2 8 2 19 10 20 18 11 19 3 12 3 4 13 4 20 14 21 3 12 3 20 14 21 19 15 20 4 16 4 5 17 5 21 18 22 4 16 4 21 18 22 20 19 21 5 20 5 6 21 6 22 22 23 5 20 5 22 22 23 21 23 22 6 24 6 7 25 7 23 26 24 6 24 6 23 26 24 22 27 23 7 28 7 8 29 8 24 30 25 7 28 7 24 30 25 23 31 24 8 32 8 9 33 9 25 34 26 8 32 8 25 34 26 24 35 25 9 36 9 10 37 10 26 38 27 9 36 9 26 38 27 25 39 26 10 40 10 11 41 11 27 42 28 10 40 10 27 42 28 26 43 27 11 44 11 12 45 12 28 46 29 11 44 11 28 46 29 27 47 28 12 48 12 13 49 13 29 50 30 12 48 12 29 50 30 28 51 29 13 52 13 14 53 14 30 54 31 13 52 13 30 54 31 29 55 30 14 56 14 15 57 15 31 58 32 14 56 14 31 58 32 30 59 31 15 60 15 0 61 16 16 62 33 15 60 15 16 62 33 31 63 32 14 64 48 0 65 34 15 66 49 5 67 39 7 68 41 6 69 40 4 70 38 7 68 41 5 67 39 12 71 46 14 64 48 13 72 47 12 71 46 0 65 34 14 64 48 11 73 45 0 65 34 12 71 46 11 73 45 1 74 35 0 65 34 10 75 44 1 74 35 11 73 45 10 75 44 2 76 36 1 74 35 9 77 43 2 76 36 10 75 44 9 77 43 3 78 37 2 76 36 8 79 42 3 78 37 9 77 43 8 79 42 4 70 38 3 78 37 8 79 42 7 68 41 4 70 38 30 80 64 31 81 65 16 82 50 21 83 55 22 84 56 23 85 57 20 86 54 21 83 55 23 85 57 28 87 62 29 88 63 30 80 64 28 87 62 30 80 64 16 82 50 27 89 61 28 87 62 16 82 50 27 89 61 16 82 50 17 90 51 26 91 60 27 89 61 17 90 51 26 91 60 17 90 51 18 92 52 25 93 59 26 91 60 18 92 52 25 93 59 18 92 52 19 94 53 24 95 58 25 93 59 19 94 53 24 95 58 19 94 53 20 86 54 24 95 58 20 86 54 23 85 57</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-SpanishArea" name="SpanishArea">
+        <matrix>1 0 0 106.6275 0 1 0 185.113 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-SpanishArea">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

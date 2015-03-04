@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:29:10</created>
+    <modified>2015-03-04T16:29:10</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Switzerland" name="Switzerland">
+      <mesh>
+        <source id="geom-Switzerland-positions">
+          <float_array id="geom-Switzerland-positions-array" count="120">9.453003 1.474304 0 11.88129 7.371552 0 4.249542 13.61569 0 2.515045 12.92191 0 2.861938 10.84052 0 -5.116699 12.57501 0 -18.2988 7.024658 0 -23.50224 1.127411 0 -15.87051 0.7804871 0 -15.87051 -5.11676 0 -10.66705 -7.545044 0 -5.810486 -6.504333 0 -1.994629 -6.504333 0 1.127472 -8.932617 0 5.984039 -4.07605 0 7.024719 -7.891937 0 11.18747 -7.545044 0 12.22818 -5.11676 0 13.26886 -5.11676 0 15.35025 -3.382263 0 9.453003 1.474304 25 11.88129 7.371552 25 4.249542 13.61569 25 2.515045 12.92191 25 2.861938 10.84052 25 -5.116699 12.57501 25 -18.2988 7.024658 25 -23.50224 1.127411 25 -15.87051 0.7804871 25 -15.87051 -5.11676 25 -10.66705 -7.545044 25 -5.810486 -6.504333 25 -1.994629 -6.504333 25 1.127472 -8.932617 25 5.984039 -4.07605 25 7.024719 -7.891937 25 11.18747 -7.545044 25 12.22818 -5.11676 25 13.26886 -5.11676 25 15.35025 -3.382263 25</float_array>
+          <technique_common>
+            <accessor source="#geom-Switzerland-positions-array" count="40" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Switzerland-normals">
+          <float_array id="geom-Switzerland-normals-array" count="360">0.9246778 -0.3807506 0 0.9246778 -0.3807505 0 0.9246778 -0.3807506 0 0.9246778 -0.3807505 0 0.6332369 0.773958 0 0.633237 0.773958 0 0.6332369 0.773958 0 0.633237 0.773958 0 -0.371385 0.9284789 0 -0.371385 0.928479 0 -0.371385 0.9284789 0 -0.371385 0.928479 0 -0.9863943 -0.1643966 0 -0.9863943 -0.1643966 0 -0.9863943 -0.1643966 0 -0.9863943 -0.1643966 0 0.2124309 0.9771762 0 0.2124309 0.9771762 0 0.2124309 0.9771762 0 0.2124309 0.9771762 0 -0.3880568 0.9216355 0 -0.3880568 0.9216355 0 -0.3880568 0.9216355 0 -0.3880568 0.9216355 0 -0.7498383 0.6616211 0 -0.7498382 0.661621 0 -0.7498383 0.6616211 0 -0.7498382 0.661621 0 -0.04541119 -0.9989684 0 -0.04541119 -0.9989683 0 -0.04541119 -0.9989684 0 -0.04541119 -0.9989683 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.4228857 -0.906183 0 -0.4228857 -0.9061829 0 -0.4228857 -0.906183 0 -0.4228857 -0.9061829 0 0.2095325 -0.9778017 0 0.2095325 -0.9778017 0 0.2095325 -0.9778017 0 0.2095325 -0.9778017 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 -0.6139379 -0.7893543 0 -0.6139379 -0.7893542 0 -0.6139379 -0.7893543 0 -0.6139379 -0.7893542 0 0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 -0.9647649 -0.2631135 0 -0.9647649 -0.2631135 0 -0.9647649 -0.2631135 0 -0.9647649 -0.2631135 0 0.08304487 -0.9965458 0 0.08304487 -0.9965457 0 0.08304487 -0.9965458 0 0.08304487 -0.9965457 0 0.9191426 -0.3939249 0 0.9191427 -0.3939249 0 0.9191426 -0.3939249 0 0.9191427 -0.3939249 0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0.6401855 -0.7682204 0 0.6401855 -0.7682204 0 0.6401855 -0.7682204 0 0.6401855 -0.7682204 0 0.6357082 0.7719295 0 0.6357082 0.7719296 0 0.6357082 0.7719295 0 0.6357082 0.7719296 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -0.9999999 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 0.9999999 0 0 0.9999999 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 0.9999999 0 0 0.9999999 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Switzerland-normals-array" count="120" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Switzerland-map1">
+          <float_array id="geom-Switzerland-map1-array" count="246">0 0 0 0.05714803 0 0 0.1455066 0 0 0.1622462 0 0 0.1811542 0 0 0.2543183 0 0 0.3824828 0 0 0.4529561 0 0 0.5214124 0 0 0.5742558 0 0 0.6257098 0 0 0.670216 0 0 0.7044088 0 0 0.7398508 0 0 0.8013949 0 0 0.8368368 0 0 0.8742672 0 0 0.8979405 0 0 0.9072658 0 0 0.9315436 0 0 1 0 0 0 1 0 0.05714803 1 0 0.1455066 1 0 0.1622462 1 0 0.1811542 1 0 0.2543183 1 0 0.3824828 1 0 0.4529561 1 0 0.5214124 1 0 0.5742558 1 0 0.6257098 1 0 0.670216 1 0 0.7044088 1 0 0.7398508 1 0 0.8013949 1 0 0.8368368 1 0 0.8742672 1 0 0.8979405 1 0 0.9072658 1 0 0.9315436 1 0 1 1 0 0.8482144 0.4615389 0 0.9107145 0.7230772 0 0.7142858 1 0 0.6696427 0.9692311 0 0.6785712 0.8769231 0 0.473214 0.9538466 0 0.1339282 0.7076927 0 0 0.4461544 0 0.1964283 0.4307686 0 0.1964283 0.1692303 0 0.3303569 0.06153779 0 0.455357 0.1076925 0 0.553571 0.1076925 0 0.6339288 0 0 0.758929 0.215385 0 0.7857143 0.04615335 0 0.8928568 0.06153779 0 0.919643 0.1692303 0 0.9464284 0.1692303 0 1 0.2461539 0 0.8482144 0.4615389 0 0.9107145 0.7230772 0 0.7142858 1 0 0.6696427 0.9692311 0 0.6785712 0.8769231 0 0.473214 0.9538466 0 0.1339282 0.7076927 0 0 0.4461544 0 0.1964283 0.4307686 0 0.1964283 0.1692303 0 0.3303569 0.06153779 0 0.455357 0.1076925 0 0.553571 0.1076925 0 0.6339288 0 0 0.758929 0.215385 0 0.7857143 0.04615335 0 0.8928568 0.06153779 0 0.919643 0.1692303 0 0.9464284 0.1692303 0 1 0.2461539 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Switzerland-map1-array" count="82" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Switzerland-vertices">
+          <input semantic="POSITION" source="#geom-Switzerland-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="76">
+          <input semantic="VERTEX" source="#geom-Switzerland-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Switzerland-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Switzerland-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 21 2 22 0 0 0 21 2 22 20 3 21 1 4 1 2 5 2 22 6 23 1 4 1 22 6 23 21 7 22 2 8 2 3 9 3 23 10 24 2 8 2 23 10 24 22 11 23 3 12 3 4 13 4 24 14 25 3 12 3 24 14 25 23 15 24 4 16 4 5 17 5 25 18 26 4 16 4 25 18 26 24 19 25 5 20 5 6 21 6 26 22 27 5 20 5 26 22 27 25 23 26 6 24 6 7 25 7 27 26 28 6 24 6 27 26 28 26 27 27 7 28 7 8 29 8 28 30 29 7 28 7 28 30 29 27 31 28 8 32 8 9 33 9 29 34 30 8 32 8 29 34 30 28 35 29 9 36 9 10 37 10 30 38 31 9 36 9 30 38 31 29 39 30 10 40 10 11 41 11 31 42 32 10 40 10 31 42 32 30 43 31 11 44 11 12 45 12 32 46 33 11 44 11 32 46 33 31 47 32 12 48 12 13 49 13 33 50 34 12 48 12 33 50 34 32 51 33 13 52 13 14 53 14 34 54 35 13 52 13 34 54 35 33 55 34 14 56 14 15 57 15 35 58 36 14 56 14 35 58 36 34 59 35 15 60 15 16 61 16 36 62 37 15 60 15 36 62 37 35 63 36 16 64 16 17 65 17 37 66 38 16 64 16 37 66 38 36 67 37 17 68 17 18 69 18 38 70 39 17 68 17 38 70 39 37 71 38 18 72 18 19 73 19 39 74 40 18 72 18 39 74 40 38 75 39 19 76 19 0 77 20 20 78 41 19 76 19 20 78 41 39 79 40 6 80 48 8 81 50 7 82 49 18 83 60 0 84 42 19 85 61 17 86 59 0 84 42 18 83 60 5 87 47 8 81 50 6 80 48 12 88 54 14 89 56 13 90 55 14 89 56 16 91 58 15 92 57 14 89 56 17 86 59 16 91 58 14 89 56 0 84 42 17 86 59 2 93 44 4 94 46 3 95 45 1 96 43 4 94 46 2 93 44 0 84 42 4 94 46 1 96 43 14 89 56 4 94 46 0 84 42 12 88 54 4 94 46 14 89 56 12 88 54 5 87 47 4 94 46 12 88 54 8 81 50 5 87 47 11 97 53 8 81 50 12 88 54 10 98 52 8 81 50 11 97 53 10 98 52 9 99 51 8 81 50 26 100 68 27 101 69 28 102 70 38 103 80 39 104 81 20 105 62 37 106 79 38 103 80 20 105 62 25 107 67 26 100 68 28 102 70 32 108 74 33 109 75 34 110 76 34 110 76 35 111 77 36 112 78 34 110 76 36 112 78 37 106 79 34 110 76 37 106 79 20 105 62 22 113 64 23 114 65 24 115 66 21 116 63 22 113 64 24 115 66 20 105 62 21 116 63 24 115 66 34 110 76 20 105 62 24 115 66 32 108 74 34 110 76 24 115 66 32 108 74 24 115 66 25 107 67 32 108 74 25 107 67 28 102 70 31 117 73 32 108 74 28 102 70 30 118 72 31 117 73 28 102 70 30 118 72 28 102 70 29 119 71</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Switzerland" name="Switzerland">
+        <matrix>1 0 0 275.6965 0 1 0 275.0028 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Switzerland">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:16:19</created>
+    <modified>2015-03-04T16:16:19</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Corsica" name="Corsica">
+      <mesh>
+        <source id="geom-Corsica-positions">
+          <float_array id="geom-Corsica-positions-array" count="72">0.5781555 -6.851227 0 3.353333 -1.300873 0 4.047119 4.249481 0 5.781586 7.71846 0 4.394012 8.75914 0 2.659515 5.63707 0 0.2312317 6.330872 0 -5.666016 4.249481 0 -4.625336 -1.300873 0 -6.359802 -6.504333 0 -3.237732 -9.973297 0 -1.156342 -11.01399 0 0.5781555 -6.851227 25 3.353333 -1.300873 25 4.047119 4.249481 25 5.781586 7.71846 25 4.394012 8.75914 25 2.659515 5.63707 25 0.2312317 6.330872 25 -5.666016 4.249481 25 -4.625336 -1.300873 25 -6.359802 -6.504333 25 -3.237732 -9.973297 25 -1.156342 -11.01399 25</float_array>
+          <technique_common>
+            <accessor source="#geom-Corsica-positions-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Corsica-normals">
+          <float_array id="geom-Corsica-normals-array" count="216">0.8944272 -0.4472136 0 0.8944272 -0.4472136 0 0.8944272 -0.4472136 0 0.8944272 -0.4472136 0 0.992278 -0.1240334 0 0.9922781 -0.1240334 0 0.992278 -0.1240334 0 0.9922781 -0.1240334 0 0.8944296 -0.4472089 0 0.8944296 -0.4472089 0 0.8944296 -0.4472089 0 0.8944296 -0.4472089 0 0.6 0.8 0 0.6 0.8 0 0.6 0.8 0 0.6 0.8 0 -0.8741556 0.4856458 0 -0.8741556 0.4856458 0 -0.8741556 0.4856458 0 -0.8741556 0.4856458 0 0.2747235 0.9615233 0 0.2747235 0.9615232 0 0.2747235 0.9615233 0 0.2747235 0.9615232 0 -0.3328214 0.9429899 0 -0.3328214 0.9429898 0 -0.3328214 0.9429899 0 -0.3328214 0.9429898 0 -0.9828725 -0.1842866 0 -0.9828725 -0.1842866 0 -0.9828725 -0.1842866 0 -0.9828725 -0.1842866 0 -0.9486845 0.3162245 0 -0.9486844 0.3162244 0 -0.9486845 0.3162245 0 -0.9486844 0.3162244 0 -0.7432938 -0.6689651 0 -0.7432938 -0.6689651 0 -0.7432938 -0.6689651 0 -0.7432938 -0.6689651 0 -0.4472136 -0.8944272 0 -0.4472136 -0.8944272 0 -0.4472136 -0.8944272 0 -0.4472136 -0.8944272 0 0.923076 -0.3846176 0 0.923076 -0.3846176 0 0.923076 -0.3846176 0 0.923076 -0.3846176 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Corsica-normals-array" count="72" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Corsica-map1">
+          <float_array id="geom-Corsica-map1-array" count="150">0 0 0 0.1184288 0 0 0.2251791 0 0 0.2991971 0 0 0.3322986 0 0 0.4004596 0 0 0.4486567 0 0 0.5680072 0 0 0.675779 0 0 0.7804563 0 0 0.8695241 0 0 0.9139351 0 0 1 0 0 0 1 0 0.1184288 1 0 0.2251791 1 0 0.2991971 1 0 0.3322986 1 0 0.4004596 1 0 0.4486567 1 0 0.5680072 1 0 0.675779 1 0 0.7804563 1 0 0.8695241 1 0 0.9139351 1 0 1 1 0 0.5714304 0.2105264 0 0.800002 0.4912282 0 0.8571443 0.77193 0 1 0.947369 0 0.8857154 1 0 0.7428572 0.8421054 0 0.5428567 0.8771936 0 0.05714228 0.77193 0 0.1428557 0.4912282 0 0 0.22807 0 0.2571428 0.05263178 0 0.4285721 0 0 0.5714304 0.2105264 0 0.800002 0.4912282 0 0.8571443 0.77193 0 1 0.947369 0 0.8857154 1 0 0.7428572 0.8421054 0 0.5428567 0.8771936 0 0.05714228 0.77193 0 0.1428557 0.4912282 0 0 0.22807 0 0.2571428 0.05263178 0 0.4285721 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Corsica-map1-array" count="50" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Corsica-vertices">
+          <input semantic="POSITION" source="#geom-Corsica-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="44">
+          <input semantic="VERTEX" source="#geom-Corsica-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Corsica-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Corsica-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 13 2 14 0 0 0 13 2 14 12 3 13 1 4 1 2 5 2 14 6 15 1 4 1 14 6 15 13 7 14 2 8 2 3 9 3 15 10 16 2 8 2 15 10 16 14 11 15 3 12 3 4 13 4 16 14 17 3 12 3 16 14 17 15 15 16 4 16 4 5 17 5 17 18 18 4 16 4 17 18 18 16 19 17 5 20 5 6 21 6 18 22 19 5 20 5 18 22 19 17 23 18 6 24 6 7 25 7 19 26 20 6 24 6 19 26 20 18 27 19 7 28 7 8 29 8 20 30 21 7 28 7 20 30 21 19 31 20 8 32 8 9 33 9 21 34 22 8 32 8 21 34 22 20 35 21 9 36 9 10 37 10 22 38 23 9 36 9 22 38 23 21 39 22 10 40 10 11 41 11 23 42 24 10 40 10 23 42 24 22 43 23 11 44 11 0 45 12 12 46 25 11 44 11 12 46 25 23 47 24 3 48 29 5 49 31 4 50 30 2 51 28 5 49 31 3 48 29 10 52 36 0 53 26 11 54 37 9 55 35 0 53 26 10 52 36 8 56 34 0 53 26 9 55 35 8 56 34 1 57 27 0 53 26 8 56 34 2 51 28 1 57 27 7 58 33 2 51 28 8 56 34 6 59 32 2 51 28 7 58 33 5 49 31 2 51 28 6 59 32 15 60 41 16 61 42 17 62 43 14 63 40 15 60 41 17 62 43 22 64 48 23 65 49 12 66 38 21 67 47 22 64 48 12 66 38 20 68 46 21 67 47 12 66 38 20 68 46 12 66 38 13 69 39 20 68 46 13 69 39 14 63 40 19 70 45 20 68 46 14 63 40 18 71 44 19 70 45 14 63 40 17 62 43 18 71 44 14 63 40</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Corsica" name="Corsica">
+        <matrix>1 0 0 264.7982 0 1 0 218.8054 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Corsica">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

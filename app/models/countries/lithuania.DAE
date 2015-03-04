@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:24:29</created>
+    <modified>2015-03-04T16:24:29</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Lithuania" name="Lithuania">
+      <mesh>
+        <source id="geom-Lithuania-positions">
+          <float_array id="geom-Lithuania-positions-array" count="120">-16.495 3.642426 0 -17.88257 0.8672485 0 -18.57639 0.5203552 0 -11.29153 -3.295502 0 -4.353577 -5.029999 0 -3.312897 -11.96793 0 -0.5377197 -14.7431 0 0.1560669 -17.86517 0 4.665741 -18.2121 0 13.68506 -13.00864 0 16.46024 -6.764465 0 23.0513 -0.867218 0 22.70438 3.642426 0 19.23541 7.458313 0 11.60367 11.96799 0 1.543671 13.70245 0 -2.966003 14.04935 0 -6.78186 15.09006 0 -15.45432 12.31488 0 -15.45432 8.498993 0 -16.495 3.642426 25 -17.88257 0.8672485 25 -18.57639 0.5203552 25 -11.29153 -3.295502 25 -4.353577 -5.029999 25 -3.312897 -11.96793 25 -0.5377197 -14.7431 25 0.1560669 -17.86517 25 4.665741 -18.2121 25 13.68506 -13.00864 25 16.46024 -6.764465 25 23.0513 -0.867218 25 22.70438 3.642426 25 19.23541 7.458313 25 11.60367 11.96799 25 1.543671 13.70245 25 -2.966003 14.04935 25 -6.78186 15.09006 25 -15.45432 12.31488 25 -15.45432 8.498993 25</float_array>
+          <technique_common>
+            <accessor source="#geom-Lithuania-positions-array" count="40" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Lithuania-normals">
+          <float_array id="geom-Lithuania-normals-array" count="360">-0.8944292 0.4472097 0 -0.8944291 0.4472097 0 -0.8944292 0.4472097 0 -0.8944291 0.4472097 0 -0.4471979 0.894435 0 -0.4471979 0.8944351 0 -0.4471979 0.894435 0 -0.4471979 0.8944351 0 -0.4640053 -0.8858324 0 -0.4640054 -0.8858324 0 -0.4640053 -0.8858324 0 -0.4640054 -0.8858324 0 -0.2425366 -0.9701422 0 -0.2425366 -0.9701423 0 -0.2425366 -0.9701422 0 -0.2425366 -0.9701423 0 -0.9889366 -0.1483392 0 -0.9889365 -0.1483392 0 -0.9889366 -0.1483392 0 -0.9889365 -0.1483392 0 -0.7071068 -0.7071068 0 -0.7071068 -0.7071068 0 -0.7071068 -0.7071068 0 -0.7071068 -0.7071068 0 -0.9761875 -0.2169285 0 -0.9761875 -0.2169284 0 -0.9761875 -0.2169285 0 -0.9761875 -0.2169284 0 -0.07670217 -0.997054 0 -0.07670218 -0.997054 0 -0.07670217 -0.997054 0 -0.07670218 -0.997054 0 0.499723 -0.8661853 0 0.4997231 -0.8661853 0 0.499723 -0.8661853 0 0.4997231 -0.8661853 0 0.9138121 -0.4061372 0 0.9138121 -0.4061372 0 0.9138121 -0.4061372 0 0.9138121 -0.4061372 0 0.6667936 -0.7452425 0 0.6667935 -0.7452425 0 0.6667936 -0.7452425 0 0.6667935 -0.7452425 0 0.997054 0.0767027 0 0.997054 0.0767027 0 0.997054 0.0767027 0 0.997054 0.0767027 0 0.7399424 0.6726701 0 0.7399425 0.6726701 0 0.7399424 0.6726701 0 0.7399425 0.6726701 0 0.5087299 0.8609262 0 0.5087299 0.8609262 0 0.5087299 0.8609262 0 0.5087299 0.8609262 0 0.1699054 0.9854604 0 0.1699054 0.9854603 0 0.1699054 0.9854604 0 0.1699054 0.9854603 0 0.07669547 0.9970546 0 0.07669547 0.9970546 0 0.07669547 0.9970546 0 0.07669547 0.9970546 0 0.2631226 0.9647624 0 0.2631226 0.9647624 0 0.2631226 0.9647624 0 0.2631226 0.9647624 0 -0.3047749 0.9524244 0 -0.3047749 0.9524245 0 -0.3047749 0.9524244 0 -0.3047749 0.9524245 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.977803 0.2095266 0 -0.9778029 0.2095266 0 -0.977803 0.2095266 0 -0.9778029 0.2095266 0 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Lithuania-normals-array" count="120" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Lithuania-map1">
+          <float_array id="geom-Lithuania-map1-array" count="246">0 0 0 0.02604612 0 0 0.03255782 0 0 0.1015925 0 0 0.1616261 0 0 0.2205186 0 0 0.2534647 0 0 0.2803124 0 0 0.3182811 0 0 0.4056911 0 0 0.463052 0 0 0.5372952 0 0 0.5752636 0 0 0.6185544 0 0 0.6929686 0 0 0.7786639 0 0 0.8166325 0 0 0.849835 0 0 0.926273 0 0 0.9583058 0 0 1 0 0 0 1 0 0.02604612 1 0 0.03255782 1 0 0.1015925 1 0 0.1616261 1 0 0.2205186 1 0 0.2534647 1 0 0.2803124 1 0 0.3182811 1 0 0.4056911 1 0 0.463052 1 0 0.5372952 1 0 0.5752636 1 0 0.6185544 1 0 0.6929686 1 0 0.7786639 1 0 0.8166325 1 0 0.849835 1 0 0.926273 1 0 0.9583058 1 0 1 1 0 0.05000015 0.6562495 0 0.0166672 0.5729163 0 0 0.5624997 0 0.1750001 0.4479168 0 0.3416671 0.3958332 0 0.3666668 0.1875005 0 0.4333334 0.1041673 0 0.4499999 0.01041746 0 0.5583334 0 0 0.7749997 0.15625 0 0.8416663 0.3437505 0 1 0.5208336 0 0.9916661 0.6562495 0 0.9083329 0.7708333 0 0.7249996 0.9062502 0 0.4833336 0.958333 0 0.375 0.9687495 0 0.2833337 1 0 0.07499985 0.9166667 0 0.07499985 0.802083 0 0.05000015 0.6562495 0 0.0166672 0.5729163 0 0 0.5624997 0 0.1750001 0.4479168 0 0.3416671 0.3958332 0 0.3666668 0.1875005 0 0.4333334 0.1041673 0 0.4499999 0.01041746 0 0.5583334 0 0 0.7749997 0.15625 0 0.8416663 0.3437505 0 1 0.5208336 0 0.9916661 0.6562495 0 0.9083329 0.7708333 0 0.7249996 0.9062502 0 0.4833336 0.958333 0 0.375 0.9687495 0 0.2833337 1 0 0.07499985 0.9166667 0 0.07499985 0.802083 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Lithuania-map1-array" count="82" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Lithuania-vertices">
+          <input semantic="POSITION" source="#geom-Lithuania-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="76">
+          <input semantic="VERTEX" source="#geom-Lithuania-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Lithuania-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Lithuania-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 21 2 22 0 0 0 21 2 22 20 3 21 1 4 1 2 5 2 22 6 23 1 4 1 22 6 23 21 7 22 2 8 2 3 9 3 23 10 24 2 8 2 23 10 24 22 11 23 3 12 3 4 13 4 24 14 25 3 12 3 24 14 25 23 15 24 4 16 4 5 17 5 25 18 26 4 16 4 25 18 26 24 19 25 5 20 5 6 21 6 26 22 27 5 20 5 26 22 27 25 23 26 6 24 6 7 25 7 27 26 28 6 24 6 27 26 28 26 27 27 7 28 7 8 29 8 28 30 29 7 28 7 28 30 29 27 31 28 8 32 8 9 33 9 29 34 30 8 32 8 29 34 30 28 35 29 9 36 9 10 37 10 30 38 31 9 36 9 30 38 31 29 39 30 10 40 10 11 41 11 31 42 32 10 40 10 31 42 32 30 43 31 11 44 11 12 45 12 32 46 33 11 44 11 32 46 33 31 47 32 12 48 12 13 49 13 33 50 34 12 48 12 33 50 34 32 51 33 13 52 13 14 53 14 34 54 35 13 52 13 34 54 35 33 55 34 14 56 14 15 57 15 35 58 36 14 56 14 35 58 36 34 59 35 15 60 15 16 61 16 36 62 37 15 60 15 36 62 37 35 63 36 16 64 16 17 65 17 37 66 38 16 64 16 37 66 38 36 67 37 17 68 17 18 69 18 38 70 39 17 68 17 38 70 39 37 71 38 18 72 18 19 73 19 39 74 40 18 72 18 39 74 40 38 75 39 19 76 19 0 77 20 20 78 41 19 76 19 20 78 41 39 79 40 1 80 43 3 81 45 2 82 44 0 83 42 3 81 45 1 80 43 6 84 48 8 85 50 7 86 49 17 87 59 19 88 61 18 89 60 6 84 48 9 90 51 8 85 50 6 84 48 10 91 52 9 90 51 5 92 47 10 91 52 6 84 48 4 93 46 10 91 52 5 92 47 10 91 52 12 94 54 11 95 53 10 91 52 13 96 55 12 94 54 4 93 46 13 96 55 10 91 52 4 93 46 14 97 56 13 96 55 4 93 46 15 98 57 14 97 56 4 93 46 16 99 58 15 98 57 3 81 45 16 99 58 4 93 46 0 83 42 16 99 58 3 81 45 19 88 61 16 99 58 0 83 42 17 87 59 16 99 58 19 88 61 21 100 63 22 101 64 23 102 65 20 103 62 21 100 63 23 102 65 26 104 68 27 105 69 28 106 70 37 107 79 38 108 80 39 109 81 26 104 68 28 106 70 29 110 71 26 104 68 29 110 71 30 111 72 25 112 67 26 104 68 30 111 72 24 113 66 25 112 67 30 111 72 30 111 72 31 114 73 32 115 74 30 111 72 32 115 74 33 116 75 24 113 66 30 111 72 33 116 75 24 113 66 33 116 75 34 117 76 24 113 66 34 117 76 35 118 77 24 113 66 35 118 77 36 119 78 23 102 65 24 113 66 36 119 78 20 103 62 23 102 65 36 119 78 39 109 81 20 103 62 36 119 78 37 107 79 39 109 81 36 119 78</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Lithuania" name="Lithuania">
+        <matrix>1 0 0 411.6109 0 1 0 359.5589 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Lithuania">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

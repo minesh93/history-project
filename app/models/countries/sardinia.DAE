@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:27:36</created>
+    <modified>2015-03-04T16:27:36</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Sardinia" name="Sardinia">
+      <mesh>
+        <source id="geom-Sardinia-positions">
+          <float_array id="geom-Sardinia-positions-array" count="90">6.776031 -2.983322 0 6.776031 0.83255 0 9.551208 2.913925 0 9.204315 11.58636 0 5.735352 14.01463 0 0.1849823 10.54567 0 -3.977783 11.58636 0 -6.059158 8.811188 0 -4.324677 6.036011 0 -5.365356 0.1387482 0 -8.140533 -10.61507 0 -7.099854 -14.08403 0 -3.630875 -13.73714 0 -1.896393 -10.96196 0 2.266357 -14.08403 0 6.776031 -2.983322 25 6.776031 0.83255 25 9.551208 2.913925 25 9.204315 11.58636 25 5.735352 14.01463 25 0.1849823 10.54567 25 -3.977783 11.58636 25 -6.059158 8.811188 25 -4.324677 6.036011 25 -5.365356 0.1387482 25 -8.140533 -10.61507 25 -7.099854 -14.08403 25 -3.630875 -13.73714 25 -1.896393 -10.96196 25 2.266357 -14.08403 25</float_array>
+          <technique_common>
+            <accessor source="#geom-Sardinia-positions-array" count="30" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sardinia-normals">
+          <float_array id="geom-Sardinia-normals-array" count="270">1 0 0 1 0 0 1 0 0 1 0 0 0.5999987 -0.800001 0 0.5999986 -0.800001 0 0.5999987 -0.800001 0 0.5999986 -0.800001 0 0.9992009 0.03996755 0 0.9992009 0.03996755 0 0.9992009 0.03996755 0 0.9992009 0.03996755 0 0.5734614 0.8192326 0 0.5734614 0.8192326 0 0.5734614 0.8192326 0 0.5734614 0.8192326 0 -0.5299971 0.8479995 0 -0.529997 0.8479995 0 -0.5299971 0.8479995 0 -0.529997 0.8479995 0 0.2425365 0.9701423 0 0.2425365 0.9701423 0 0.2425365 0.9701423 0 0.2425365 0.9701423 0 -0.800001 0.5999987 0 -0.800001 0.5999986 0 -0.800001 0.5999987 0 -0.800001 0.5999986 0 -0.8479989 -0.5299981 0 -0.8479989 -0.5299981 0 -0.8479989 -0.5299981 0 -0.8479989 -0.5299981 0 -0.9847839 0.1737832 0 -0.9847839 0.1737832 0 -0.9847839 0.1737832 0 -0.9847839 0.1737832 0 -0.9682773 0.2498779 0 -0.9682773 0.2498779 0 -0.9682773 0.2498779 0 -0.9682773 0.2498779 0 -0.957827 -0.2873456 0 -0.957827 -0.2873456 0 -0.957827 -0.2873456 0 -0.957827 -0.2873456 0 0.09950242 -0.9950373 0 0.09950242 -0.9950373 0 0.09950242 -0.9950373 0 0.09950242 -0.9950373 0 0.8479989 -0.5299981 0 0.8479989 -0.5299981 0 0.8479989 -0.5299981 0 0.8479989 -0.5299981 0 -0.600001 -0.7999993 0 -0.6000009 -0.7999992 0 -0.600001 -0.7999993 0 -0.6000009 -0.7999992 0 0.9264662 -0.3763779 0 0.9264662 -0.3763779 0 0.9264662 -0.3763779 0 0.9264662 -0.3763779 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Sardinia-normals-array" count="90" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sardinia-map1">
+          <float_array id="geom-Sardinia-map1-array" count="186">0 0 0 0.04628853 0 0 0.08836892 0 0 0.1936543 0 0 0.2450199 0 0 0.3244172 0 0 0.3764678 0 0 0.4185482 0 0 0.4582468 0 0 0.530889 0 0 0.6656122 0 0 0.7095453 0 0 0.7518357 0 0 0.7915343 0 0 0.8546548 0 0 1 0 0 0 1 0 0.04628853 1 0 0.08836892 1 0 0.1936543 1 0 0.2450199 1 0 0.3244172 1 0 0.3764678 1 0 0.4185482 1 0 0.4582468 1 0 0.530889 1 0 0.6656122 1 0 0.7095453 1 0 0.7518357 1 0 0.7915343 1 0 0.8546548 1 0 1 1 0 0.8431371 0.3950618 0 0.8431371 0.5308644 0 1 0.6049383 0 0.9803923 0.9135807 0 0.7843142 1 0 0.4705877 0.8765435 0 0.2352934 0.9135807 0 0.1176467 0.8148152 0 0.2156858 0.7160498 0 0.1568628 0.5061728 0 0 0.1234565 0 0.05882292 0 0 0.2549019 0.01234554 0 0.352941 0.111111 0 0.5882344 0 0 0.8431371 0.3950618 0 0.8431371 0.5308644 0 1 0.6049383 0 0.9803923 0.9135807 0 0.7843142 1 0 0.4705877 0.8765435 0 0.2352934 0.9135807 0 0.1176467 0.8148152 0 0.2156858 0.7160498 0 0.1568628 0.5061728 0 0 0.1234565 0 0.05882292 0 0 0.2549019 0.01234554 0 0.352941 0.111111 0 0.5882344 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Sardinia-map1-array" count="62" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Sardinia-vertices">
+          <input semantic="POSITION" source="#geom-Sardinia-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="56">
+          <input semantic="VERTEX" source="#geom-Sardinia-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Sardinia-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Sardinia-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 16 2 17 0 0 0 16 2 17 15 3 16 1 4 1 2 5 2 17 6 18 1 4 1 17 6 18 16 7 17 2 8 2 3 9 3 18 10 19 2 8 2 18 10 19 17 11 18 3 12 3 4 13 4 19 14 20 3 12 3 19 14 20 18 15 19 4 16 4 5 17 5 20 18 21 4 16 4 20 18 21 19 19 20 5 20 5 6 21 6 21 22 22 5 20 5 21 22 22 20 23 21 6 24 6 7 25 7 22 26 23 6 24 6 22 26 23 21 27 22 7 28 7 8 29 8 23 30 24 7 28 7 23 30 24 22 31 23 8 32 8 9 33 9 24 34 25 8 32 8 24 34 25 23 35 24 9 36 9 10 37 10 25 38 26 9 36 9 25 38 26 24 39 25 10 40 10 11 41 11 26 42 27 10 40 10 26 42 27 25 43 26 11 44 11 12 45 12 27 46 28 11 44 11 27 46 28 26 47 27 12 48 12 13 49 13 28 50 29 12 48 12 28 50 29 27 51 28 13 52 13 14 53 14 29 54 30 13 52 13 29 54 30 28 55 29 14 56 14 0 57 15 15 58 31 14 56 14 15 58 31 29 59 30 13 60 45 0 61 32 14 62 46 10 63 42 12 64 44 11 65 43 10 63 42 13 60 45 12 64 44 9 66 41 13 60 45 10 63 42 9 66 41 0 61 32 13 60 45 9 66 41 1 67 33 0 61 32 8 68 40 1 67 33 9 66 41 6 69 38 8 68 40 7 70 39 5 71 37 8 68 40 6 69 38 5 71 37 1 67 33 8 68 40 5 71 37 2 72 34 1 67 33 5 71 37 3 73 35 2 72 34 4 74 36 3 73 35 5 71 37 28 75 60 29 76 61 15 77 47 25 78 57 26 79 58 27 80 59 25 78 57 27 80 59 28 75 60 24 81 56 25 78 57 28 75 60 24 81 56 28 75 60 15 77 47 24 81 56 15 77 47 16 82 48 23 83 55 24 81 56 16 82 48 21 84 53 22 85 54 23 83 55 20 86 52 21 84 53 23 83 55 20 86 52 23 83 55 16 82 48 20 86 52 16 82 48 17 87 49 20 86 52 17 87 49 18 88 50 19 89 51 20 86 52 18 88 50</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Sardinia" name="Sardinia">
+        <matrix>1 0 0 255.1313 0 1 0 193.083 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Sardinia">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

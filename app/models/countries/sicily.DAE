@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:27:49</created>
+    <modified>2015-03-04T16:27:49</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Sicily" name="Sicily">
+      <mesh>
+        <source id="geom-Sicily-positions">
+          <float_array id="geom-Sicily-positions-array" count="96">12.07635 -10.75381 0 10.34186 -5.203461 0 17.27982 5.203461 0 9.301178 4.509659 0 5.832214 3.815872 0 -2.146423 5.203461 0 -5.615417 9.019333 0 -8.737488 7.631744 0 -11.16574 9.71312 0 -14.28784 6.591049 0 -14.28784 3.468979 0 -9.084381 1.040695 0 -3.534027 -5.897247 0 2.016327 -8.325531 0 3.403931 -11.79451 0 8.607391 -14.22278 0 12.07635 -10.75381 25 10.34186 -5.203461 25 17.27982 5.203461 25 9.301178 4.509659 25 5.832214 3.815872 25 -2.146423 5.203461 25 -5.615417 9.019333 25 -8.737488 7.631744 25 -11.16574 9.71312 25 -14.28784 6.591049 25 -14.28784 3.468979 25 -9.084381 1.040695 25 -3.534027 -5.897247 25 2.016327 -8.325531 25 3.403931 -11.79451 25 8.607391 -14.22278 25</float_array>
+          <technique_common>
+            <accessor source="#geom-Sicily-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sicily-normals">
+          <float_array id="geom-Sicily-normals-array" count="288">0.9544794 0.2982768 0 0.9544793 0.2982768 0 0.9544794 0.2982768 0 0.9544793 0.2982768 0 0.83205 -0.5547008 0 0.8320499 -0.5547007 0 0.83205 -0.5547008 0 0.8320499 -0.5547007 0 -0.08663052 0.9962406 0 -0.08663052 0.9962405 0 -0.08663052 0.9962406 0 -0.08663052 0.9962405 0 -0.1961145 0.980581 0 -0.1961145 0.980581 0 -0.1961145 0.980581 0 -0.1961145 0.980581 0 0.1713411 0.9852118 0 0.1713411 0.9852118 0 0.1713411 0.9852118 0 0.1713411 0.9852118 0 0.7399382 0.6726748 0 0.7399381 0.6726748 0 0.7399382 0.6726748 0 0.7399381 0.6726748 0 -0.4061389 0.9138113 0 -0.4061389 0.9138113 0 -0.4061389 0.9138113 0 -0.4061389 0.9138113 0 0.6507941 0.7592543 0 0.6507941 0.7592543 0 0.6507941 0.7592543 0 0.6507941 0.7592543 0 -0.7071033 0.7071102 0 -0.7071033 0.7071102 0 -0.7071033 0.7071102 0 -0.7071033 0.7071102 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -0.4228857 -0.906183 0 -0.4228857 -0.9061829 0 -0.4228857 -0.906183 0 -0.4228857 -0.9061829 0 -0.7808688 -0.6246951 0 -0.7808688 -0.6246951 0 -0.7808688 -0.6246951 0 -0.7808688 -0.6246951 0 -0.4008193 -0.9161571 0 -0.4008194 -0.9161571 0 -0.4008193 -0.9161571 0 -0.4008194 -0.9161571 0 -0.9284755 -0.3713935 0 -0.9284755 -0.3713935 0 -0.9284755 -0.3713935 0 -0.9284755 -0.3713935 0 -0.4228836 -0.9061841 0 -0.4228836 -0.9061841 0 -0.4228836 -0.9061841 0 -0.4228836 -0.9061841 0 0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 0.7071068 -0.7071068 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Sicily-normals-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Sicily-map1">
+          <float_array id="geom-Sicily-map1-array" count="198">0 0 0 0.06297023 0 0 0.1984124 0 0 0.2851377 0 0 0.3234464 0 0 0.4111425 0 0 0.4669869 0 0 0.503984 0 0 0.5386168 0 0 0.5864292 0 0 0.6202376 0 0 0.6824186 0 0 0.7786316 0 0 0.8442358 0 0 0.8846945 0 0 0.9468754 0 0 1 0 0 0 1 0 0.06297023 1 0 0.1984124 1 0 0.2851377 1 0 0.3234464 1 0 0.4111425 1 0 0.4669869 1 0 0.503984 1 0 0.5386168 1 0 0.5864292 1 0 0.6202376 1 0 0.6824186 1 0 0.7786316 1 0 0.8442358 1 0 0.8846945 1 0 0.9468754 1 0 1 1 0 0.8351648 0.1449272 0 0.7802194 0.3768113 0 1 0.8115943 0 0.7472528 0.7826084 0 0.637363 0.7536233 0 0.3846157 0.8115943 0 0.274725 0.9710148 0 0.1758241 0.9130437 0 0.09890188 0.9999999 0 0 0.8695653 0 0 0.7391307 0 0.1648352 0.6376812 0 0.3406593 0.3478261 0 0.5164833 0.2463767 0 0.5604398 0.1014488 0 0.725275 0 0 0.8351648 0.1449272 0 0.7802194 0.3768113 0 1 0.8115943 0 0.7472528 0.7826084 0 0.637363 0.7536233 0 0.3846157 0.8115943 0 0.274725 0.9710148 0 0.1758241 0.9130437 0 0.09890188 0.9999999 0 0 0.8695653 0 0 0.7391307 0 0.1648352 0.6376812 0 0.3406593 0.3478261 0 0.5164833 0.2463767 0 0.5604398 0.1014488 0 0.725275 0 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Sicily-map1-array" count="66" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Sicily-vertices">
+          <input semantic="POSITION" source="#geom-Sicily-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="60">
+          <input semantic="VERTEX" source="#geom-Sicily-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Sicily-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Sicily-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 17 2 18 0 0 0 17 2 18 16 3 17 1 4 1 2 5 2 18 6 19 1 4 1 18 6 19 17 7 18 2 8 2 3 9 3 19 10 20 2 8 2 19 10 20 18 11 19 3 12 3 4 13 4 20 14 21 3 12 3 20 14 21 19 15 20 4 16 4 5 17 5 21 18 22 4 16 4 21 18 22 20 19 21 5 20 5 6 21 6 22 22 23 5 20 5 22 22 23 21 23 22 6 24 6 7 25 7 23 26 24 6 24 6 23 26 24 22 27 23 7 28 7 8 29 8 24 30 25 7 28 7 24 30 25 23 31 24 8 32 8 9 33 9 25 34 26 8 32 8 25 34 26 24 35 25 9 36 9 10 37 10 26 38 27 9 36 9 26 38 27 25 39 26 10 40 10 11 41 11 27 42 28 10 40 10 27 42 28 26 43 27 11 44 11 12 45 12 28 46 29 11 44 11 28 46 29 27 47 28 12 48 12 13 49 13 29 50 30 12 48 12 29 50 30 28 51 29 13 52 13 14 53 14 30 54 31 13 52 13 30 54 31 29 55 30 14 56 14 15 57 15 31 58 32 14 56 14 31 58 32 30 59 31 15 60 15 0 61 16 16 62 33 15 60 15 16 62 33 31 63 32 1 64 35 3 65 37 2 66 36 1 64 35 4 67 38 3 65 37 7 68 41 9 69 43 8 70 42 7 68 41 10 71 44 9 69 43 7 68 41 11 72 45 10 71 44 5 73 39 7 68 41 6 74 40 5 73 39 11 72 45 7 68 41 5 73 39 12 75 46 11 72 45 4 67 38 12 75 46 5 73 39 4 67 38 13 76 47 12 75 46 1 64 35 13 76 47 4 67 38 0 77 34 13 76 47 1 64 35 0 77 34 14 78 48 13 76 47 0 77 34 15 79 49 14 78 48 17 80 51 18 81 52 19 82 53 17 80 51 19 82 53 20 83 54 23 84 57 24 85 58 25 86 59 23 84 57 25 86 59 26 87 60 23 84 57 26 87 60 27 88 61 21 89 55 22 90 56 23 84 57 21 89 55 23 84 57 27 88 61 21 89 55 27 88 61 28 91 62 20 83 54 21 89 55 28 91 62 20 83 54 28 91 62 29 92 63 17 80 51 20 83 54 29 92 63 16 93 50 17 80 51 29 92 63 16 93 50 29 92 63 30 94 64 16 93 50 30 94 64 31 95 65</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Sicily" name="Sicily">
+        <matrix>1 0 0 295.6215 0 1 0 149.5127 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Sicily">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>

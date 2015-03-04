@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <contributor>
+      <author>Richard</author>
+      <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
+      <source_data>file:///C:/Users/Richard/SkyDrive/Documents/__Uni_Final_Year__/Media/Project/Europe3DCountries.max</source_data>
+    </contributor>
+    <created>2015-03-04T16:24:07</created>
+    <modified>2015-03-04T16:24:07</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="Material__3">
+      <profile_COMMON>
+        <newparam sid="neutral_jpg-surface">
+          <surface type="2D">
+            <init_from>neutral_jpg</init_from>
+          </surface>
+        </newparam>
+        <newparam sid="neutral_jpg-sampler">
+          <sampler2D>
+            <source>neutral_jpg-surface</source>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <blinn>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0.588 0.588 0.588 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="neutral_jpg-sampler" texcoord="CHANNEL1"/>
+            </diffuse>
+            <specular>
+              <color>0.9 0.9 0.9 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <reflective>
+              <color>0 0 0 1</color>
+            </reflective>
+            <transparent opaque="A_ONE">
+              <color>1 1 1 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+          </blinn>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="OpenCOLLADA3dsMax">
+          <extended_shader>
+            <apply_reflection_dimming>0</apply_reflection_dimming>
+            <dim_level>0</dim_level>
+            <falloff_type>0</falloff_type>
+            <index_of_refraction>1.5</index_of_refraction>
+            <opacity_type>0</opacity_type>
+            <reflection_level>3</reflection_level>
+            <wire_size>1</wire_size>
+            <wire_units>0</wire_units>
+          </extended_shader>
+          <shader>
+            <ambient_diffuse_lock>1</ambient_diffuse_lock>
+            <ambient_diffuse_texture_lock>1</ambient_diffuse_texture_lock>
+            <diffuse_specular_lock>0</diffuse_specular_lock>
+            <soften>0.1</soften>
+            <use_self_illum_color>0</use_self_illum_color>
+          </shader>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="Material__3-material" name="Material__3">
+      <instance_effect url="#Material__3"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="geom-Latvia" name="Latvia">
+      <mesh>
+        <source id="geom-Latvia-positions">
+          <float_array id="geom-Latvia-positions-array" count="132">-15.05844 -5.124603 0 -11.24258 -6.165314 0 -6.73291 -6.512207 0 3.327087 -8.246674 0 10.95883 -12.75635 0 14.4278 -16.57224 0 19.63126 -14.49084 0 26.56921 -9.981171 0 24.14093 3.894714 0 20.32507 7.363678 0 15.8154 7.363678 0 6.449188 15.34232 0 1.939514 12.91403 0 0.5519104 4.241608 0 -1.529449 1.466431 0 -4.998444 1.119537 0 -8.467407 6.322998 0 -11.58948 12.91403 0 -17.83365 10.13885 0 -20.2619 3.200928 0 -22.69019 1.466431 0 -23.7309 -7.89978 0 -15.05844 -5.124603 25 -11.24258 -6.165314 25 -6.73291 -6.512207 25 3.327087 -8.246674 25 10.95883 -12.75635 25 14.4278 -16.57224 25 19.63126 -14.49084 25 26.56921 -9.981171 25 24.14093 3.894714 25 20.32507 7.363678 25 15.8154 7.363678 25 6.449188 15.34232 25 1.939514 12.91403 25 0.5519104 4.241608 25 -1.529449 1.466431 25 -4.998444 1.119537 25 -8.467407 6.322998 25 -11.58948 12.91403 25 -17.83365 10.13885 25 -20.2619 3.200928 25 -22.69019 1.466431 25 -23.7309 -7.89978 25</float_array>
+          <technique_common>
+            <accessor source="#geom-Latvia-positions-array" count="44" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Latvia-normals">
+          <float_array id="geom-Latvia-normals-array" count="396">-0.2631226 -0.9647624 0 -0.2631226 -0.9647624 0 -0.2631226 -0.9647624 0 -0.2631226 -0.9647624 0 -0.07669547 -0.9970546 0 -0.07669547 -0.9970546 0 -0.07669547 -0.9970546 0 -0.07669547 -0.9970546 0 -0.1699054 -0.9854604 0 -0.1699054 -0.9854603 0 -0.1699054 -0.9854604 0 -0.1699054 -0.9854603 0 -0.5087299 -0.8609262 0 -0.5087299 -0.8609262 0 -0.5087299 -0.8609262 0 -0.5087299 -0.8609262 0 -0.7399424 -0.6726701 0 -0.7399425 -0.6726701 0 -0.7399424 -0.6726701 0 -0.7399425 -0.6726701 0 0.3713916 -0.9284763 0 0.3713916 -0.9284763 0 0.3713916 -0.9284763 0 0.3713916 -0.9284763 0 0.5449885 -0.8384436 0 0.5449885 -0.8384436 0 0.5449885 -0.8384436 0 0.5449885 -0.8384436 0 0.9850304 0.1723806 0 0.9850304 0.1723806 0 0.9850304 0.1723806 0 0.9850304 0.1723806 0 0.6726731 0.7399399 0 0.6726731 0.7399399 0 0.6726731 0.7399399 0 0.6726731 0.7399399 0 0 0.9999999 0 0 1 0 0 0.9999999 0 0 1 0 0.6484671 0.7612427 0 0.6484671 0.7612427 0 0.6484671 0.7612427 0 0.6484671 0.7612427 0 -0.4740995 0.8804712 0 -0.4740995 0.8804713 0 -0.4740995 0.8804712 0 -0.4740995 0.8804713 0 -0.9874403 0.1579923 0 -0.9874403 0.1579923 0 -0.9874403 0.1579923 0 -0.9874403 0.1579923 0 -0.8000032 0.5999958 0 -0.8000032 0.5999958 0 -0.8000032 0.5999958 0 -0.8000032 0.5999958 0 -0.09950199 0.9950374 0 -0.09950199 0.9950374 0 -0.09950199 0.9950374 0 -0.09950199 0.9950374 0 0.832051 0.5546991 0 0.832051 0.5546991 0 0.832051 0.5546991 0 0.832051 0.5546991 0 0.9037377 0.4280865 0 0.9037377 0.4280865 0 0.9037377 0.4280865 0 0.9037377 0.4280865 0 -0.4061372 0.9138121 0 -0.4061372 0.9138121 0 -0.4061372 0.9138121 0 -0.4061372 0.9138121 0 -0.9438593 0.3303479 0 -0.9438593 0.3303478 0 -0.9438593 0.3303479 0 -0.9438593 0.3303478 0 -0.5812402 0.8137321 0 -0.5812402 0.8137321 0 -0.5812402 0.8137321 0 -0.5812402 0.8137321 0 -0.9938835 0.1104337 0 -0.9938835 0.1104337 0 -0.9938835 0.1104337 0 -0.9938835 0.1104337 0 0.3047749 -0.9524244 0 0.3047749 -0.9524245 0 0.3047749 -0.9524244 0 0.3047749 -0.9524245 0 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 0.9999999 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#geom-Latvia-normals-array" count="132" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="geom-Latvia-map1">
+          <float_array id="geom-Latvia-map1-array" count="270">0 0 0 0.02589371 0 0 0.05550442 0 0 0.1223359 0 0 0.1803696 0 0 0.214131 0 0 0.2508207 0 0 0.3049934 0 0 0.3972152 0 0 0.4309764 0 0 0.4604999 0 0 0.5410495 0 0 0.574581 0 0 0.6320789 0 0 0.6547891 0 0 0.6776128 0 0 0.7185544 0 0 0.7663001 0 0 0.8110344 0 0 0.8591565 0 0 0.8786927 0 0 0.9403879 0 0 1 0 0 0 1 0 0.02589371 1 0 0.05550442 1 0 0.1223359 1 0 0.1803696 1 0 0.214131 1 0 0.2508207 1 0 0.3049934 1 0 0.3972152 1 0 0.4309764 1 0 0.4604999 1 0 0.5410495 1 0 0.574581 1 0 0.6320789 1 0 0.6547891 1 0 0.6776128 1 0 0.7185544 1 0 0.7663001 1 0 0.8110344 1 0 0.8591565 1 0 0.8786927 1 0 0.9403879 1 0 1 1 0 0.1724142 0.3586963 0 0.248276 0.326087 0 0.3379314 0.3152176 0 0.5379309 0.2608704 0 0.6896551 0.1195658 0 0.7586204 0 0 0.8620688 0.0652176 0 1 0.2065222 0 0.9517241 0.6413046 0 0.8758623 0.75 0 0.786207 0.75 0 0.6000004 1 0 0.510345 0.9239129 0 0.4827585 0.6521741 0 0.4413797 0.5652176 0 0.3724138 0.5543482 0 0.3034484 0.7173917 0 0.2413796 0.9239129 0 0.1172412 0.8369565 0 0.06896593 0.6195658 0 0.02069002 0.5652176 0 0 0.2717398 0 0.1724142 0.3586963 0 0.248276 0.326087 0 0.3379314 0.3152176 0 0.5379309 0.2608704 0 0.6896551 0.1195658 0 0.7586204 0 0 0.8620688 0.0652176 0 1 0.2065222 0 0.9517241 0.6413046 0 0.8758623 0.75 0 0.786207 0.75 0 0.6000004 1 0 0.510345 0.9239129 0 0.4827585 0.6521741 0 0.4413797 0.5652176 0 0.3724138 0.5543482 0 0.3034484 0.7173917 0 0.2413796 0.9239129 0 0.1172412 0.8369565 0 0.06896593 0.6195658 0 0.02069002 0.5652176 0 0 0.2717398 0</float_array>
+          <technique_common>
+            <accessor source="#geom-Latvia-map1-array" count="90" stride="3">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+              <param name="P" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="geom-Latvia-vertices">
+          <input semantic="POSITION" source="#geom-Latvia-positions"/>
+        </vertices>
+        <triangles material="Material__3_1" count="84">
+          <input semantic="VERTEX" source="#geom-Latvia-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-Latvia-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-Latvia-map1" offset="2" set="0"/>
+          <p>0 0 0 1 1 1 23 2 24 0 0 0 23 2 24 22 3 23 1 4 1 2 5 2 24 6 25 1 4 1 24 6 25 23 7 24 2 8 2 3 9 3 25 10 26 2 8 2 25 10 26 24 11 25 3 12 3 4 13 4 26 14 27 3 12 3 26 14 27 25 15 26 4 16 4 5 17 5 27 18 28 4 16 4 27 18 28 26 19 27 5 20 5 6 21 6 28 22 29 5 20 5 28 22 29 27 23 28 6 24 6 7 25 7 29 26 30 6 24 6 29 26 30 28 27 29 7 28 7 8 29 8 30 30 31 7 28 7 30 30 31 29 31 30 8 32 8 9 33 9 31 34 32 8 32 8 31 34 32 30 35 31 9 36 9 10 37 10 32 38 33 9 36 9 32 38 33 31 39 32 10 40 10 11 41 11 33 42 34 10 40 10 33 42 34 32 43 33 11 44 11 12 45 12 34 46 35 11 44 11 34 46 35 33 47 34 12 48 12 13 49 13 35 50 36 12 48 12 35 50 36 34 51 35 13 52 13 14 53 14 36 54 37 13 52 13 36 54 37 35 55 36 14 56 14 15 57 15 37 58 38 14 56 14 37 58 38 36 59 37 15 60 15 16 61 16 38 62 39 15 60 15 38 62 39 37 63 38 16 64 16 17 65 17 39 66 40 16 64 16 39 66 40 38 67 39 17 68 17 18 69 18 40 70 41 17 68 17 40 70 41 39 71 40 18 72 18 19 73 19 41 74 42 18 72 18 41 74 42 40 75 41 19 76 19 20 77 20 42 78 43 19 76 19 42 78 43 41 79 42 20 80 20 21 81 21 43 82 44 20 80 20 43 82 44 42 83 43 21 84 21 0 85 22 22 86 45 21 84 21 22 86 45 43 87 44 20 88 66 0 89 46 21 90 67 19 91 65 0 89 46 20 88 66 16 92 62 18 93 64 17 94 63 16 92 62 19 91 65 18 93 64 16 92 62 0 89 46 19 91 65 15 95 61 0 89 46 16 92 62 15 95 61 1 96 47 0 89 46 15 95 61 2 97 48 1 96 47 15 95 61 3 98 49 2 97 48 14 99 60 3 98 49 15 95 61 4 100 50 6 101 52 5 102 51 10 103 56 12 104 58 11 105 57 10 103 56 13 106 59 12 104 58 6 101 52 8 107 54 7 108 53 4 100 50 8 107 54 6 101 52 4 100 50 9 109 55 8 107 54 4 100 50 10 103 56 9 109 55 4 100 50 13 106 59 10 103 56 3 98 49 13 106 59 4 100 50 14 99 60 13 106 59 3 98 49 42 110 88 43 111 89 22 112 68 41 113 87 42 110 88 22 112 68 38 114 84 39 115 85 40 116 86 38 114 84 40 116 86 41 113 87 38 114 84 41 113 87 22 112 68 37 117 83 38 114 84 22 112 68 37 117 83 22 112 68 23 118 69 37 117 83 23 118 69 24 119 70 37 117 83 24 119 70 25 120 71 36 121 82 37 117 83 25 120 71 26 122 72 27 123 73 28 124 74 32 125 78 33 126 79 34 127 80 32 125 78 34 127 80 35 128 81 28 124 74 29 129 75 30 130 76 26 122 72 28 124 74 30 130 76 26 122 72 30 130 76 31 131 77 26 122 72 31 131 77 32 125 78 26 122 72 32 125 78 35 128 81 25 120 71 26 122 72 35 128 81 36 121 82 25 120 71 35 128 81</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_lights>
+    <light id="EnvironmentAmbientLight" name="EnvironmentAmbientLight">
+      <technique_common>
+        <ambient>
+          <color>0 0 0</color>
+        </ambient>
+      </technique_common>
+    </light>
+  </library_lights>
+  <library_images>
+    <image id="neutral_jpg">
+      <init_from>./images/0_neutral.jpg</init_from>
+    </image>
+  </library_images>
+  <library_visual_scenes>
+    <visual_scene id="MaxScene">
+      <node name="EnvironmentAmbientLight">
+        <instance_light url="#EnvironmentAmbientLight"/>
+      </node>
+      <node id="node-Latvia" name="Latvia">
+        <matrix>1 0 0 419.8875 0 1 0 379.7736 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#geom-Latvia">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="Material__3_1" target="#Material__3-material">
+                <bind_vertex_input semantic="CHANNEL1" input_semantic="TEXCOORD" input_set="0"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+        <extra>
+          <technique profile="OpenCOLLADA">
+            <cast_shadows>1</cast_shadows>
+            <primary_visibility>1</primary_visibility>
+            <receive_shadows>1</receive_shadows>
+            <secondary_visibility>1</secondary_visibility>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#MaxScene"/>
+  </scene>
+</COLLADA>
