@@ -1,4 +1,4 @@
-Game.countryArray['Egypt'] = new Country();
+Game.countryArray['Egypt'] = new Country("Egypt");
 
 Game.countryArray['Egypt'].data[1939] = {
 	occupation:'Egyptian',

@@ -89,17 +89,17 @@ window.Game = {
 		});
 
 		// { x: 20, y: 5, z: -63 }
-		Game.countryArray.Britain.setCapital('models/big-ben.DAE',0,0,0);
+		Game.countryArray['Britain'].setCapital('models/big-ben.DAE',0,0,0);
 		// { x: 232, y: 25, z: -314 }
-		Game.countryArray.France.setCapital('models/Paris.DAE',232,25,-314);
+		Game.countryArray['France'].setCapital('models/Paris.DAE',232,25,-314);
 		// { x: 335, y: 26, z: -325 }
-		Game.countryArray.Germany.setCapital('models/Berlin.DAE',335,26,-325);
+		Game.countryArray['Germany'].setCapital('models/Berlin.DAE',335,26,-325);
 
-		Game.countryArray.Egypt.setCapital('models/Cairo.DAE',300,26,-344);;
+		// Game.countryArray['Egypt'].setCapital('models/Cairo.DAE',300,26,-344);
 		// { x: 500, y: 26, z: -344 }
-		Game.countryArray.Russia.setCapital('models/Moscow.DAE',500,26,-344);
+		Game.countryArray['Russia'].setCapital('models/Moscow.DAE',500,26,-344);
 		// { x: 300, y: 26, z: -208 }
-		Game.countryArray.Italy.setCapital('models/Rome.DAE',300,26,-208);
+		Game.countryArray['Italy'].setCapital('models/Rome.DAE',300,26,-208);
 
 		this.objects['light'] = new THREE.PointLight(0xFFFFFF,2,10000);
 		this.objects['light'].position.x = 240;
