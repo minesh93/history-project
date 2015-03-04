@@ -1,43 +1,36 @@
-Game.countryArray['Britain'] = new Country("Britain");
+Game.countryArray['Yugoslavia'] = new Country("Yugoslavia");
 
-Game.countryArray['Britain'].data[1939] = {
+Game.countryArray['Yugoslavia'].data[1939] = {
 	occupation:'Neutral',
-	capital:'London',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1940] = {
+Game.countryArray['Yugoslavia'].data[1940] = {
 	occupation:'Neutral',
-	capital:'London',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1941] = {
+Game.countryArray['Yugoslavia'].data[1941] = {
 	occupation:'Neutral',
-	capital:'London',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1942] = {
+Game.countryArray['Yugoslavia'].data[1942] = {
 	occupation:'Neutral',
-	capital:'London',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1943] = {
+Game.countryArray['Yugoslavia'].data[1943] = {
 	occupation:'Neutral',
-	capital:'London',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1944] = {
+Game.countryArray['Yugoslavia'].data[1944] = {
 	occupation:'Neutral',
-	capital:'London',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1945] = {
+Game.countryArray['Yugoslavia'].data[1945] = {
 	occupation:'Neutral',
-	capital:'London',
 	events:[]
 }
