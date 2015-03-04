@@ -1,5 +1,5 @@
 Game.countryArray['Corsica'] = new Country("Corsica");
-Game.capital = "Pin";
+Game.countryArray['Corsica'].capital = "Pin";
 
 Game.countryArray['Corsica'].data[1939] = {
 	occupation:'Neutral',

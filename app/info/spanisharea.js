@@ -1,5 +1,5 @@
 Game.countryArray['Spanisharea'] = new Country("Spanisharea");
-Game.capital = 'Pin';
+Game.countryArray['Spanisharea'].capital = 'Pin';
 
 
 Game.countryArray['Spanisharea'].data[1939] = {

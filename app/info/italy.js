@@ -1,4 +1,5 @@
 Game.countryArray['Italy'] = new Country("Italy");
+Game.countryArray['Italy'].cPos = { x: 300, y: 26, z: -208 };
 
 Game.countryArray['Italy'].data[1939] = {
 	occupation:'Neutral',

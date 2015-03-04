@@ -1,37 +1,37 @@
-Game.countryArray['Morroco'] = new Country("Morroco");
-Game.capital = 'Pin';
+Game.countryArray['Morocco'] = new Country("Morocco");
+Game.countryArray['Morocco'].capital = 'Pin';
 
-Game.countryArray['Morroco'].data[1939] = {
+Game.countryArray['Morocco'].data[1939] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Morroco'].data[1940] = {
+Game.countryArray['Morocco'].data[1940] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Morroco'].data[1941] = {
+Game.countryArray['Morocco'].data[1941] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Morroco'].data[1942] = {
+Game.countryArray['Morocco'].data[1942] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Morroco'].data[1943] = {
+Game.countryArray['Morocco'].data[1943] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Morroco'].data[1944] = {
+Game.countryArray['Morocco'].data[1944] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Morroco'].data[1945] = {
+Game.countryArray['Morocco'].data[1945] = {
 	occupation:'Neutral',
 	events:[]
 }

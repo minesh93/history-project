@@ -3,32 +3,43 @@ var Country = function (name){
 	this.active = false;
 	this.raising = true;
 	this.raised = false;
-	this.position = new THREE.Vector3(0,0,0);
-	this.material = new THREE.MeshLambertMaterial({color: 0xFF0000})
+	this.position = "";
+	this.material = "";
 	this.model = {},
-	this.capital = {},
+	this.capital = "",
 	this.data = [];
 };
 
 Country.prototype.setCapital = function(path,x,y,z){
 	//- this will not work in callbacks
 	var that = this;
-	Game.loadModel(path,function(model){
-		that.capital = model;
-		that.capital.position.x = x;
-		that.capital.position.y = y;
-		that.capital.position.z = z;
-	});
+	var lowername = this.name.toLowerCase().replace(/\s/g, '');
+	// console.log('models/capitals/'+lowername+'.DAE');
+
+	if(this.capital != 'Pin'){
+		var pos = this.cPos;
+		console.log("Loading capital: "+lowername);
+		Game.loadModel('models/capitals/'+lowername+'.DAE',function(model){
+			that.capital = model;
+			that.capital.position.x = pos.x;
+			that.capital.position.y = pos.y;
+			that.capital.position.z = pos.z;
+		});
+	}
+
+
 }
 
 Country.prototype.getCapital = function() {
 	return this.capital;
 };
 
-Country.prototype.setModel = function(path){
+Country.prototype.setModel = function(){
 	var that = this;
-	Game.loadModel(path,function(model){
-		that.capital = model;
+	var lowername = this.name.toLowerCase().replace(/\s/g, '');
+	
+	Game.loadModel('models/countries/'+lowername+'.DAE',function(model){
+		that.model = model;
 	});
 }
 
