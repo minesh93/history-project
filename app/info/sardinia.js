@@ -1,37 +1,37 @@
-Game.countryArray['Sardina'] = new Country("Sardina");
+Game.countryArray['Sardinia'] = new Country("Sardinia");
 Game.capital = 'Pin';
 
-Game.countryArray['Sardina'].data[1939] = {
+Game.countryArray['Sardinia'].data[1939] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Sardina'].data[1940] = {
+Game.countryArray['Sardinia'].data[1940] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Sardina'].data[1941] = {
+Game.countryArray['Sardinia'].data[1941] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Sardina'].data[1942] = {
+Game.countryArray['Sardinia'].data[1942] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Sardina'].data[1943] = {
+Game.countryArray['Sardinia'].data[1943] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Sardina'].data[1944] = {
+Game.countryArray['Sardinia'].data[1944] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Sardina'].data[1945] = {
+Game.countryArray['Sardinia'].data[1945] = {
 	occupation:'Neutral',
 	events:[]
 }
