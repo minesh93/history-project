@@ -1,43 +1,36 @@
 Game.countryArray['Russia'] = new Country("Russia");
 
 Game.countryArray['Russia'].data[1939] = {
-	occupation:'Russian',
-	capital:'Moscow',
+	occupation:'Neutral',
 	events:[]
 }
 
 Game.countryArray['Russia'].data[1940] = {
-	occupation:'Russian',
-	capital:'Moscow',
+	occupation:'Neutral',
 	events:[]
 }
 
 Game.countryArray['Russia'].data[1941] = {
-	occupation:'Russian',
-	capital:'Moscow',
+	occupation:'Neutral',
 	events:[]
 }
 
 Game.countryArray['Russia'].data[1942] = {
-	occupation:'Russian',
-	capital:'Moscow',
+	occupation:'Neutral',
 	events:[]
 }
 
 Game.countryArray['Russia'].data[1943] = {
-	occupation:'Russian',
-	capital:'Moscow',
+	occupation:'Neutral',
 	events:[]
 }
 
 Game.countryArray['Russia'].data[1944] = {
-	occupation:'Russian',
-	capital:'Moscow',
+	occupation:'Neutral',
 	events:[]
 }
 
 Game.countryArray['Russia'].data[1945] = {
-	occupation:'Russian',
-	capital:'Moscow',
+	occupation:'Neutral',
 	events:[]
 }

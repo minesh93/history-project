@@ -1,36 +1,37 @@
-Game.countryArray['Britain'] = new Country("Britain");
+Game.countryArray['Spainmajorca'] = new Country("Spainmajorca");
+Game.capital = 'Pin';
 
-Game.countryArray['Britain'].data[1939] = {
+Game.countryArray['Spainmajorca'].data[1939] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1940] = {
+Game.countryArray['Spainmajorca'].data[1940] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1941] = {
+Game.countryArray['Spainmajorca'].data[1941] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1942] = {
+Game.countryArray['Spainmajorca'].data[1942] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1943] = {
+Game.countryArray['Spainmajorca'].data[1943] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1944] = {
+Game.countryArray['Spainmajorca'].data[1944] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1945] = {
+Game.countryArray['Spainmajorca'].data[1945] = {
 	occupation:'Neutral',
 	events:[]
 }
