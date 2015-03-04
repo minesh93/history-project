@@ -1,36 +1,37 @@
-Game.countryArray['Britain'] = new Country("Britain");
+Game.countryArray['Estonia'] = new Country("Estonia");
+Game.capital = "Pin";
 
-Game.countryArray['Britain'].data[1939] = {
+Game.countryArray['Estonia'].data[1939] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1940] = {
+Game.countryArray['Estonia'].data[1940] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1941] = {
+Game.countryArray['Estonia'].data[1941] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1942] = {
+Game.countryArray['Estonia'].data[1942] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1943] = {
+Game.countryArray['Estonia'].data[1943] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1944] = {
+Game.countryArray['Estonia'].data[1944] = {
 	occupation:'Neutral',
 	events:[]
 }
 
-Game.countryArray['Britain'].data[1945] = {
+Game.countryArray['Estonia'].data[1945] = {
 	occupation:'Neutral',
 	events:[]
 }
