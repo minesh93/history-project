@@ -11,6 +11,8 @@ window.Game = {
 	controls:'',
 	countryArray:[],
 	currentCountry:'',
+    projector: '',
+    mouse: new THREE.Vector2(0,0),
 	currentTime:new Date(),
 	clock:new THREE.Clock(),
 	objects:[],
@@ -20,12 +22,13 @@ window.Game = {
 
 		this.renderer = new THREE.WebGLRenderer();
 		this.renderer.setSize(this.WIDTH,this.HEIGHT);
-
+        this.projector = new THREE.Projector();
 		this.modelLoader.options.convertUpAxis = true;
 
 		var el = document.getElementById('canvas-wrapper');
 		el.appendChild(this.renderer.domElement);
-		
+		document.addEventListener('mousedown', Game.onDocumentMouseDown, false);
+
 		this.renderer.setClearColor(0xccccff);
 		this.scene = new THREE.Scene();
 
@@ -140,6 +143,30 @@ window.Game = {
 		getByNameYear:function(name,year){
 			return Game.countryArray[name].data[year];
 		}
-	}
+	},
+
+	onDocumentMouseDown: function (event) {
+
+        event.preventDefault();
+
+        Game.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        Game.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+        var vector = new THREE.Vector3(Game.mouse.x, Game.mouse.y, 0.5);
+        
+        Game.projector.unprojectVector(vector, Game.camera);
+        //var raycaster = new THREE.Raycaster(Game.camera.position, vector.subSelf(Game.camera.position).normalize());
+        var raycaster = new THREE.Raycaster(Game.camera.position, vector.sub(Game.camera.position).normalize());
+
+        var intersects = raycaster.intersectObjects(Game.scene.children,true);
+        //console.log(Game.mouse);
+        //console.log(Game.camera.position);
+        // console.log(intersects);
+        if(intersects.length){
+            intersects[0].object.position.y += 10;
+        }
+        // console.log(Game.scene.children);
+        
+    }
 
 }
