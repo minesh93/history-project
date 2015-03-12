@@ -12,6 +12,9 @@ window.Game = {
     countryArray: [],
     currentCountry: '',
     projector: '',
+    selected:'',
+    prevSelected:'',
+    mouseOn:'',
     mouse: new THREE.Vector2(0, 0),
     currentTime: new Date(),
     clock: new THREE.Clock(),
@@ -37,7 +40,7 @@ window.Game = {
 
         window.addEventListener('resize', Game.onWindowResize, false);
 
-        document.addEventListener('mousedown', Game.onDocumentMouseDown, false);
+        document.addEventListener('mousemove', Game.onDocumentMouseDown, false);
 
         this.renderer.setClearColor(0xccccff);
         this.scene = new THREE.Scene();
@@ -136,7 +139,9 @@ window.Game = {
     },
 
     animate: function (deltaTime) {
-        // Game.countryArray.France.raise(deltaTime);
+        for (var country in Game.countryArray) {
+            Game.countryArray[country].animate();
+        }
     },
 
     render: function () {
@@ -179,7 +184,16 @@ window.Game = {
         var intersects = raycaster.intersectObjects(Game.scene.children, true);
 
         if (intersects.length) {
-            intersects[0].object.position.y += 5;
+            // intersects[0].object.position.y += 5;
+            var old = Game.selected;
+            if(intersects[0].object.parent.name != Game.selected){
+                Game.selected = intersects[0].object.parent.name;
+                Game.countryArray[Game.selected].raising = true;
+                console.log("Selection has changed to:"+Game.selected);
+                Game.countryArray[old].raising = false;
+            }
+
+            // console.log("Selected:"+selected);
         }
     }
 

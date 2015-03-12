@@ -1,8 +1,9 @@
 var Country = function (name){
 	this.name = name;
 	this.active = false;
-	this.raising = true;
+	this.raising = false;
 	this.raised = false;
+	this.loaded = false;
 	this.position = "";
 	this.material = "";
 	this.model = {},
@@ -47,8 +48,30 @@ Country.prototype.setModel = function(){
 	
 	Game.loadModel('models/countries/'+lowername+'.DAE',function(model){
 		that.model = model;
+		that.model.targetName = that.name;
+		that.loaded = true;
 	});
 }
+
+Country.prototype.animate = function() {
+	if(this.loaded){
+		if(this.raising){
+			if(!this.raised){
+				this.model.position.y++;
+				if(this.model.position.y == 40){
+					this.raising = false;
+					this.raised = true;
+				}
+			}
+		}
+	
+		if(!this.raising && (this.model.position.y >= 40 && this.model.position.y <= 0)){
+			this.raised = false;
+			this.model.position.y--;
+		}
+	}
+}
+
 
 Country.prototype.getModel = function() {
 	return this.model;
