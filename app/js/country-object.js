@@ -3,6 +3,8 @@ var Country = function (name){
 	this.active = false;
 	this.raising = false;
 	this.raised = false;
+	this.lowring = false;
+	this.down = true;
 	this.loaded = false;
 	this.position = "";
 	this.material = "";
@@ -54,20 +56,42 @@ Country.prototype.setModel = function(){
 }
 
 Country.prototype.animate = function() {
-	if(this.loaded){
-		if(this.raising){
-			if(!this.raised){
-				this.model.position.y++;
-				if(this.model.position.y == 40){
-					this.raising = false;
-					this.raised = true;
-				}
-			}
-		}
 	
-		if(!this.raising && (this.model.position.y >= 40 && this.model.position.y <= 0)){
-			this.raised = false;
-			this.model.position.y--;
+	// Check that the model is loaded - if not, stuff will break!
+	if(this.loaded){
+		
+		
+		// active + raised
+		// active + raising
+		// active + down
+		// active + lowering
+		// inactive + raised
+		// inactive + raising
+		// inactive + down
+		// inactive + lowering
+		
+		// the country has been clicked
+		if (this.active){
+			
+			if (this.raised){
+				// do nowt
+			} else {
+				this.raising = true;
+				this.lowering = false;
+				this.down = false;
+				this.raise();
+			}
+		} else {
+			// Inactive
+			
+			if(this.down){
+				// do nowt
+			} else {
+				this.lowering = true;
+				this.raising = false;
+				this.raised = false;
+				this.lower();
+			}	
 		}
 	}
 }
@@ -78,12 +102,21 @@ Country.prototype.getModel = function() {
 };
 
 Country.prototype.raise = function(deltaTime) {
-	//- Placeholder if using animation
+	this.model.position.y++;
+				if(this.model.position.y == 25){
+					this.raising = false;
+					this.raised = true;
+				}
 
 	return this.model;
 };
 
 Country.prototype.lower = function() {
-	//- Placeholder if using animation
+	this.model.position.y = this.model.position.y-2;
+				if(this.model.position.y <= 25){
+					this.raising = false;
+					this.raised = true;
+					this.model.position.y = 0;
+				}
 	return this.model;
 };

@@ -40,7 +40,8 @@ window.Game = {
 
         window.addEventListener('resize', Game.onWindowResize, false);
 
-        document.addEventListener('mousemove', Game.onDocumentMouseDown, false);
+		document.addEventListener('mousedown', Game.onDocumentMouseDown, false);
+        document.addEventListener('mousemove', Game.onDocumentMouseMove, false);
 
         this.renderer.setClearColor(0xccccff);
         this.scene = new THREE.Scene();
@@ -173,6 +174,7 @@ window.Game = {
     onDocumentMouseDown: function (event) {
         event.preventDefault();
 
+		// Ray casting
         Game.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
         Game.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 
@@ -183,17 +185,41 @@ window.Game = {
 
         var intersects = raycaster.intersectObjects(Game.scene.children, true);
 
+		// Doing something with returned object
         if (intersects.length) {
-            // intersects[0].object.position.y += 5;
-            var old = Game.selected;
+            Game.prevSelected = Game.selected;
+            if(intersects[0].object.parent.name != Game.selected){
+                Game.selected = intersects[0].object.parent.name;
+				
+				// Make this object active / old object inactive
+				Game.countryArray[Game.selected].active = true;
+				Game.countryArray[Game.prevSelected].active = false;
+            }
+        }
+    },
+	
+	onDocumentMouseMove: function (event) {
+        event.preventDefault();
+		
+		// Ray casting
+        Game.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+        Game.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+        var vector = new THREE.Vector3(Game.mouse.x, Game.mouse.y, 0.5);
+
+        Game.projector.unprojectVector(vector, Game.camera);
+        var raycaster = new THREE.Raycaster(Game.camera.position, vector.sub(Game.camera.position).normalize());
+
+        var intersects = raycaster.intersectObjects(Game.scene.children, true);
+
+		// Doing something with returned object
+        if (intersects.length) {
+            Game.prevSelected = Game.selected;
             if(intersects[0].object.parent.name != Game.selected){
                 Game.selected = intersects[0].object.parent.name;
                 Game.countryArray[Game.selected].raising = true;
-                console.log("Selection has changed to:"+Game.selected);
-                Game.countryArray[old].raising = false;
+                Game.countryArray[Game.prevSelected].raising = false;
             }
-
-            // console.log("Selected:"+selected);
         }
     }
 
