@@ -1,10 +1,7 @@
 var Country = function (name){
 	this.name = name;
 	this.active = false;
-	this.raising = false;
-	this.raised = false;
-	this.lowring = false;
-	this.down = true;
+	this.state = "down";
 	this.loaded = false;
 	this.position = "";
 	this.material = "";
@@ -58,41 +55,24 @@ Country.prototype.setModel = function(){
 Country.prototype.animate = function() {
 	
 	// Check that the model is loaded - if not, stuff will break!
-	if(this.loaded){
-		
-		
-		// active + raised
-		// active + raising
-		// active + down
-		// active + lowering
-		// inactive + raised
-		// inactive + raising
-		// inactive + down
-		// inactive + lowering
-		
-		// the country has been clicked
-		if (this.active){
-			
-			if (this.raised){
-				// do nowt
-			} else {
-				this.raising = true;
-				this.lowering = false;
-				this.down = false;
-				this.raise();
-			}
-		} else {
-			// Inactive
-			
-			if(this.down){
-				// do nowt
-			} else {
-				this.lowering = true;
-				this.raising = false;
-				this.raised = false;
-				this.lower();
-			}	
-		}
+    if (this.loaded) {
+        // State machine for country movement
+	    switch(this.state) {
+	        case "down":
+	            // stuff like stop capital animations
+	            break;
+	        case "raising":
+	            this.raise();
+	            break;
+	        case "up":
+	            // stuff like run animate on capital city model
+	            break;
+	        case "lowering":
+	            this.lower();
+	            break;
+	        default:
+	        // default stuff
+	    } 
 	}
 }
 
@@ -103,20 +83,18 @@ Country.prototype.getModel = function() {
 
 Country.prototype.raise = function(deltaTime) {
 	this.model.position.y++;
-				if(this.model.position.y == 25){
-					this.raising = false;
-					this.raised = true;
+				if(this.model.position.y >= 25){
+				    this.state = "up";
+				    this.model.position = 25;
 				}
-
 	return this.model;
 };
 
-Country.prototype.lower = function() {
-	this.model.position.y = this.model.position.y-2;
-				if(this.model.position.y <= 25){
-					this.raising = false;
-					this.raised = true;
-					this.model.position.y = 0;
-				}
-	return this.model;
+Country.prototype.lower = function(deltaTime) {
+    this.model.position.y--;
+    if (this.model.position.y <= 0) {
+        this.state = "down";
+        this.model.position.y = 0;
+    }
+    return this.model;
 };

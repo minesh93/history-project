@@ -14,6 +14,8 @@ window.Game = {
     projector: '',
     selected:'',
     prevSelected:'',
+    clickSelected:'',
+    clickPrevSelected:'',
     mouseOn:'',
     mouse: new THREE.Vector2(0, 0),
     currentTime: new Date(),
@@ -40,7 +42,7 @@ window.Game = {
 
         window.addEventListener('resize', Game.onWindowResize, false);
 
-		document.addEventListener('mousedown', Game.onDocumentMouseDown, false);
+		document.addEventListener('dblclick', Game.onDocumentMouseDown, false);
         document.addEventListener('mousemove', Game.onDocumentMouseMove, false);
 
         this.renderer.setClearColor(0xccccff);
@@ -187,9 +189,9 @@ window.Game = {
 
 		// Doing something with returned object
         if (intersects.length) {
-            Game.prevSelected = Game.selected;
-            if(intersects[0].object.parent.name != Game.selected){
-                Game.selected = intersects[0].object.parent.name;
+            Game.clickPrevSelected = Game.clickSelected;
+            if(intersects[0].object.parent.name != Game.clickSelected){
+                Game.clickSelected = intersects[0].object.parent.name;
 				
 				// Make this object active / old object inactive
 
@@ -201,8 +203,8 @@ window.Game = {
 				    Game.countryArray[Game.clickPrevSelected].active = false;
                 }
 
-				Game.countryArray[Game.selected].active = true;
-				Game.countryArray[Game.prevSelected].active = false;
+				Game.countryArray[Game.clickSelected].active = true;
+				Game.countryArray[Game.clickPrevSelected].active = false;
 
             }
         }
@@ -224,23 +226,24 @@ window.Game = {
 
 		// Doing something with returned object
         if (intersects.length) {
-            Game.prevSelected = Game.selected;
-            if(intersects[0].object.parent.name != Game.selected){
-
-                if(Game.countryArray[Game.selected] !== undefined){
-                    Game.selected = intersects[0].object.parent.name;
-                    Game.countryArray[Game.selected].raising = true;
-                }
-
-                if(Game.countryArray[Game.prevSelected]){
-                    Game.countryArray[Game.prevSelected].raising = false;
-                }
-
+            //Game.prevSelected = Game.selected;
+            if (intersects[0].object.parent.name != Game.selected) {
+                Game.prevSelected = Game.selected;
                 Game.selected = intersects[0].object.parent.name;
-                Game.countryArray[Game.selected].raising = true;
-                Game.countryArray[Game.prevSelected].raising = false;
-
+                Game.countryArray[Game.selected].state = "raising";
+                if (Game.countryArray[Game.prevSelected] != null) {
+                    Game.countryArray[Game.prevSelected].state = "lowering";
+                }
             }
+        } else {
+            if (Game.countryArray[Game.selected] != null) {
+                Game.countryArray[Game.selected].state = "lowering";
+            }
+            if (Game.countryArray[Game.prevSelected] != null){
+                Game.countryArray[Game.prevSelected].state = "lowering";
+            }
+            Game.prevSelected = "";
+            Game.selected = "";
         }
     }
 
