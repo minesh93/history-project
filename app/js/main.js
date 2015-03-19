@@ -14,8 +14,6 @@ window.Game = {
     projector: '',
     selected:'',
     prevSelected:'',
-    clickSelected:'',
-    clickPrevSelected:'',
     mouseOn:'',
     mouse: new THREE.Vector2(0, 0),
     currentTime: new Date(),
@@ -186,20 +184,16 @@ window.Game = {
         var raycaster = new THREE.Raycaster(Game.camera.position, vector.sub(Game.camera.position).normalize());
 
         var intersects = raycaster.intersectObjects(Game.scene.children, true);
-        //- #newvariables
+
 		// Doing something with returned object
         if (intersects.length) {
-            Game.clickPrevSelected = Game.clickSelected;
-            if(intersects[0].object.parent.name != Game.clickSelected){
-
-                Game.clickSelected = intersects[0].object.parent.name;
-
+            Game.prevSelected = Game.selected;
+            if(intersects[0].object.parent.name != Game.selected){
+                Game.selected = intersects[0].object.parent.name;
+				
 				// Make this object active / old object inactive
-				Game.countryArray[Game.clickSelected].active = true;
-                console.log(Game.countryArray[Game.clickSelected].name);
-                if(Game.countryArray[Game.clickPrevSelected]){
-				    Game.countryArray[Game.clickPrevSelected].active = false;
-                }
+				Game.countryArray[Game.selected].active = true;
+				Game.countryArray[Game.prevSelected].active = false;
             }
         }
     },
@@ -222,13 +216,9 @@ window.Game = {
         if (intersects.length) {
             Game.prevSelected = Game.selected;
             if(intersects[0].object.parent.name != Game.selected){
-
                 Game.selected = intersects[0].object.parent.name;
                 Game.countryArray[Game.selected].raising = true;
-
-                if(Game.countryArray[Game.prevSelected]){
-                    Game.countryArray[Game.prevSelected].raising = false;
-                }
+                Game.countryArray[Game.prevSelected].raising = false;
             }
         }
     }
