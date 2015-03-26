@@ -45,7 +45,7 @@ window.Game = {
 		document.addEventListener('dblclick', Game.onDocumentMouseDown, false);
         document.addEventListener('mousemove', Game.onDocumentMouseMove, false);
 
-        this.renderer.setClearColor(0xccccff);
+        this.renderer.setClearColor(0x354e77);
         this.scene = new THREE.Scene();
 
         this.initCamera();
@@ -76,10 +76,24 @@ window.Game = {
             returnModel = collada.scene;
 
             // Scale your model to the correct size.
+            returnModel.keyFrameAnimations = [];
             returnModel.scale.x = 1;
             returnModel.scale.y = 1;
             returnModel.scale.z = 1;
             returnModel.updateMatrix();
+
+            animationsLength = collada.animations.length;
+            animations = collada.animations;
+
+            for (var i = 0; i < animationsLength; i++) {
+                var animation = animations[i];
+
+                var keyFrameAnimation = new THREE.KeyFrameAnimation(animation);
+                keyFrameAnimation.timeScale = 1;
+                keyFrameAnimation.loop = false;
+                returnModel.keyFrameAnimations.push(keyFrameAnimation);
+            }
+
             // Add the model to the scene.
             Game.scene.add(returnModel);
             callback(returnModel);
@@ -94,9 +108,9 @@ window.Game = {
 
         this.loadModel('models/general/tank.DAE', function (model) {
             Game.objects['tank'] = model;
-            Game.objects['tank'].position.x = 0;
+            Game.objects['tank'].position.x = 232;
             Game.objects['tank'].position.y = 25;
-            Game.objects['tank'].position.z = 0;
+            Game.objects['tank'].position.z = -314;
         });
 
 
@@ -130,14 +144,14 @@ window.Game = {
         }
 
 
-        this.objects['light'] = new THREE.PointLight(0xFFFFFF, 2, 10000);
-        this.objects['light'].position.x = 240;
-        this.objects['light'].position.y = 293;
-        this.objects['light'].position.z = 200;
+        this.light = new THREE.PointLight(0xFFFFFF, 2, 10000);
+        this.light.position.x = 240;
+        this.light.position.y = 293;
+        this.light.position.z = 200;
 
 
 
-        this.scene.add(this.objects['light']);
+        this.scene.add(this.light);
 
     },
 
@@ -147,11 +161,46 @@ window.Game = {
         }
     },
 
+    loopAnimations: function(){
+        for (var object in Game.objects) {
+            // console.log(object);
+            for (var i = 0; i < Game.objects[object].keyFrameAnimations.length; i++) {
+               var currentAnimation = Game.objects[object].keyFrameAnimations[i];
+                if(currentAnimation.currentTime == currentAnimation.data.length){
+                    currentAnimation.stop();
+                }
+            };
+        }
+
+        for (var country in Game.countryArray) {
+            //console.log(country);
+            if(Game.countryArray[country].getCapital().keyFrameAnimations !== undefined){
+                for (var i = 0; i < Game.countryArray[country].getCapital().keyFrameAnimations.length; i++) {
+                    var currentAnimation = Game.countryArray[country].getCapital().keyFrameAnimations[i];
+                    if(currentAnimation.isPlaying && !currentAnimation.isPaused){
+                        //console.log("Reached End");
+                        if(currentAnimation.currentTime == currentAnimation.data.length){
+                            //console.log("End");
+                            currentAnimation.currentTime = 0;
+                            currentAnimation.stop();
+                        }
+                    } else {
+                        currentAnimation.play();
+                    }
+                }; 
+            }
+
+        }
+
+    },
+
     render: function () {
-        Game.renderer.render(Game.scene, Game.camera);
         var deltaTime = Game.clock.getDelta();
         Game.controls.update(deltaTime);
         Game.animate(deltaTime);
+        THREE.AnimationHandler.update(deltaTime);
+        Game.loopAnimations();
+        Game.renderer.render(Game.scene, Game.camera);
         requestAnimationFrame(Game.render);
     },
 
@@ -199,6 +248,7 @@ window.Game = {
 				    Game.countryArray[Game.clickSelected].active = true;
                     console.log(Game.countryArray[Game.clickSelected].name);
                 }
+
                 if(Game.countryArray[Game.clickPrevSelected]){
 				    Game.countryArray[Game.clickPrevSelected].active = false;
                 }
@@ -230,7 +280,9 @@ window.Game = {
             if (intersects[0].object.parent.name != Game.selected) {
                 Game.prevSelected = Game.selected;
                 Game.selected = intersects[0].object.parent.name;
-                Game.countryArray[Game.selected].state = "raising";
+                if (Game.countryArray[Game.selected] != null) {
+                    Game.countryArray[Game.selected].state = "raising";
+                }
                 if (Game.countryArray[Game.prevSelected] != null) {
                     Game.countryArray[Game.prevSelected].state = "lowering";
                 }
