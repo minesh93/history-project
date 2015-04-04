@@ -82,19 +82,23 @@ Country.prototype.getModel = function() {
 };
 
 Country.prototype.raise = function(deltaTime) {
-	this.model.position.y++;
-				if(this.model.position.y >= 25){
-				    this.state = "up";
-				    this.model.position = 25;
-				}
-	return this.model;
+		this.model.position.y++;
+		this.capital.position.y++;
+		if(this.model.position.y >= 25){
+		    this.state = "up";
+		    this.model.position.y = 25;
+		}
+		return this.model;
 };
 
 Country.prototype.lower = function(deltaTime) {
-    this.model.position.y--;
-    if (this.model.position.y <= 0) {
-        this.state = "down";
-        this.model.position.y = 0;
-    }
-    return this.model;
+	if(!this.active){
+	    this.model.position.y--;
+	    this.capital.position.y--;
+	    if (this.model.position.y <= 0) {
+	        this.state = "down";
+	        this.model.position.y = 0;
+	    }
+	    return this.model;
+	}
 };

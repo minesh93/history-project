@@ -7,6 +7,7 @@ window.Game = {
     FAR_CLIPPING_PLANE: 10000,
     renderer: '',
     scene: '',
+    uiScene:'',
     camera: '',
     controls: '',
     countryArray: [],
@@ -21,6 +22,12 @@ window.Game = {
     currentTime: new Date(),
     clock: new THREE.Clock(),
     objects: [],
+    //- don't know if you class a spitfire as ambient
+    ambientObjects: [],
+    x:-5,
+    y:-65.2,
+    z:0,
+    loaded:false,
     modelLoader: new THREE.ColladaLoader(),
     init: function () {
         console.log("Initiated.");
@@ -46,7 +53,9 @@ window.Game = {
         document.addEventListener('mousemove', Game.onDocumentMouseMove, false);
 
         this.renderer.setClearColor(0x354e77);
+        this.renderer.autoClear = false;
         this.scene = new THREE.Scene();
+        this.uiScene = new THREE.Scene();
 
         this.initCamera();
         this.initScene();
@@ -102,9 +111,14 @@ window.Game = {
     },
     initScene: function () {
 
-        // this.loadModel('models/redundant/Europe3d.DAE',function(model){
-        // 	Game.objects['mapeu'] = model;
-        // });
+        this.loadModel('models/general/spitfire.DAE', function (model) {
+            Game.ambientObjects['spitfire'] = model;
+            Game.ambientObjects['spitfire'].position.x = 230;
+            Game.ambientObjects['spitfire'].position.y = 75;
+            Game.ambientObjects['spitfire'].position.z = -384;
+        });
+
+
 
         this.loadModel('models/general/tank.DAE', function (model) {
             Game.objects['tank'] = model;
@@ -113,14 +127,30 @@ window.Game = {
             Game.objects['tank'].position.z = -314;
         });
 
+       // this.loadModel('models/ui/YearDial.DAE', function (model) {
+       //      Game.objects['dial'] = model;
+       //      Game.objects['dial'].scale.set(0.5,0.5,0.5);
+       //      Game.objects['dial'].rotation.x = 1.0000000000000004;
+       //      Game.objects['dial']
+       //      Game.uiScene.add(Game.objects['dial']);
+       //      Game.loadModel('models/ui/YearPointer.DAE', function (model) {
+       //          Game.objects['pointer'] = model;
+       //          Game.objects['pointer'].scale.set(0.3,0.3,0.3);
+
+       //          // Game.objects['pointer'].rotation.y = -3.0000000000000004;
+       //          Game.objects['pointer'].rotation.x = 0.7;
+       //          Game.uiScene.add(Game.objects['pointer']);
+       //          Game.loaded = true;
+       //      });
+       //  });
 
 
-        // this.loadModel('models/general/pin.DAE',function(model){
-        // 	Game.objects['pin'] = model;
-        // 	Game.objects['pin'].position.x = 400;
-        // 	Game.objects['pin'].position.y = 26;
-        // 	Game.objects['pin'].position.z = -320;
-        // });
+
+        //- Load all models for countries here
+        for (var country in Game.countryArray) {
+            Game.countryArray[country].setModel();
+            Game.countryArray[country].setCapital();
+        }
 
         this.loadModel('models/general/boat.DAE', function (model) {
             Game.objects['boat'] = model;
@@ -137,12 +167,6 @@ window.Game = {
             Game.objects['boat2'].rotation.y = 70;
         });
 
-        //- Load all models for countries here
-        for (var country in Game.countryArray) {
-            Game.countryArray[country].setModel();
-            Game.countryArray[country].setCapital();
-        }
-
 
         this.light = new THREE.PointLight(0xFFFFFF, 2, 10000);
         this.light.position.x = 240;
@@ -153,9 +177,28 @@ window.Game = {
 
         this.scene.add(this.light);
 
+        this.uiLight = new THREE.PointLight(0xFFFFFF, 2, 10000);
+        this.uiLight.position.x = 240;
+        this.uiLight.position.y = 293;
+        this.uiLight.position.z = 200;
+
+        this.uiScene.add(this.uiLight);
+
     },
 
     animate: function (deltaTime) {
+
+        if(Game.loaded){
+            var zCamVec = new THREE.Vector3(0,0,1);
+            var position = Game.camera.localToWorld(zCamVec);
+            
+            Game.objects['pointer'].position.set(position.x - 100 + Game.x, position.y - 120 + Game.y, position.z - 200 + Game.z);
+            Game.objects['dial'].position.set(position.x - 100, position.y - 200, position.z - 200);
+            // Game.objects['dial'].position.applyMatrix4( Game.camera.matrixWorld );
+            // Game.objects['pointer'].position.applyMatrix4( Game.camera.matrixWorld );
+            // Game.objects.dial.rotation.y += deltaTime;
+        }
+
         for (var country in Game.countryArray) {
             Game.countryArray[country].animate();
         }
@@ -168,6 +211,23 @@ window.Game = {
                var currentAnimation = Game.objects[object].keyFrameAnimations[i];
                 if(currentAnimation.currentTime == currentAnimation.data.length){
                     currentAnimation.stop();
+                }
+            };
+        }
+
+        for (var object in Game.ambientObjects) {
+            // console.log(object);
+            for (var i = 0; i < Game.ambientObjects[object].keyFrameAnimations.length; i++) {
+               var currentAnimation = Game.ambientObjects[object].keyFrameAnimations[i];
+               if(currentAnimation.isPlaying && !currentAnimation.isPaused){
+                    //console.log("Reached End");
+                    if(currentAnimation.currentTime == currentAnimation.data.length){
+                        //console.log("End");
+                        currentAnimation.currentTime = 0;
+                        currentAnimation.stop();
+                    }
+                } else {
+                    currentAnimation.play();
                 }
             };
         }
@@ -200,7 +260,10 @@ window.Game = {
         Game.animate(deltaTime);
         THREE.AnimationHandler.update(deltaTime);
         Game.loopAnimations();
-        Game.renderer.render(Game.scene, Game.camera);
+        Game.renderer.clear();                    
+        Game.renderer.render(Game.scene, Game.camera);   
+        Game.renderer.clearDepth();               
+        Game.renderer.render( Game.uiScene, Game.camera );   
         requestAnimationFrame(Game.render);
     },
 
@@ -224,7 +287,7 @@ window.Game = {
 
     onDocumentMouseDown: function (event) {
         event.preventDefault();
-
+        console.log("Clicked");
 		// Ray casting
         Game.mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
         Game.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
@@ -246,15 +309,16 @@ window.Game = {
 
                 if(Game.countryArray[Game.clickSelected] !== undefined){
 				    Game.countryArray[Game.clickSelected].active = true;
-                    console.log(Game.countryArray[Game.clickSelected].name);
+                    console.log(Game.countryArray[Game.clickSelected].name + " is active");
                 }
 
                 if(Game.countryArray[Game.clickPrevSelected]){
 				    Game.countryArray[Game.clickPrevSelected].active = false;
+                    console.log(Game.countryArray[Game.clickPrevSelected].name + " is inactive");
                 }
 
-				Game.countryArray[Game.clickSelected].active = true;
-				Game.countryArray[Game.clickPrevSelected].active = false;
+				// Game.countryArray[Game.clickSelected].active = true;
+				// Game.countryArray[Game.clickPrevSelected].active = false;
 
             }
         }
