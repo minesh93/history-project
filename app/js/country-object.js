@@ -24,6 +24,7 @@ Country.prototype.setCapital = function(path,x,y,z){
 			that.capital.position.x = pos.x;
 			that.capital.position.y = pos.y;
 			that.capital.position.z = pos.z;
+
 		});
 	} else {
 		Game.loadModel('models/general/pin.DAE',function(model){
@@ -31,10 +32,10 @@ Country.prototype.setCapital = function(path,x,y,z){
 			that.capital.position.x = pos.x;
 			that.capital.position.y = pos.y;
 			that.capital.position.z = pos.z;
+
+
 		});
 	}
-
-
 }
 
 Country.prototype.getCapital = function() {
@@ -76,6 +77,9 @@ Country.prototype.animate = function() {
 	}
 }
 
+// Country.prototype.generateEvents = (){
+	
+// }
 
 Country.prototype.getModel = function() {
 	return this.model;
@@ -84,8 +88,10 @@ Country.prototype.getModel = function() {
 Country.prototype.raise = function(deltaTime) {
 		this.model.position.y++;
 		this.capital.position.y++;
+
 		if(this.model.position.y >= 25){
 		    this.state = "up";
+
 		    this.model.position.y = 25;
 		}
 		return this.model;
@@ -97,6 +103,7 @@ Country.prototype.lower = function(deltaTime) {
 	    this.capital.position.y--;
 	    if (this.model.position.y <= 0) {
 	        this.state = "down";
+     
 	        this.model.position.y = 0;
 	    }
 	    return this.model;

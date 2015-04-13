@@ -20,6 +20,8 @@ window.Game = {
     mouseOn:'',
     mouse: new THREE.Vector2(0, 0),
     currentTime: new Date(),
+    cameraMoving:false,
+    cameraTarget:{},
     clock: new THREE.Clock(),
     objects: [],
     //- don't know if you class a spitfire as ambient
@@ -199,6 +201,50 @@ window.Game = {
             // Game.objects.dial.rotation.y += deltaTime;
         }
 
+        if(Game.cameraMoving){
+            // var pos = ;
+            Game.camera.lookAt(Game.cameraTarget);
+
+
+            var current = Game.camera.position;
+            var target = Game.cameraTarget;
+            var diff = {};
+            diff.x = Math.abs(current.x - target.x);
+            diff.y = Math.abs(current.y - target.y);
+            diff.z = Math.abs(current.z - target.z);
+
+
+            if(diff.x > 50){
+                if(current.x > target.x){
+                    Game.camera.position.x -= diff.x/60;
+                } else {
+                    Game.camera.position.x += diff.x/60;
+                }
+            } 
+
+            if(diff.y > 50){
+                if(current.y > target.y){
+                    Game.camera.position.y -= diff.y/60;
+                } else {
+                    Game.camera.position.y += diff.y/60;
+                }            
+            }
+
+            if(diff.z > 50){
+                if(current.z > target.z){
+                    Game.camera.position.z -= diff.z/60;
+                } else {
+                    Game.camera.position.z += diff.z/60;
+                }            
+            }
+
+            if((diff.x + diff.y + diff.z) < 150){
+                Game.cameraMoving = false;
+            }
+
+        }
+
+
         for (var country in Game.countryArray) {
             Game.countryArray[country].animate();
         }
@@ -310,6 +356,8 @@ window.Game = {
                 if(Game.countryArray[Game.clickSelected] !== undefined){
 				    Game.countryArray[Game.clickSelected].active = true;
                     console.log(Game.countryArray[Game.clickSelected].name + " is active");
+                    Game.cameraTarget = Game.countryArray[Game.clickSelected].getCapital().position;
+                    Game.cameraMoving = true;
                 }
 
                 if(Game.countryArray[Game.clickPrevSelected]){
