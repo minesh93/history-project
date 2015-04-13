@@ -30,6 +30,10 @@ window.Game = {
     y:-65.2,
     z:0,
     loaded:false,
+    currentYear:1939,
+    axisTexture:'',
+    alliesTexture:'',
+    neutralTexture:'',
     modelLoader: new THREE.ColladaLoader(),
     init: function () {
         console.log("Initiated.");
@@ -51,7 +55,8 @@ window.Game = {
 
         window.addEventListener('resize', Game.onWindowResize, false);
 
-		document.addEventListener('dblclick', Game.onDocumentMouseDown, false);
+        document.addEventListener('dblclick', Game.onDocumentMouseDown, false);
+		document.addEventListener('keypress', Game.onKeyPress, false);
         document.addEventListener('mousemove', Game.onDocumentMouseMove, false);
 
         this.renderer.setClearColor(0x354e77);
@@ -113,6 +118,10 @@ window.Game = {
     },
     initScene: function () {
 
+        this.axisTexture = new THREE.MeshLambertMaterial( { map: THREE.ImageUtils.loadTexture('models/countries/images/0_axis.jpg') } );
+        this.alliedTexture = new THREE.MeshLambertMaterial( { map: THREE.ImageUtils.loadTexture('models/countries/images/0_allied.jpg') } );
+        this.neutralTexture = new THREE.MeshLambertMaterial( { map: THREE.ImageUtils.loadTexture('models/countries/images/0_neutral.jpg') } );
+
         this.loadModel('models/general/spitfire.DAE', function (model) {
             Game.ambientObjects['spitfire'] = model;
             Game.ambientObjects['spitfire'].position.x = 230;
@@ -153,6 +162,8 @@ window.Game = {
             Game.countryArray[country].setModel();
             Game.countryArray[country].setCapital();
         }
+
+
 
         this.loadModel('models/general/boat.DAE', function (model) {
             Game.objects['boat'] = model;
@@ -313,6 +324,17 @@ window.Game = {
         requestAnimationFrame(Game.render);
     },
 
+
+    setText:function(){
+        document.getElementById("current-country").innerHTML = Game.countryArray[Game.selected].name;
+        document.getElementById("current-occupation").innerHTML = Game.countryArray[Game.selected].getOccupation();
+    },
+
+    clearText:function(){
+        document.getElementById("current-country").innerHTML = "";
+        document.getElementById("current-occupation").innerHTML = "";
+    },
+
     country: {
         getByName: function (name) {
             return Game.countryArray[name];
@@ -329,6 +351,29 @@ window.Game = {
         Game.camera.aspect = Game.WIDTH / Game.HEIGHT;
         Game.camera.updateProjectionMatrix();
         Game.renderer.setSize(window.innerWidth, window.innerHeight);
+    },
+
+    incYear:function(){
+        Game.currentYear++;
+        if(Game.currentYear == 1946){
+            Game.currentYear = 1939;
+        }
+
+        document.getElementById("current-year").innerHTML = Game.currentYear;        
+
+        for (var country in Game.countryArray) {
+            Game.countryArray[country].setOccupationTexture();
+        }
+
+    },
+
+    onKeyPress: function(event){
+        // console.log(event.key);
+        switch(event.key){
+            case "h":
+                Game.incYear();
+                break
+        }
     },
 
     onDocumentMouseDown: function (event) {
@@ -371,7 +416,7 @@ window.Game = {
             }
         }
     },
-	
+
 	onDocumentMouseMove: function (event) {
         event.preventDefault();
 		
@@ -392,6 +437,8 @@ window.Game = {
             if (intersects[0].object.parent.name != Game.selected) {
                 Game.prevSelected = Game.selected;
                 Game.selected = intersects[0].object.parent.name;
+                Game.setText();
+                
                 if (Game.countryArray[Game.selected] != null) {
                     Game.countryArray[Game.selected].state = "raising";
                 }
@@ -400,6 +447,7 @@ window.Game = {
                 }
             }
         } else {
+            Game.clearText();
             if (Game.countryArray[Game.selected] != null) {
                 Game.countryArray[Game.selected].state = "lowering";
             }

@@ -3,36 +3,36 @@ Game.countryArray['GreatBritain'].cPos = { x: 230, y: 25, z: -384 }
 
 
 Game.countryArray['GreatBritain'].data[1939] = {
-	occupation:'British',
+	occupation:'Allied',
 	events:[]
 }
 
 Game.countryArray['GreatBritain'].data[1940] = {
-	occupation:'British',
+	occupation:'Allied',
 	events:[]
 }
 
 Game.countryArray['GreatBritain'].data[1941] = {
-	occupation:'British',
+	occupation:'Allied',
 	events:[]
 }
 
 Game.countryArray['GreatBritain'].data[1942] = {
-	occupation:'British',
+	occupation:'Allied',
 	events:[]
 }
 
 Game.countryArray['GreatBritain'].data[1943] = {
-	occupation:'British',
+	occupation:'Allied',
 	events:[]
 }
 
 Game.countryArray['GreatBritain'].data[1944] = {
-	occupation:'British',
+	occupation:'Allied',
 	events:[]
 }
 
 Game.countryArray['GreatBritain'].data[1945] = {
-	occupation:'British',
+	occupation:'Allied',
 	events:[]
 }
