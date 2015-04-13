@@ -24,9 +24,9 @@ Country.prototype.setCapital = function(path,x,y,z){
 			that.capital.position.x = pos.x;
 			that.capital.position.y = pos.y;
 			that.capital.position.z = pos.z;
-			that.capital.scale.x = 0;
-			that.capital.scale.y = 0;
-			that.capital.scale.z = 0;
+			that.capital.scale.x = 0.01;
+			that.capital.scale.y = 0.01;
+			that.capital.scale.z = 0.01;
 		});
 	} else {
 		Game.loadModel('models/general/pin.DAE',function(model){
@@ -34,9 +34,9 @@ Country.prototype.setCapital = function(path,x,y,z){
 			that.capital.position.x = pos.x;
 			that.capital.position.y = pos.y;
 			that.capital.position.z = pos.z;
-			that.capital.scale.x = 0;
-			that.capital.scale.y = 0;
-			that.capital.scale.z = 0;
+			that.capital.scale.x = 0.01;
+			that.capital.scale.y = 0.01;
+			that.capital.scale.z = 0.01;
 		});
 	}
 }
@@ -134,9 +134,9 @@ Country.prototype.lower = function(deltaTime) {
 	    if (this.model.position.y <= 0) {
 	        this.state = "down";
 	        this.model.position.y = 0;
-			this.capital.scale.x = 0;
-			this.capital.scale.y = 0;
-			this.capital.scale.z = 0;
+			this.capital.scale.x = 0.01;
+			this.capital.scale.y = 0.01;
+			this.capital.scale.z = 0.01;
 	    }
 	    return this.model;
 	}
