@@ -95,9 +95,27 @@ Country.prototype.animate = function() {
 	}
 }
 
-// Country.prototype.generateEvents = (){
-	
-// }
+Country.prototype.loadAllEvents = function(){
+	//- Load events for all years
+	this.loadEvents(1939);
+	this.loadEvents(1940);
+	this.loadEvents(1941);
+	this.loadEvents(1942);
+	this.loadEvents(1943);
+	this.loadEvents(1944);
+	this.loadEvents(1945);
+};
+
+
+Country.prototype.loadEvents = function(year){
+	for (var singleEvent in this.data[year].events) {
+	    // console.log(this.data[year].events[singleEvent]);
+	    var currentEvent = this.data[year].events[singleEvent];
+	    for (var model in this.data[year].events) {
+	    	console.log(currentEvent.models[model].path);
+	    }
+	}
+}
 
 Country.prototype.getModel = function() {
 	return this.model;
@@ -105,21 +123,21 @@ Country.prototype.getModel = function() {
 
 // Raises a country
 Country.prototype.raise = function(deltaTime) {
-		this.model.position.y++;
-		this.capital.position.y++;
-		this.capital.scale.x = this.capital.scale.x + 0.04;
-		this.capital.scale.y = this.capital.scale.y + 0.04;
-		this.capital.scale.z = this.capital.scale.z + 0.04;
-		
+	this.model.position.y++;
+	this.capital.position.y++;
+	this.capital.scale.x = this.capital.scale.x + 0.04;
+	this.capital.scale.y = this.capital.scale.y + 0.04;
+	this.capital.scale.z = this.capital.scale.z + 0.04;
+	
 
-		if(this.model.position.y >= 25){
-		    this.state = "up";
-		    this.model.position.y = 25;
-			this.capital.scale.x = 1;
-			this.capital.scale.y = 1;
-			this.capital.scale.z = 1;
-		}
-		return this.model;
+	if(this.model.position.y >= 25){
+	    this.state = "up";
+	    this.model.position.y = 25;
+		this.capital.scale.x = 1;
+		this.capital.scale.y = 1;
+		this.capital.scale.z = 1;
+	}
+	return this.model;
 };
 
 // Lowers a country

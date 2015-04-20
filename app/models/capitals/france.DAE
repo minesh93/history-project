@@ -6,8 +6,8 @@
       <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
       <source_data>file:///U:/MyModules/ADMA/GameModels/eifleTower.max</source_data>
     </contributor>
-    <created>2015-03-03T13:53:33</created>
-    <modified>2015-03-03T13:53:33</modified>
+    <created>2015-04-20T13:06:18</created>
+    <modified>2015-04-20T13:06:18</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -751,276 +751,287 @@
       <node name="EnvironmentAmbientLight">
         <instance_light url="#EnvironmentAmbientLight"/>
       </node>
-      <node id="node-bottomBase" name="bottomBase">
-        <matrix>0.128495 0 0 0 0 0.1318387 0 0 0 0 0.2024175 4.922173 0 0 0 1</matrix>
-        <instance_geometry url="#geom-bottomBase">
-          <bind_material>
-            <technique_common>
-              <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-            </technique_common>
-          </bind_material>
-        </instance_geometry>
-        <node id="node-Leg006" name="Leg006">
-          <matrix>-2.38323e-4 0.6132707 0 21.60438 -0.8326915 -3.23593e-4 0 20.92412 0 0 0.772467 4.90213 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Leg006">
+      <node id="node-Tower" name="Tower">
+        <matrix>1 0 0 0.02486777 0 1 0 -0.08740234 0 0 1 17.05262 0 0 0 1</matrix>
+        <node id="node-bottomBase" name="bottomBase">
+          <matrix>0.128495 0 0 -0.02486777 0 0.1318387 0 0.08740234 0 0 0.2024175 -12.13045 0 0 0 1</matrix>
+          <instance_geometry url="#geom-bottomBase">
             <bind_material>
               <technique_common>
                 <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
               </technique_common>
             </bind_material>
           </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Leg005" name="Leg005">
-          <matrix>0.613271 0 0 -20.57447 0 0.8326917 0 22.76707 0 0 0.7724671 4.90213 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Leg005">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-bottomBase002" name="bottomBase002">
-          <matrix>0.6270481 0 0 6.48499e-5 0 0.627048 0 -7.62939e-6 0 0 10.32803 34.08908 0 0 0 1</matrix>
-          <instance_geometry url="#geom-bottomBase002">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-bottomBase001" name="bottomBase001">
-          <matrix>0.6974583 0 0 6.48499e-5 0 0.6974583 0 -7.62939e-6 0 0 0.9999998 29.25738 0 0 0 1</matrix>
-          <instance_geometry url="#geom-bottomBase001">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Leg008" name="Leg008">
-          <matrix>-0.001891244 -0.6132681 0 -21.22048 0.8326876 -0.002567908 0 -22.19808 0 0 0.772467 4.90213 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Leg008">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Leg007" name="Leg007">
-          <matrix>-0.6132674 -0.002129566 0 20.84321 0.0028915 -0.8326867 0 -24.03771 0 0 0.7724671 4.90213 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Leg007">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Box005" name="Box005">
-          <matrix>0.2656332 0 0 0.1390953 0 0.4300776 0 0.6751575 0 0 0.8323565 106.3076 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Box005">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Leg3" name="Leg3">
-          <matrix>-0.8845148 -0.003071471 0 29.98945 0.004170406 -1.200983 0 -34.39558 0 0 0.7724673 -23.88218 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Leg3">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Box004" name="Box004">
-          <matrix>0.2942322 0 0 0.1389732 0 0.4573418 0 0.6751575 0 0 0.2455173 103.9712 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Box004">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Leg2" name="Leg2">
-          <matrix>-3.43733e-4 0.8845197 0 31.08703 -1.200989 -4.66717e-4 0 30.45279 0 0 0.7724671 -23.88218 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Leg2">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Leg4" name="Leg4">
-          <matrix>-0.00272774 -0.8845156 0 -30.67885 1.200984 -0.003703689 0 -31.74228 0 0 0.7724671 -23.88218 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Leg4">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Leg1" name="Leg1">
-          <matrix>0.8845199 0 0 -29.74718 0 1.20099 0 33.11086 0 0 0.7724671 -23.88218 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Leg1">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Cylinder001" name="Cylinder001">
-          <matrix>0.1302081 0 0 -0.03707886 0 0.1862786 0 0.6616287 0 0 0.1200612 121.4929 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Cylinder001">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Pyramid001" name="Pyramid001">
-          <matrix>0.3666739 0 0 0.05185699 0 0.4460958 0 0.7340583 0 0 0.1235095 115.3481 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Pyramid001">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
-          <extra>
-            <technique profile="OpenCOLLADA">
-              <cast_shadows>1</cast_shadows>
-              <primary_visibility>1</primary_visibility>
-              <receive_shadows>1</receive_shadows>
-              <secondary_visibility>1</secondary_visibility>
-            </technique>
-          </extra>
-        </node>
-        <node id="node-Sphere001" name="Sphere001">
-          <matrix>0.9441324 0 0 -0.072937 0 1.281932 0 0.6040688 0 0 1.94553 141.4979 0 0 0 1</matrix>
-          <instance_geometry url="#geom-Sphere001">
-            <bind_material>
-              <technique_common>
-                <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
-              </technique_common>
-            </bind_material>
-          </instance_geometry>
+          <node id="node-Leg006" name="Leg006">
+            <matrix>-2.38323e-4 0.6132707 0 21.60438 -0.8326915 -3.23593e-4 0 20.92412 0 0 0.772467 4.90213 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Leg006">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Leg005" name="Leg005">
+            <matrix>0.613271 0 0 -20.57447 0 0.8326917 0 22.76707 0 0 0.7724671 4.90213 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Leg005">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-bottomBase002" name="bottomBase002">
+            <matrix>0.6270481 0 0 6.48499e-5 0 0.627048 0 -7.62939e-6 0 0 10.32803 34.08908 0 0 0 1</matrix>
+            <instance_geometry url="#geom-bottomBase002">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-bottomBase001" name="bottomBase001">
+            <matrix>0.6974583 0 0 6.48499e-5 0 0.6974583 0 -7.62939e-6 0 0 0.9999998 29.25738 0 0 0 1</matrix>
+            <instance_geometry url="#geom-bottomBase001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Leg008" name="Leg008">
+            <matrix>-0.001891244 -0.6132681 0 -21.22048 0.8326876 -0.002567908 0 -22.19808 0 0 0.772467 4.90213 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Leg008">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Leg007" name="Leg007">
+            <matrix>-0.6132674 -0.002129566 0 20.84321 0.0028915 -0.8326867 0 -24.03771 0 0 0.7724671 4.90213 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Leg007">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Box005" name="Box005">
+            <matrix>0.2656332 0 0 0.1390953 0 0.4300776 0 0.6751575 0 0 0.8323565 106.3076 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Box005">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Leg3" name="Leg3">
+            <matrix>-0.8845148 -0.003071471 0 29.98945 0.004170406 -1.200983 0 -34.39558 0 0 0.7724673 -23.88218 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Leg3">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Box004" name="Box004">
+            <matrix>0.2942322 0 0 0.1389732 0 0.4573418 0 0.6751575 0 0 0.2455173 103.9712 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Box004">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Leg2" name="Leg2">
+            <matrix>-3.43733e-4 0.8845197 0 31.08703 -1.200989 -4.66717e-4 0 30.45279 0 0 0.7724671 -23.88218 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Leg2">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Leg4" name="Leg4">
+            <matrix>-0.00272774 -0.8845156 0 -30.67885 1.200984 -0.003703689 0 -31.74228 0 0 0.7724671 -23.88218 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Leg4">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Leg1" name="Leg1">
+            <matrix>0.8845199 0 0 -29.74718 0 1.20099 0 33.11086 0 0 0.7724671 -23.88218 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Leg1">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Cylinder001" name="Cylinder001">
+            <matrix>0.1302081 0 0 -0.03707886 0 0.1862786 0 0.6616287 0 0 0.1200612 121.4929 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Cylinder001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Pyramid001" name="Pyramid001">
+            <matrix>0.3666739 0 0 0.05185699 0 0.4460958 0 0.7340583 0 0 0.1235095 115.3481 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Pyramid001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
+          <node id="node-Sphere001" name="Sphere001">
+            <matrix>0.9441324 0 0 -0.072937 0 1.281932 0 0.6040688 0 0 1.94553 141.4979 0 0 0 1</matrix>
+            <instance_geometry url="#geom-Sphere001">
+              <bind_material>
+                <technique_common>
+                  <instance_material symbol="ColorMaterial" target="#ColorEffectR86G86B86-material"/>
+                </technique_common>
+              </bind_material>
+            </instance_geometry>
+            <extra>
+              <technique profile="OpenCOLLADA">
+                <cast_shadows>1</cast_shadows>
+                <primary_visibility>1</primary_visibility>
+                <receive_shadows>1</receive_shadows>
+                <secondary_visibility>1</secondary_visibility>
+              </technique>
+            </extra>
+          </node>
           <extra>
             <technique profile="OpenCOLLADA">
               <cast_shadows>1</cast_shadows>

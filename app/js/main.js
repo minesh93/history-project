@@ -129,64 +129,54 @@ window.Game = {
             Game.ambientObjects['spitfire'].position.z = -384;
         });
 
+        // this.loadModel('models/general/tank.DAE', function (model) {
+        //     Game.objects['tank'] = model;
+        //     Game.objects['tank'].position.x = 232;
+        //     Game.objects['tank'].position.y = 25;
+        //     Game.objects['tank'].position.z = -314;
+        // });
 
-
-        this.loadModel('models/general/tank.DAE', function (model) {
-            Game.objects['tank'] = model;
-            Game.objects['tank'].position.x = 232;
-            Game.objects['tank'].position.y = 25;
-            Game.objects['tank'].position.z = -314;
-        });
-
-       // this.loadModel('models/ui/YearDial.DAE', function (model) {
-       //      Game.objects['dial'] = model;
-       //      Game.objects['dial'].scale.set(0.5,0.5,0.5);
-       //      Game.objects['dial'].rotation.x = 1.0000000000000004;
-       //      Game.objects['dial']
-       //      Game.uiScene.add(Game.objects['dial']);
-       //      Game.loadModel('models/ui/YearPointer.DAE', function (model) {
-       //          Game.objects['pointer'] = model;
-       //          Game.objects['pointer'].scale.set(0.3,0.3,0.3);
-
-       //          // Game.objects['pointer'].rotation.y = -3.0000000000000004;
-       //          Game.objects['pointer'].rotation.x = 0.7;
-       //          Game.uiScene.add(Game.objects['pointer']);
-       //          Game.loaded = true;
-       //      });
-       //  });
-
-
-
+        // this.loadModel('models/ui/YearDial.DAE', function (model) {
+        //      Game.objects['dial'] = model;
+        //      Game.objects['dial'].scale.set(0.5,0.5,0.5);
+        //      Game.objects['dial'].rotation.x = 1.0000000000000004;
+        //      Game.objects['dial']
+        //      Game.uiScene.add(Game.objects['dial']);
+        //      Game.loadModel('models/ui/YearPointer.DAE', function (model) {
+        //          Game.objects['pointer'] = model;
+        //          Game.objects['pointer'].scale.set(0.3,0.3,0.3);
+        //          // Game.objects['pointer'].rotation.y = -3.0000000000000004;
+        //          Game.objects['pointer'].rotation.x = 0.7;
+        //          Game.uiScene.add(Game.objects['pointer']);
+        //          Game.loaded = true;
+        //      });
+        //  });
         //- Load all models for countries here
         for (var country in Game.countryArray) {
             Game.countryArray[country].setModel();
             Game.countryArray[country].setCapital();
+            Game.countryArray[country].loadAllEvents();
         }
 
+        // this.loadModel('models/capitals/france.DAE', function (model) {
+        //     Game.objects['boat'] = model;
+        //     Game.objects['boat'].position.x = 200;
+        //     Game.objects['boat'].position.y = 25;
+        //     Game.objects['boat'].position.z = -340;
+        // });
 
-
-        this.loadModel('models/general/boat.DAE', function (model) {
-            Game.objects['boat'] = model;
-            Game.objects['boat'].position.x = 200;
-            Game.objects['boat'].position.y = 25;
-            Game.objects['boat'].position.z = -340;
-        });
-
-        this.loadModel('models/general/boat.DAE', function (model) {
-            Game.objects['boat2'] = model;
-            Game.objects['boat2'].position.x = 180;
-            Game.objects['boat2'].position.y = 25;
-            Game.objects['boat2'].position.z = -345;
-            Game.objects['boat2'].rotation.y = 70;
-        });
-
+        // this.loadModel('models/general/boat.DAE', function (model) {
+        //     Game.objects['boat2'] = model;
+        //     Game.objects['boat2'].position.x = 180;
+        //     Game.objects['boat2'].position.y = 25;
+        //     Game.objects['boat2'].position.z = -345;
+        //     Game.objects['boat2'].rotation.y = 70;
+        // });
 
         this.light = new THREE.PointLight(0xFFFFFF, 2, 10000);
         this.light.position.x = 240;
         this.light.position.y = 293;
         this.light.position.z = 200;
-
-
 
         this.scene.add(this.light);
 
@@ -306,9 +296,7 @@ window.Game = {
                     }
                 }; 
             }
-
         }
-
     },
 
     render: function () {
