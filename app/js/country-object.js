@@ -19,24 +19,24 @@ Country.prototype.setCapital = function(path,x,y,z){
 	var pos = this.cPos;
 	if(this.capital != 'Pin'){
 		console.log("Loading capital: "+lowername);
-		Game.loadModel('models/capitals/'+lowername+'.DAE',function(model){
+		Game.loadModel('models/capitals/'+lowername+'.DAE',0,function(model){
 			that.capital = model;
 			that.capital.position.x = pos.x;
 			that.capital.position.y = pos.y;
 			that.capital.position.z = pos.z;
-			that.capital.scale.x = 0.01;
-			that.capital.scale.y = 0.01;
-			that.capital.scale.z = 0.01;
+			that.capital.scale.x = 0.0001;
+			that.capital.scale.y = 0.0001;
+			that.capital.scale.z = 0.0001;
 		});
 	} else {
-		Game.loadModel('models/general/pin.DAE',function(model){
+		Game.loadModel('models/general/pin.DAE',0,function(model){
 			that.capital = model;
 			that.capital.position.x = pos.x;
 			that.capital.position.y = pos.y;
 			that.capital.position.z = pos.z;
-			that.capital.scale.x = 0.01;
-			that.capital.scale.y = 0.01;
-			that.capital.scale.z = 0.01;
+			that.capital.scale.x = 0.0001;
+			that.capital.scale.y = 0.0001;
+			that.capital.scale.z = 0.0001;
 		});
 	}
 }
@@ -49,12 +49,18 @@ Country.prototype.setModel = function(){
 	var that = this;
 	var lowername = this.name.toLowerCase().replace(/\s/g, '');
 	
-	Game.loadModel('models/countries/'+lowername+'.DAE',function(model){
+	Game.loadModel('models/countries/'+lowername+'.DAE',0,function(model){
 		that.model = model;
 		that.model.targetName = that.name;
 		that.setOccupationTexture();
 		that.loaded = true;
 	});
+}
+
+Country.prototype.loadModels = function(){
+	this.setModel();
+	this.setCapital();
+	this.loadAllEvents();
 }
 
 Country.prototype.setOccupationTexture = function(){
@@ -93,7 +99,7 @@ Country.prototype.animate = function() {
 	        // default stuff
 	    } 
 	}
-}
+};
 
 Country.prototype.loadAllEvents = function(){
 	//- Load events for all years
@@ -106,16 +112,65 @@ Country.prototype.loadAllEvents = function(){
 	this.loadEvents(1945);
 };
 
-
 Country.prototype.loadEvents = function(year){
-	for (var singleEvent in this.data[year].events) {
-	    // console.log(this.data[year].events[singleEvent]);
-	    var currentEvent = this.data[year].events[singleEvent];
-	    for (var model in this.data[year].events) {
-	    	console.log(currentEvent.models[model].path);
+    var currentYear = this.data[year];
+    for (var mi = 0; mi < currentYear.models.length; mi++) {
+    	console.log(currentYear.models[mi].path);
+    	Game.loadModel(currentYear.models[mi].path,mi,function(model){
+
+    		var tempPos = currentYear.models[model.lookUpIndex].pos;
+    		var tempRot = currentYear.models[model.lookUpIndex].rot;
+    		var animate = currentYear.models[model.lookUpIndex].animate;
+
+    		currentYear.models[model.lookUpIndex] = model;
+
+       		currentYear.models[model.lookUpIndex].position.set(tempPos.x,tempPos.y,tempPos.z);
+
+    		currentYear.models[model.lookUpIndex].rotation.set(tempRot.x,tempRot.y,tempRot.z);
+
+      		currentYear.models[model.lookUpIndex].scale.set(0.0001,0.0001,0.0001);
+    		currentYear.models[model.lookUpIndex].hasAnimations = animate;
+    	});
+    }
+};
+
+Country.prototype.activate = function(){
+	    document.getElementById("events-wrapper").innerHTML = '';
+	for (var year = 1939; year < 1945; year++) {
+	    var currentYear = this.data[year];
+	    for (var mi in currentYear.models) {
+	    	console.log(currentYear.models[mi].scale);
+	    	currentYear.models[mi].scale.set(0.0001,0.0001,0.0001);
 	    }
 	}
-}
+
+    var currentYear = this.data[Game.currentYear];
+    for (var mi in currentYear.models) {
+    	console.log(currentYear.models[mi]);
+    	currentYear.models[mi].scale.set(1,1,1);
+    }
+
+    var currentYear = this.data[Game.currentYear];
+    var eventHTML = '';
+    for (var ei in currentYear.events) {
+    	currentEvent = currentYear.events[ei];
+    	eventHTML += '<div class="event"><h2>'+currentEvent.title+'</h2><p>'+currentEvent.text+'</p></div>'
+    }
+
+
+    document.getElementById("events-wrapper").innerHTML = eventHTML; 
+
+};
+
+Country.prototype.deactivate = function(){
+	for (var year = 1939; year < 1945; year++) {
+	    var currentYear = this.data[year].events;
+	    for (var mi in currentYear.models) {
+	    	console.log(currentYear.models[mi]);
+	    	currentYear.models[mi].scale.set(0.0001,0.0001,0.0001)
+	    }
+	}
+};
 
 Country.prototype.getModel = function() {
 	return this.model;
@@ -152,9 +207,9 @@ Country.prototype.lower = function(deltaTime) {
 	    if (this.model.position.y <= 0) {
 	        this.state = "down";
 	        this.model.position.y = 0;
-			this.capital.scale.x = 0.01;
-			this.capital.scale.y = 0.01;
-			this.capital.scale.z = 0.01;
+			this.capital.scale.x = 0.0001;
+			this.capital.scale.y = 0.0001;
+			this.capital.scale.z = 0.0001;
 	    }
 	    return this.model;
 	}

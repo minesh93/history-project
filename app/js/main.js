@@ -85,12 +85,12 @@ window.Game = {
         this.controls.autoForward = false;
         this.controls.dragToLook = true;
     },
-    loadModel: function (path, callback) {
+    loadModel: function (path, index, callback) {
         var returnModel = {};
         this.modelLoader.load(path, function (collada) {
             // Here we store the dae in a global variable.
             returnModel = collada.scene;
-
+            returnModel.lookUpIndex = index;
             // Scale your model to the correct size.
             returnModel.keyFrameAnimations = [];
             returnModel.scale.x = 1;
@@ -122,7 +122,7 @@ window.Game = {
         this.alliedTexture = new THREE.MeshLambertMaterial( { map: THREE.ImageUtils.loadTexture('models/countries/images/0_allied.jpg') } );
         this.neutralTexture = new THREE.MeshLambertMaterial( { map: THREE.ImageUtils.loadTexture('models/countries/images/0_neutral.jpg') } );
 
-        this.loadModel('models/general/spitfire.DAE', function (model) {
+        this.loadModel('models/general/spitfire.DAE',0, function (model) {
             Game.ambientObjects['spitfire'] = model;
             Game.ambientObjects['spitfire'].position.x = 230;
             Game.ambientObjects['spitfire'].position.y = 75;
@@ -153,25 +153,8 @@ window.Game = {
         //  });
         //- Load all models for countries here
         for (var country in Game.countryArray) {
-            Game.countryArray[country].setModel();
-            Game.countryArray[country].setCapital();
-            Game.countryArray[country].loadAllEvents();
+            Game.countryArray[country].loadModels();
         }
-
-        // this.loadModel('models/capitals/france.DAE', function (model) {
-        //     Game.objects['boat'] = model;
-        //     Game.objects['boat'].position.x = 200;
-        //     Game.objects['boat'].position.y = 25;
-        //     Game.objects['boat'].position.z = -340;
-        // });
-
-        // this.loadModel('models/general/boat.DAE', function (model) {
-        //     Game.objects['boat2'] = model;
-        //     Game.objects['boat2'].position.x = 180;
-        //     Game.objects['boat2'].position.y = 25;
-        //     Game.objects['boat2'].position.z = -345;
-        //     Game.objects['boat2'].rotation.y = 70;
-        // });
 
         this.light = new THREE.PointLight(0xFFFFFF, 2, 10000);
         this.light.position.x = 240;
@@ -217,25 +200,25 @@ window.Game = {
 
             if(diff.x > 50){
                 if(current.x > target.x){
-                    Game.camera.position.x -= diff.x/60;
+                    Game.camera.position.x -= diff.x/30;
                 } else {
-                    Game.camera.position.x += diff.x/60;
+                    Game.camera.position.x += diff.x/30;
                 }
             } 
 
             if(diff.y > 50){
                 if(current.y > target.y){
-                    Game.camera.position.y -= diff.y/60;
+                    Game.camera.position.y -= diff.y/30;
                 } else {
-                    Game.camera.position.y += diff.y/60;
+                    Game.camera.position.y += diff.y/30;
                 }            
             }
 
             if(diff.z > 50){
                 if(current.z > target.z){
-                    Game.camera.position.z -= diff.z/60;
+                    Game.camera.position.z -= diff.z/30;
                 } else {
-                    Game.camera.position.z += diff.z/60;
+                    Game.camera.position.z += diff.z/30;
                 }            
             }
 
@@ -297,6 +280,27 @@ window.Game = {
                 }; 
             }
         }
+
+
+        if(Game.countryArray[Game.clickSelected] !== undefined){
+            var models = Game.countryArray[Game.clickSelected].data[Game.currentYear].models;
+            for (var i = 0; i < models.length; i++) {
+                var currentModel = models[i];
+                if(currentModel.hasAnimations){
+                    currentAnimation = currentModel.keyFrameAnimations[0];
+                        if(currentAnimation.isPlaying && !currentAnimation.isPaused){
+                            if(currentAnimation.currentTime == currentAnimation.data.length){
+                                currentAnimation.currentTime = 0;
+                                currentAnimation.stop();
+                            }
+                        } else {
+                            currentAnimation.play();
+                        }
+                }
+            };
+        }
+
+
     },
 
     render: function () {
@@ -353,15 +357,26 @@ window.Game = {
             Game.countryArray[country].setOccupationTexture();
         }
 
+        if(Game.countryArray[Game.clickSelected] !== undefined){
+            Game.countryArray[Game.clickSelected].activate();
+        }
+
+
     },
 
     onKeyPress: function(event){
-        // console.log(event.key);
-        switch(event.key){
-            case "h":
-                Game.incYear();
-                break
+        if(event.charCode == 32){
+            Game.incYear();
         }
+
+        if(event.charCode == 104){
+            Game.toggleControls();
+        }
+
+    },
+
+    toggleControls:function(){
+        document.getElementById("controls").classList.toggle('active');
     },
 
     onDocumentMouseDown: function (event) {
@@ -389,12 +404,14 @@ window.Game = {
                 if(Game.countryArray[Game.clickSelected] !== undefined){
 				    Game.countryArray[Game.clickSelected].active = true;
                     console.log(Game.countryArray[Game.clickSelected].name + " is active");
+                    Game.countryArray[Game.clickSelected].activate();
                     Game.cameraTarget = Game.countryArray[Game.clickSelected].getCapital().position;
                     Game.cameraMoving = true;
                 }
 
                 if(Game.countryArray[Game.clickPrevSelected]){
 				    Game.countryArray[Game.clickPrevSelected].active = false;
+                    Game.countryArray[Game.clickSelected].deactivate();
                     console.log(Game.countryArray[Game.clickPrevSelected].name + " is inactive");
                 }
 

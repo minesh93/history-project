@@ -31,3 +31,40 @@
 	right:0;
 	margin:auto;
 }
+
+#events-wrapper{
+	position: absolute;
+	top:60px;
+	right:60px;
+	width:400px;
+}
+
+#events-wrapper div{
+	margin-bottom:90px;
+}
+
+#events-wrapper div h2{
+	text-align: center;
+}
+
+#control-toggle{
+	position: absolute;
+	bottom:30px;
+	right:162px;
+	font-size:12px;
+}
+
+#controls{
+	display: none;
+	position: absolute;
+	bottom:60px;
+	right:30px;
+}
+
+#controls.active{
+	display: block;
+}
+
+#controls p{
+ margin: 0px;
+}
