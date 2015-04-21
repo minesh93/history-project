@@ -135,7 +135,10 @@ Country.prototype.loadEvents = function(year){
 };
 
 Country.prototype.activate = function(){
-	    document.getElementById("events-wrapper").innerHTML = '';
+	document.getElementById("events-wrapper").innerHTML = '';
+
+	this.active = true;
+
 	for (var year = 1939; year < 1945; year++) {
 	    var currentYear = this.data[year];
 	    for (var mi in currentYear.models) {
@@ -163,11 +166,14 @@ Country.prototype.activate = function(){
 };
 
 Country.prototype.deactivate = function(){
+	document.getElementById("events-wrapper").innerHTML = '';
+	this.active = false;
+
 	for (var year = 1939; year < 1945; year++) {
-	    var currentYear = this.data[year].events;
+	    var currentYear = this.data[year];
 	    for (var mi in currentYear.models) {
-	    	console.log(currentYear.models[mi]);
-	    	currentYear.models[mi].scale.set(0.0001,0.0001,0.0001)
+	    	console.log(currentYear.models[mi].scale);
+	    	currentYear.models[mi].scale.set(0.0001,0.0001,0.0001);
 	    }
 	}
 };
@@ -185,9 +191,10 @@ Country.prototype.raise = function(deltaTime) {
 	this.capital.scale.z = this.capital.scale.z + 0.04;
 	
 
-	if(this.model.position.y >= 25){
+	if(this.model.position.y >= 22){
 	    this.state = "up";
-	    this.model.position.y = 25;
+	    this.model.position.y = 22;
+	    this.capital.position.y = 48;
 		this.capital.scale.x = 1;
 		this.capital.scale.y = 1;
 		this.capital.scale.z = 1;

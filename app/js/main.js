@@ -11,24 +11,30 @@ window.Game = {
     camera: '',
     controls: '',
     countryArray: [],
+
     currentCountry: '',
+    userState:'IDLE',
+
     projector: '',
     selected:'',
     prevSelected:'',
     clickSelected:'',
     clickPrevSelected:'',
-    mouseOn:'',
+
     mouse: new THREE.Vector2(0, 0),
     currentTime: new Date(),
+
+    cameraLock:false,
     cameraMoving:false,
+
+    cameraCity:{},
     cameraTarget:{},
+    cameraInitial:{},
+
     clock: new THREE.Clock(),
     objects: [],
-    //- don't know if you class a spitfire as ambient
     ambientObjects: [],
-    x:-5,
-    y:-65.2,
-    z:0,
+
     loaded:false,
     currentYear:1939,
     axisTexture:'',
@@ -55,7 +61,7 @@ window.Game = {
 
         window.addEventListener('resize', Game.onWindowResize, false);
 
-        document.addEventListener('dblclick', Game.onDocumentMouseDown, false);
+        document.addEventListener('dblclick', Game.onDocumentMouseClick, false);
 		document.addEventListener('keypress', Game.onKeyPress, false);
         document.addEventListener('mousemove', Game.onDocumentMouseMove, false);
 
@@ -72,12 +78,10 @@ window.Game = {
     initCamera: function () {
 
         this.camera = new THREE.PerspectiveCamera(this.VIEW_ANGLE, this.ASPECT_RATIO, this.NEAR_CLIPPING_PLANE, this.FAR_CLIPPING_PLANE);
-        // 0.06636389772195989, _y: -0.8648781502759016, _z: -0.030489611766917137
-        // -591.0329190552981, y: -287.87343007596024, z: 936.1095241470686
+
         this.camera.rotation.set(-0.47950680676215296, 0.20616691477392507, -0.03438771783635605);
         this.camera.position.set(293.58995771984328, 240.451532243403, -27.41075915421712);
-        // this.camera.rotation.set(0.06636389772195989,-0.8648781502759016, -0.030489611766917137);
-        // this.camera.position.set(-591,-287,936);
+
         this.controls = new THREE.FlyControls(this.camera);
         this.controls.movementSpeed = 300;
         this.controls.domElement = document.getElementById('canvas-wrapper');
@@ -129,28 +133,6 @@ window.Game = {
             Game.ambientObjects['spitfire'].position.z = -384;
         });
 
-        // this.loadModel('models/general/tank.DAE', function (model) {
-        //     Game.objects['tank'] = model;
-        //     Game.objects['tank'].position.x = 232;
-        //     Game.objects['tank'].position.y = 25;
-        //     Game.objects['tank'].position.z = -314;
-        // });
-
-        // this.loadModel('models/ui/YearDial.DAE', function (model) {
-        //      Game.objects['dial'] = model;
-        //      Game.objects['dial'].scale.set(0.5,0.5,0.5);
-        //      Game.objects['dial'].rotation.x = 1.0000000000000004;
-        //      Game.objects['dial']
-        //      Game.uiScene.add(Game.objects['dial']);
-        //      Game.loadModel('models/ui/YearPointer.DAE', function (model) {
-        //          Game.objects['pointer'] = model;
-        //          Game.objects['pointer'].scale.set(0.3,0.3,0.3);
-        //          // Game.objects['pointer'].rotation.y = -3.0000000000000004;
-        //          Game.objects['pointer'].rotation.x = 0.7;
-        //          Game.uiScene.add(Game.objects['pointer']);
-        //          Game.loaded = true;
-        //      });
-        //  });
         //- Load all models for countries here
         for (var country in Game.countryArray) {
             Game.countryArray[country].loadModels();
@@ -172,62 +154,75 @@ window.Game = {
 
     },
 
-    animate: function (deltaTime) {
-
-        if(Game.loaded){
-            var zCamVec = new THREE.Vector3(0,0,1);
-            var position = Game.camera.localToWorld(zCamVec);
-            
-            Game.objects['pointer'].position.set(position.x - 100 + Game.x, position.y - 120 + Game.y, position.z - 200 + Game.z);
-            Game.objects['dial'].position.set(position.x - 100, position.y - 200, position.z - 200);
-            // Game.objects['dial'].position.applyMatrix4( Game.camera.matrixWorld );
-            // Game.objects['pointer'].position.applyMatrix4( Game.camera.matrixWorld );
-            // Game.objects.dial.rotation.y += deltaTime;
+    returnCamera:function(){
+        
+        if(Game.countryArray[Game.clickSelected] !== undefined){
+            Game.countryArray[Game.clickSelected].deactivate();
+            Game.countryArray[Game.clickSelected].state = "lowering";
         }
 
-        if(Game.cameraMoving){
-            // var pos = ;
-            Game.camera.lookAt(Game.cameraTarget);
+        if(Game.countryArray[Game.clickPrevSelected] !== undefined){
+            Game.countryArray[Game.clickPrevSelected].deactivate();
+        }
+        
+        Game.clickSelected = '';
+        Game.clickPrevSelected = '';
+        Game.cameraTarget = Game.cameraInitial;
+        Game.userState = 'IDLE';
+        Game.cameraMoving = true;
+    },
 
+    animate: function (deltaTime) {
+
+        if(Game.cameraMoving && Game.cameraLock){
+            var distanceDiff = 20;
+            var speedFactor = 10;
+            if(Game.userState == 'SELECTED'){
+                distanceDiff = 50;
+                speedFactor = 15;
+            }
+            Game.camera.lookAt(Game.cameraCity);
 
             var current = Game.camera.position;
             var target = Game.cameraTarget;
+
             var diff = {};
             diff.x = Math.abs(current.x - target.x);
             diff.y = Math.abs(current.y - target.y);
             diff.z = Math.abs(current.z - target.z);
 
-
-            if(diff.x > 50){
+            console.log(diff);
+            if(diff.x > distanceDiff){
                 if(current.x > target.x){
-                    Game.camera.position.x -= diff.x/30;
+                    Game.camera.position.x -= diff.x/speedFactor;
                 } else {
-                    Game.camera.position.x += diff.x/30;
+                    Game.camera.position.x += diff.x/speedFactor;
                 }
             } 
 
-            if(diff.y > 50){
+            if(diff.y > distanceDiff){
                 if(current.y > target.y){
-                    Game.camera.position.y -= diff.y/30;
+                    Game.camera.position.y -= diff.y/speedFactor;
                 } else {
-                    Game.camera.position.y += diff.y/30;
+                    Game.camera.position.y += diff.y/speedFactor;
                 }            
             }
 
-            if(diff.z > 50){
+            if(diff.z > distanceDiff){
                 if(current.z > target.z){
-                    Game.camera.position.z -= diff.z/30;
+                    Game.camera.position.z -= diff.z/speedFactor;
                 } else {
-                    Game.camera.position.z += diff.z/30;
+                    Game.camera.position.z += diff.z/speedFactor;
                 }            
             }
 
-            if((diff.x + diff.y + diff.z) < 150){
+            if((diff.x + diff.y + diff.z) < distanceDiff*3){
                 Game.cameraMoving = false;
+                if(Game.userState != 'SELECTED'){
+                    Game.cameraLock = false;
+                }
             }
-
         }
-
 
         for (var country in Game.countryArray) {
             Game.countryArray[country].animate();
@@ -235,52 +230,36 @@ window.Game = {
     },
 
     loopAnimations: function(){
-        for (var object in Game.objects) {
-            // console.log(object);
-            for (var i = 0; i < Game.objects[object].keyFrameAnimations.length; i++) {
-               var currentAnimation = Game.objects[object].keyFrameAnimations[i];
-                if(currentAnimation.currentTime == currentAnimation.data.length){
-                    currentAnimation.stop();
-                }
-            };
-        }
-
         for (var object in Game.ambientObjects) {
             // console.log(object);
             for (var i = 0; i < Game.ambientObjects[object].keyFrameAnimations.length; i++) {
                var currentAnimation = Game.ambientObjects[object].keyFrameAnimations[i];
                if(currentAnimation.isPlaying && !currentAnimation.isPaused){
-                    //console.log("Reached End");
                     if(currentAnimation.currentTime == currentAnimation.data.length){
-                        //console.log("End");
                         currentAnimation.currentTime = 0;
                         currentAnimation.stop();
                     }
                 } else {
                     currentAnimation.play();
                 }
-            };
+            }
         }
 
         for (var country in Game.countryArray) {
-            //console.log(country);
             if(Game.countryArray[country].getCapital().keyFrameAnimations !== undefined){
                 for (var i = 0; i < Game.countryArray[country].getCapital().keyFrameAnimations.length; i++) {
                     var currentAnimation = Game.countryArray[country].getCapital().keyFrameAnimations[i];
                     if(currentAnimation.isPlaying && !currentAnimation.isPaused){
-                        //console.log("Reached End");
                         if(currentAnimation.currentTime == currentAnimation.data.length){
-                            //console.log("End");
                             currentAnimation.currentTime = 0;
                             currentAnimation.stop();
                         }
                     } else {
                         currentAnimation.play();
                     }
-                }; 
+                } 
             }
         }
-
 
         if(Game.countryArray[Game.clickSelected] !== undefined){
             var models = Game.countryArray[Game.clickSelected].data[Game.currentYear].models;
@@ -288,24 +267,25 @@ window.Game = {
                 var currentModel = models[i];
                 if(currentModel.hasAnimations){
                     currentAnimation = currentModel.keyFrameAnimations[0];
-                        if(currentAnimation.isPlaying && !currentAnimation.isPaused){
-                            if(currentAnimation.currentTime == currentAnimation.data.length){
-                                currentAnimation.currentTime = 0;
-                                currentAnimation.stop();
-                            }
-                        } else {
-                            currentAnimation.play();
+                    if(currentAnimation.isPlaying && !currentAnimation.isPaused){
+                        if(currentAnimation.currentTime == currentAnimation.data.length){
+                            currentAnimation.currentTime = 0;
+                            currentAnimation.stop();
                         }
+                    } else {
+                        currentAnimation.play();
+                    }
                 }
-            };
+            }
         }
-
 
     },
 
     render: function () {
         var deltaTime = Game.clock.getDelta();
-        Game.controls.update(deltaTime);
+        if(!Game.cameraLock){
+            Game.controls.update(deltaTime);
+        }
         Game.animate(deltaTime);
         THREE.AnimationHandler.update(deltaTime);
         Game.loopAnimations();
@@ -325,16 +305,6 @@ window.Game = {
     clearText:function(){
         document.getElementById("current-country").innerHTML = "";
         document.getElementById("current-occupation").innerHTML = "";
-    },
-
-    country: {
-        getByName: function (name) {
-            return Game.countryArray[name];
-        },
-
-        getByNameYear: function (name, year) {
-            return Game.countryArray[name].data[year];
-        }
     },
 
     onWindowResize: function () {
@@ -368,18 +338,22 @@ window.Game = {
         if(event.charCode == 32){
             Game.incYear();
         }
-
         if(event.charCode == 104){
             Game.toggleControls();
         }
+        console.log(event.keyCode)
+        if(event.keyCode == 27){
+            Game.returnCamera();
+        }
 
     },
+
 
     toggleControls:function(){
         document.getElementById("controls").classList.toggle('active');
     },
 
-    onDocumentMouseDown: function (event) {
+    onDocumentMouseClick: function (event) {
         event.preventDefault();
         console.log("Clicked");
 		// Ray casting
@@ -402,17 +376,19 @@ window.Game = {
 				// Make this object active / old object inactive
 
                 if(Game.countryArray[Game.clickSelected] !== undefined){
-				    Game.countryArray[Game.clickSelected].active = true;
-                    console.log(Game.countryArray[Game.clickSelected].name + " is active");
+                    Game.userState = 'SELECTED';
                     Game.countryArray[Game.clickSelected].activate();
-                    Game.cameraTarget = Game.countryArray[Game.clickSelected].getCapital().position;
+
+                    Game.cameraLock = true;
                     Game.cameraMoving = true;
+
+                    Game.cameraInitial = new THREE.Vector3(Game.camera.position.x,Game.camera.position.y,Game.camera.position.z);
+                    Game.cameraCity = Game.countryArray[Game.clickSelected].getCapital().position;
+                    Game.cameraTarget = Game.countryArray[Game.clickSelected].getCapital().position;
                 }
 
                 if(Game.countryArray[Game.clickPrevSelected]){
-				    Game.countryArray[Game.clickPrevSelected].active = false;
-                    Game.countryArray[Game.clickSelected].deactivate();
-                    console.log(Game.countryArray[Game.clickPrevSelected].name + " is inactive");
+                    Game.countryArray[Game.clickPrevSelected].deactivate();
                 }
 
 				// Game.countryArray[Game.clickSelected].active = true;
