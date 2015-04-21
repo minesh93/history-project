@@ -1,19 +1,22 @@
 Game.countryArray['France'] = new Country('France');
 Game.countryArray['France'].capital = 'Pin';
 Game.countryArray['France'].cPos = { x: 232, y: 25, z: -314 };
-
 Game.countryArray['France'].data[1939] = {
 	occupation:'Allied',
-	events:[],
+		events:[
+		{
+			title:'Ultimatum',
+			text:'The United Kingdom and France issue a joint ultimatum to Germany, requiring German troops to evacuate Polish territory.',
+		},
+	],
 	models:[]
 }
-
 Game.countryArray['France'].data[1940] = {
 	occupation:'Allied',
 	events:[
 		{
-			title:'German Occupation',
-			text:'German forces started to push into france in an attempt capture it.',
+			title:'Northern German Occupation',
+			text:'German forces occupy northern france with the south complying to Nazi rule.',
 		},
 	],
 	models:[
@@ -25,25 +28,31 @@ Game.countryArray['France'].data[1940] = {
 		},
 	]
 }
-
 Game.countryArray['France'].data[1941] = {
 	occupation:'Allied',
-	events:[],
+	events:[
+		{
+			title:'Resistance',
+			text:'French resistance is formed as a signle organisation',
+		}
+	],
 	models:[]
 }
-
 Game.countryArray['France'].data[1942] = {
 	occupation:'Axis',
-	events:[],
+		events:[
+		{
+			title:'Total German Occupation',
+			text:'German forces invade southern France due to fears of lack of compliance',
+		},
+	],
 	models:[]
 }
-
 Game.countryArray['France'].data[1943] = {
 	occupation:'Axis',
 	events:[],
 	models:[]
 }
-
 Game.countryArray['France'].data[1944] = {
 	occupation:'Allied',
 	events:[
@@ -81,12 +90,19 @@ Game.countryArray['France'].data[1944] = {
 			rot:{x:0,y:85.8,z:0},
 			animate:true
 		},	
-
 	]
 }
-
 Game.countryArray['France'].data[1945] = {
 	occupation:'Allied',
-	events:[],
+		events:[
+		{
+			title:'Austria Push',
+			text:'French troops join the final push into Austria',
+		},
+		{
+			title:'Victory',
+			text:'Allied forces win the war with the surrender of Germany ',
+		}
+	],
 	models:[]
 }

@@ -1,6 +1,6 @@
 Game.countryArray['Yugoslavia'] = new Country("Yugoslavia");
 Game.countryArray['Yugoslavia'].capital = 'Pin';
-Game.countryArray['Yugoslavia'].cPos = { x: 0, y: 0, z: 0 };
+Game.countryArray['Yugoslavia'].cPos = { x: 372, y: 25, z: -236 };
 
 Game.countryArray['Yugoslavia'].data[1939] = {
 	occupation:'Neutral',
@@ -15,31 +15,31 @@ Game.countryArray['Yugoslavia'].data[1940] = {
 }
 
 Game.countryArray['Yugoslavia'].data[1941] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Yugoslavia'].data[1942] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Yugoslavia'].data[1943] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Yugoslavia'].data[1944] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Yugoslavia'].data[1945] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }

@@ -1,45 +1,44 @@
 Game.countryArray['Poland'] = new Country("Poland");
 Game.countryArray['Poland'].capital = 'Pin';
-Game.countryArray['Poland'].cPos = { x: 0, y: 0, z: 0 };
-
+Game.countryArray['Poland'].cPos = { x: 420, y: 25, z: -310 }
 Game.countryArray['Poland'].data[1939] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Poland'].data[1940] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Poland'].data[1941] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Poland'].data[1942] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Poland'].data[1943] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Poland'].data[1944] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Poland'].data[1945] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }

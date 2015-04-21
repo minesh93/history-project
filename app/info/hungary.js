@@ -33,13 +33,13 @@ Game.countryArray['Hungary'].data[1943] = {
 }
 
 Game.countryArray['Hungary'].data[1944] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Hungary'].data[1945] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }

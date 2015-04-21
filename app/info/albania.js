@@ -1,6 +1,6 @@
 Game.countryArray['Albania'] = new Country("Albania");
 Game.countryArray['Albania'].capital = "Pin";
-Game.countryArray['Albania'].cPos = { x: 0, y: 0, z: 0 };
+Game.countryArray['Albania'].cPos = { x: 358, y: 26, z: -180 };
 
 Game.countryArray['Albania'].data[1939] = {
 	occupation:'Neutral',
@@ -9,37 +9,37 @@ Game.countryArray['Albania'].data[1939] = {
 }
 
 Game.countryArray['Albania'].data[1940] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Albania'].data[1941] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Albania'].data[1942] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Albania'].data[1943] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Albania'].data[1944] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Albania'].data[1945] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }

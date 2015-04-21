@@ -1,6 +1,6 @@
 Game.countryArray['Bulgaria'] = new Country("Bulgaria");
 Game.countryArray['Bulgaria'].capital = "Pin";
-Game.countryArray['Bulgaria'].cPos = { x: 0, y: 0, z: 0 };
+Game.countryArray['Bulgaria'].cPos = { x: 400, y: 26, z: -200 };
 
 Game.countryArray['Bulgaria'].data[1939] = {
 	occupation:'Neutral',
@@ -33,13 +33,13 @@ Game.countryArray['Bulgaria'].data[1943] = {
 }
 
 Game.countryArray['Bulgaria'].data[1944] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Bulgaria'].data[1945] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }

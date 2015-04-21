@@ -1,6 +1,6 @@
 Game.countryArray['Luxembourg'] = new Country("Luxembourg");
 Game.countryArray['Luxembourg'].capital = 'Pin';
-Game.countryArray['Luxembourg'].cPos = { x: 0, y: 0, z: 0 };
+Game.countryArray['Luxembourg'].cPos = { x: 268, y: 26, z: -318 };
 
 Game.countryArray['Luxembourg'].data[1939] = {
 	occupation:'Neutral',
@@ -9,37 +9,37 @@ Game.countryArray['Luxembourg'].data[1939] = {
 }
 
 Game.countryArray['Luxembourg'].data[1940] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Luxembourg'].data[1941] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Luxembourg'].data[1942] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Luxembourg'].data[1943] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Luxembourg'].data[1944] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Luxembourg'].data[1945] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }

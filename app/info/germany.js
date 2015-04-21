@@ -40,7 +40,7 @@ Game.countryArray['Germany'].data[1944] = {
 }
 
 Game.countryArray['Germany'].data[1945] = {
-	occupation:'Axis',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }

@@ -1,6 +1,6 @@
 Game.countryArray['Sicily'] = new Country("Sicily");
 Game.countryArray['Sicily'].capital = 'Pin';
-Game.countryArray['Sicily'].cPos = { x: 0, y: 0, z: 0 };
+Game.countryArray['Sicily'].cPos = { x: 287, y: 25, z: -153 };
 
 Game.countryArray['Sicily'].data[1939] = {
 	occupation:'Neutral',
@@ -9,37 +9,37 @@ Game.countryArray['Sicily'].data[1939] = {
 }
 
 Game.countryArray['Sicily'].data[1940] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Sicily'].data[1941] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Sicily'].data[1942] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Sicily'].data[1943] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Sicily'].data[1944] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Sicily'].data[1945] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }

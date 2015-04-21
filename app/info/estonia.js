@@ -1,6 +1,6 @@
 Game.countryArray['Estonia'] = new Country("Estonia");
 Game.countryArray['Estonia'].capital = "Pin";
-Game.countryArray['Estonia'].cPos = { x: 0, y: 0, z: 0 };
+Game.countryArray['Estonia'].cPos = { x: 431, y: 48, z: -412 };
 
 Game.countryArray['Estonia'].data[1939] = {
 	occupation:'Neutral',
@@ -15,31 +15,31 @@ Game.countryArray['Estonia'].data[1940] = {
 }
 
 Game.countryArray['Estonia'].data[1941] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Estonia'].data[1942] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Estonia'].data[1943] = {
-	occupation:'Neutral',
+	occupation:'Axis',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Estonia'].data[1944] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }
 
 Game.countryArray['Estonia'].data[1945] = {
-	occupation:'Neutral',
+	occupation:'Allied',
 	events:[],
 	models:[]
 }

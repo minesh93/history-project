@@ -41,6 +41,9 @@ window.Game = {
     alliesTexture:'',
     neutralTexture:'',
     modelLoader: new THREE.ColladaLoader(),
+
+    frameNum: 0,
+
     init: function () {
         console.log("Initiated.");
 
@@ -79,8 +82,8 @@ window.Game = {
 
         this.camera = new THREE.PerspectiveCamera(this.VIEW_ANGLE, this.ASPECT_RATIO, this.NEAR_CLIPPING_PLANE, this.FAR_CLIPPING_PLANE);
 
-        this.camera.rotation.set(-0.47950680676215296, 0.20616691477392507, -0.03438771783635605);
-        this.camera.position.set(293.58995771984328, 240.451532243403, -27.41075915421712);
+        this.camera.rotation.set(-1.1334485586118261, 0.022009294869930782, -0.07153258340446002);
+        this.camera.position.set(361.7766252744028, 533.4988933764232, -2.291261939595149);
 
         this.controls = new THREE.FlyControls(this.camera);
         this.controls.movementSpeed = 300;
@@ -133,6 +136,29 @@ window.Game = {
             Game.ambientObjects['spitfire'].position.z = -384;
         });
 
+        this.loadModel('models/ui/dial.DAE',0, function (model) {
+            Game.objects['dial'] = model;
+            Game.objects['dial'].scale.set(0.5,0.5,0.5);
+            Game.objects['dial'].rotation.x = -1.25;
+            Game.objects['dial'].rotation.y = 0.25;
+            Game.objects['dial']
+            Game.uiScene.add(Game.objects['dial']);
+              
+            Game.loadModel('models/ui/pointer.DAE',0, function (model) {
+                Game.objects['pointer'] = model;
+                Game.objects['pointer'].scale.set(0.8,0.8,0.8);
+                //Game.objects['pointer'].rotation.x = -1.25;
+                Game.objects['pointer'].rotation.y = -0.07;
+                // Game.objects['pointer'].rotation.y = -3.0000000000000004;
+                Game.objects['pointer'].rotation.x = 0.7;
+                Game.uiScene.add(Game.objects['pointer']);
+                          
+                Game.loaded = true;
+            });
+
+              
+          }); 
+
         //- Load all models for countries here
         for (var country in Game.countryArray) {
             Game.countryArray[country].loadModels();
@@ -151,6 +177,13 @@ window.Game = {
         this.uiLight.position.z = 200;
 
         this.uiScene.add(this.uiLight);
+
+        this.uiLightTwo = new THREE.PointLight(0xFFFFFF, 2, 10000);
+        this.uiLightTwo.position.x = 240;
+        this.uiLightTwo.position.y = 293;
+        this.uiLightTwo.position.z = 200;
+
+        this.uiScene.add(this.uiLightTwo);
 
     },
 
@@ -173,6 +206,18 @@ window.Game = {
     },
 
     animate: function (deltaTime) {
+
+        if(Game.loaded){
+            var zCamVec = new THREE.Vector3(0,0,1);
+            var position = Game.camera.localToWorld(zCamVec);
+            
+            Game.objects['dial'].position.set(position.x - 150, position.y - 300, position.z - 70);
+            Game.objects['pointer'].position.set(position.x - 140, position.y - 280, position.z - 25);
+
+            this.uiLightTwo.position.x = Game.objects['pointer'].position.x - 10;
+            this.uiLightTwo.position.y = Game.objects['pointer'].position.y - 10;
+            this.uiLightTwo.position.z = Game.objects['pointer'].position.z - 100;
+        }
 
         if(Game.cameraMoving && Game.cameraLock){
             var distanceDiff = 20;
@@ -229,9 +274,43 @@ window.Game = {
         }
     },
 
+    animateDial:function(){
+    if(Game.frameNum == 6){
+     Game.frameNum = 0;
+    
+    }
+
+    switch(Game.frameNum) {
+        case 0:
+            Game.objects['dial'].rotation.z = -1;
+            break;
+        case 1:
+            Game.objects['dial'].rotation.z = -2.25;
+            break;
+        case 2:
+            Game.objects['dial'].rotation.z = -3.25;
+            break;
+        case 3:
+            Game.objects['dial'].rotation.z = -4.3;
+            break;
+        case 4:
+            Game.objects['dial'].rotation.z = -5.50;
+            break;
+        case 5:
+            Game.objects['dial'].rotation.z = -6.4;
+            break;
+        default:
+
+    }
+        
+    Game.frameNum = Game.frameNum + 1;
+        
+    
+    },
+
     loopAnimations: function(){
         for (var object in Game.ambientObjects) {
-            // console.log(object);
+
             for (var i = 0; i < Game.ambientObjects[object].keyFrameAnimations.length; i++) {
                var currentAnimation = Game.ambientObjects[object].keyFrameAnimations[i];
                if(currentAnimation.isPlaying && !currentAnimation.isPaused){
@@ -321,6 +400,7 @@ window.Game = {
             Game.currentYear = 1939;
         }
 
+        Game.animateDial();
         document.getElementById("current-year").innerHTML = Game.currentYear;        
 
         for (var country in Game.countryArray) {

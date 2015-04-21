@@ -7,6 +7,7 @@ var Country = function (name){
 	this.material = "";
 	this.model = {},
 	this.capital = "",
+	this.NoCapital = false;
 	this.data = [];
 };
 
@@ -15,7 +16,7 @@ Country.prototype.setCapital = function(path,x,y,z){
 	var that = this;
 	var lowername = this.name.toLowerCase().replace(/\s/g, '');
 	// console.log('models/capitals/'+lowername+'.DAE');
-
+	
 	var pos = this.cPos;
 	if(this.capital != 'Pin'){
 		console.log("Loading capital: "+lowername);
@@ -40,6 +41,7 @@ Country.prototype.setCapital = function(path,x,y,z){
 		});
 	}
 }
+
 
 Country.prototype.getCapital = function() {
 	return this.capital;
@@ -185,19 +187,23 @@ Country.prototype.getModel = function() {
 // Raises a country
 Country.prototype.raise = function(deltaTime) {
 	this.model.position.y++;
-	this.capital.position.y++;
-	this.capital.scale.x = this.capital.scale.x + 0.04;
-	this.capital.scale.y = this.capital.scale.y + 0.04;
-	this.capital.scale.z = this.capital.scale.z + 0.04;
 	
+	if(this.NoCapital != true){
+		this.capital.position.y++;
+		this.capital.scale.x = this.capital.scale.x + 0.04;
+		this.capital.scale.y = this.capital.scale.y + 0.04;
+		this.capital.scale.z = this.capital.scale.z + 0.04;
+	}
 
 	if(this.model.position.y >= 22){
 	    this.state = "up";
 	    this.model.position.y = 22;
 	    this.capital.position.y = 48;
-		this.capital.scale.x = 1;
-		this.capital.scale.y = 1;
-		this.capital.scale.z = 1;
+		if(this.NoCapital != true){
+			this.capital.scale.x = 1;
+			this.capital.scale.y = 1;
+			this.capital.scale.z = 1;
+		}
 	}
 	return this.model;
 };
@@ -222,13 +228,6 @@ Country.prototype.lower = function(deltaTime) {
 	}
 };
 
-// Grows a model
-Country.prototype.grow = function(deltatime){
-}
-
-// Shrinks a model
-Country.prototype.shrink = function(deltatime){
-}
 
 Country.prototype.getOccupation = function(){
 	return this.data[Game.currentYear].occupation;
