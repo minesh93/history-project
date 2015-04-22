@@ -1,6 +1,7 @@
 Game.countryArray['SpainMajorca'] = new Country("Spain Majorca");
 Game.countryArray['SpainMajorca'].capital = 'Pin';
-Game.countryArray['SpainMajorca'].cPos = { x: 0, y: 0, z: 0 };
+Game.countryArray['SpainMajorca'].cPos = { x: 196, y: 25, z: -206 };
+Game.countryArray['SpainMajorca'].NoCapital = true;
 
 Game.countryArray['SpainMajorca'].data[1939] = {
 	occupation:'Neutral',

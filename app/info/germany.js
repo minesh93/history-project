@@ -1,5 +1,5 @@
 Game.countryArray['Germany'] = new Country("Germany");
-Game.countryArray['Germany'].capital = "Pin";
+// Game.countryArray['Germany'].capital = "Pin";
 Game.countryArray['Germany'].cPos = { x: 335, y: 26, z: -325 }
 
 

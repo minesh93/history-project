@@ -136,6 +136,11 @@ window.Game = {
             Game.ambientObjects['spitfire'].position.z = -384;
         });
 
+        // this.loadModel('models/general/sea.DAE',0, function (model) {
+        //     Game.objects['sea'] = model;
+        //     Game.objects['sea'].position.y = 20;
+        // });
+
         this.loadModel('models/ui/dial.DAE',0, function (model) {
             Game.objects['dial'] = model;
             Game.objects['dial'].scale.set(0.5,0.5,0.5);
@@ -214,9 +219,9 @@ window.Game = {
             Game.objects['dial'].position.set(position.x - 150, position.y - 300, position.z - 70);
             Game.objects['pointer'].position.set(position.x - 140, position.y - 280, position.z - 25);
 
-            this.uiLightTwo.position.x = Game.objects['pointer'].position.x - 10;
-            this.uiLightTwo.position.y = Game.objects['pointer'].position.y - 10;
-            this.uiLightTwo.position.z = Game.objects['pointer'].position.z - 100;
+            this.uiLight.position.x = Game.objects['pointer'].position.x - 10;
+            this.uiLight.position.y = Game.objects['pointer'].position.y - 10;
+            this.uiLight.position.z = Game.objects['pointer'].position.z - 100;
         }
 
         if(Game.cameraMoving && Game.cameraLock){
@@ -275,35 +280,46 @@ window.Game = {
     },
 
     animateDial:function(){
-    if(Game.frameNum == 6){
-     Game.frameNum = 0;
+        if(Game.frameNum == 7){
+         Game.frameNum = 0;
+        }
     
-    }
+        switch(Game.frameNum) {
+            case 0:
+                console.log("0");
+                Game.objects['dial'].rotation.z = -1;
+                break;
+            case 1:
+                console.log("1");
+                Game.objects['dial'].rotation.z = -2;
+                    
+                
+                break;
+            case 2:
+                console.log("2");
+                Game.objects['dial'].rotation.z = -2.9;
+                break;
+            case 3:
+                console.log("3");
+                Game.objects['dial'].rotation.z = -3.8;
+                break;
+            case 4:
+                console.log("4");
+                Game.objects['dial'].rotation.z = -4.6;
+                break;
+            case 5:
+                console.log("5");
+                Game.objects['dial'].rotation.z = -5.4;
+                break;
+            case 6:
+                console.log("6");
+                Game.objects['dial'].rotation.z = -6.4;
+                break;
+            default:
 
-    switch(Game.frameNum) {
-        case 0:
-            Game.objects['dial'].rotation.z = -1;
-            break;
-        case 1:
-            Game.objects['dial'].rotation.z = -2.25;
-            break;
-        case 2:
-            Game.objects['dial'].rotation.z = -3.25;
-            break;
-        case 3:
-            Game.objects['dial'].rotation.z = -4.3;
-            break;
-        case 4:
-            Game.objects['dial'].rotation.z = -5.50;
-            break;
-        case 5:
-            Game.objects['dial'].rotation.z = -6.4;
-            break;
-        default:
-
-    }
-        
-    Game.frameNum = Game.frameNum + 1;
+        }
+            
+        Game.frameNum = Game.frameNum + 1;
         
     
     },

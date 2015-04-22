@@ -6,8 +6,8 @@
       <authoring_tool>OpenCOLLADA for 3ds Max;  ;  </authoring_tool>
       <source_data>file:///U:/MyModules/ADMA/GameModels/Pyramid.max</source_data>
     </contributor>
-    <created>2015-03-03T15:31:54</created>
-    <modified>2015-03-03T15:31:54</modified>
+    <created>2015-04-22T11:44:05</created>
+    <modified>2015-04-22T11:44:05</modified>
     <unit name="meter" meter="1"/>
     <up_axis>Z_UP</up_axis>
   </asset>
@@ -48,45 +48,45 @@
     </material>
   </library_materials>
   <library_geometries>
-    <geometry id="geom-Box001" name="Box001">
+    <geometry id="geom-egyptPyramid" name="egyptPyramid">
       <mesh>
-        <source id="geom-Box001-positions">
-          <float_array id="geom-Box001-positions-array" count="24">-23.29983 -27.82644 -0.07045603 -14.29983 -27.82644 -0.07045603 -23.29983 -18.82644 -0.07045603 -14.29983 -18.82644 -0.07045603 -18.8083 -23.33491 8.929544 -18.79135 -23.33491 8.929544 -18.8083 -23.31796 8.929544 -18.79135 -23.31796 8.929544</float_array>
+        <source id="geom-egyptPyramid-positions">
+          <float_array id="geom-egyptPyramid-positions-array" count="24">-23.29983 -27.82644 -0.07045603 -14.29983 -27.82644 -0.07045603 -23.29983 -18.82644 -0.07045603 -14.29983 -18.82644 -0.07045603 -18.8083 -23.33491 8.929544 -18.79135 -23.33491 8.929544 -18.8083 -23.31796 8.929544 -18.79135 -23.31796 8.929544</float_array>
           <technique_common>
-            <accessor source="#geom-Box001-positions-array" count="8" stride="3">
+            <accessor source="#geom-egyptPyramid-positions-array" count="8" stride="3">
               <param name="X" type="float"/>
               <param name="Y" type="float"/>
               <param name="Z" type="float"/>
             </accessor>
           </technique_common>
         </source>
-        <source id="geom-Box001-normals">
-          <float_array id="geom-Box001-normals-array" count="72">0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -0.8947639 0.4465396 0 -0.8947638 0.4465396 0 -0.8947639 0.4465396 0 -0.8947639 0.4465396 0.8947639 0 0.4465396 0.8947638 0 0.4465396 0.8947639 0 0.4465396 0.8947639 0 0.4465396 0 0.8947639 0.4465396 0 0.8947638 0.4465396 0 0.8947639 0.4465396 0 0.8947639 0.4465396 -0.8947639 0 0.4465396 -0.8947638 0 0.4465396 -0.8947639 0 0.4465396 -0.8947639 0 0.4465396</float_array>
+        <source id="geom-egyptPyramid-normals">
+          <float_array id="geom-egyptPyramid-normals-array" count="72">0 0 -0.9999999 0 0 -1 0 0 -0.9999999 0 0 -1 0 0 1 0 0 1 0 0 1 0 0 1 0 -0.8947639 0.4465396 0 -0.8947638 0.4465396 0 -0.8947639 0.4465396 0 -0.8947639 0.4465396 0.8947639 0 0.4465396 0.8947638 0 0.4465396 0.8947639 0 0.4465396 0.8947639 0 0.4465396 0 0.8947639 0.4465396 0 0.8947638 0.4465396 0 0.8947639 0.4465396 0 0.8947639 0.4465396 -0.8947639 0 0.4465396 -0.8947638 0 0.4465396 -0.8947639 0 0.4465396 -0.8947639 0 0.4465396</float_array>
           <technique_common>
-            <accessor source="#geom-Box001-normals-array" count="24" stride="3">
+            <accessor source="#geom-egyptPyramid-normals-array" count="24" stride="3">
               <param name="X" type="float"/>
               <param name="Y" type="float"/>
               <param name="Z" type="float"/>
             </accessor>
           </technique_common>
         </source>
-        <source id="geom-Box001-map1">
-          <float_array id="geom-Box001-map1-array" count="72">1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
+        <source id="geom-egyptPyramid-map1">
+          <float_array id="geom-egyptPyramid-map1-array" count="72">1 0 0 0 0 0 1 1 0 0 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 1 0 1 1 0</float_array>
           <technique_common>
-            <accessor source="#geom-Box001-map1-array" count="24" stride="3">
+            <accessor source="#geom-egyptPyramid-map1-array" count="24" stride="3">
               <param name="S" type="float"/>
               <param name="T" type="float"/>
               <param name="P" type="float"/>
             </accessor>
           </technique_common>
         </source>
-        <vertices id="geom-Box001-vertices">
-          <input semantic="POSITION" source="#geom-Box001-positions"/>
+        <vertices id="geom-egyptPyramid-vertices">
+          <input semantic="POSITION" source="#geom-egyptPyramid-positions"/>
         </vertices>
         <triangles material="ColorMaterial" count="12">
-          <input semantic="VERTEX" source="#geom-Box001-vertices" offset="0"/>
-          <input semantic="NORMAL" source="#geom-Box001-normals" offset="1"/>
-          <input semantic="TEXCOORD" source="#geom-Box001-map1" offset="2" set="0"/>
+          <input semantic="VERTEX" source="#geom-egyptPyramid-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#geom-egyptPyramid-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#geom-egyptPyramid-map1" offset="2" set="0"/>
           <p>0 0 0 2 1 2 3 2 3 3 2 3 1 3 1 0 0 0 4 4 4 5 5 5 7 6 7 7 6 7 6 7 6 4 4 4 0 8 8 1 9 9 5 10 11 5 10 11 4 11 10 0 8 8 1 12 12 3 13 13 7 14 15 7 14 15 5 15 14 1 12 12 3 16 16 2 17 17 6 18 19 6 18 19 7 19 18 3 16 16 2 20 20 0 21 21 4 22 23 4 22 23 6 23 22 2 20 20</p>
         </triangles>
       </mesh>
@@ -106,9 +106,9 @@
       <node name="EnvironmentAmbientLight">
         <instance_light url="#EnvironmentAmbientLight"/>
       </node>
-      <node id="node-Box001" name="Box001">
+      <node id="node-egyptPyramid" name="egyptPyramid">
         <matrix>1 0 0 18.79983 0 1 0 23.32644 0 0 1 0 0 0 0 1</matrix>
-        <instance_geometry url="#geom-Box001">
+        <instance_geometry url="#geom-egyptPyramid">
           <bind_material>
             <technique_common>
               <instance_material symbol="ColorMaterial" target="#ColorEffectR135G110B8-material"/>

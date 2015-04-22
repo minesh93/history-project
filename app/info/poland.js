@@ -1,5 +1,5 @@
 Game.countryArray['Poland'] = new Country("Poland");
-Game.countryArray['Poland'].capital = 'Pin';
+// Game.countryArray['Poland'].capital = 'Pin';
 Game.countryArray['Poland'].cPos = { x: 420, y: 25, z: -310 }
 Game.countryArray['Poland'].data[1939] = {
 	occupation:'Axis',
